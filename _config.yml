@@ -17,7 +17,8 @@ keep_files:
 title: Airspace
 subtitle: "A free HTML5 agency template"
 url: "http://elisavilches.github.io" # the base hostname & protocol for your site
-baseurl: "https://elisavilches.github.io" # Set this value to "" if you want your site to be root
+#baseurl: "/the/subpath/of/your/site" # Set this value to "" if you want your site to be root
+baseurl: "https://elisavilches.github.io"
 cover: "/assets/cover.png"
 logo: "/assets/logo.png"
 
