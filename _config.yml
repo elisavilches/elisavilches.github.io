@@ -15,10 +15,11 @@ keep_files:
 
 # Site settings
 title: Elisa Vilches
+shorttitle: Elisa V.
 subtitle: "Certified Translator"
-url: "http://elisavilches.github.io" # the base hostname & protocol for your site
+url: "https://elisavilches.github.io" # the base hostname & protocol for your site
 #baseurl: "/the/subpath/of/your/site" # Set this value to "" if you want your site to be root
-baseurl: "https://elisavilches.github.io"
+baseurl: ""
 cover: "assets/cover.png"
 logo: "assets/logo.png"
 
