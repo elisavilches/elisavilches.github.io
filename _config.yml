@@ -14,13 +14,13 @@ keep_files:
 
 
 # Site settings
-title: Elisa Vilches - Traductora Intérprete
-subtitle: "Traductora Intérprete"
+title: Elisa Vilches
+subtitle: "Certified Translator"
 url: "http://elisavilches.github.io" # the base hostname & protocol for your site
 #baseurl: "/the/subpath/of/your/site" # Set this value to "" if you want your site to be root
 baseurl: "https://elisavilches.github.io"
-cover: "/assets/cover.png"
-logo: "/assets/logo.png"
+cover: "assets/cover.png"
+logo: "assets/logo.png"
 
 # Build settings
 markdown: kramdown
