@@ -1,12 +1,37 @@
 name: Elisa Vilches
 title: Certified translator & proofreader
-languages: EN | FR | ES | CAT
+languages: EN | FR | ES | CA
 aboutme: "<p>Hi, there! I am Elisa Vílchez. I am a professional <b>certified 
-translator</b>.</p>
+translator</b>. I have run my own translation practice for over 12 years now, translating from <b>English</b> and
+<b>French</b> into my native languages, <b>Spanish</b> and <b>Catalan</b>.</p>
 <p>I was born and raised in Barcelona, where I earned my <b>B.A. in Translation</b> &amp; Interpretation
 (majoring in <b>legal and economic</b> studies). In 2008 I graduated with an <b>M.A. in Medical &amp; Health
-Translations</b>.
-I have run my own translation practice for over 12 years now, translating from <b>English</b> and
-<b>French</b> into my native languages, <b>Spanish</b> and <b>Catalan</b>.</p>
+Translations</b>.</p>
 <p>With a solid experience in <b>legal, economic, marketing and medical backgrounds</b>, I make sure I
 only offer high-quality, timely and accurate translation services.</p>"
+
+services: "These are my services. For more information or for free price quotation, feel free to contact me 
+or send your documents to <b>elisa.vilchez@gmail.com</br>"
+
+
+contact: "For a free price quotation, feel free to contact me 
+or send your documents to <b>elisa.vilchez@gmail.com</br>."
+
+certified_translation:
+  title: Certified translation
+  desc: "Do you need a certified translation (English/Spanish) for your studies or for a legal entity? 
+    Choose one of my offices in Paris or Barcelona."
+
+translation:
+  title: Translation
+  desc: "Request a quotation for any document in English, French, Spanish or Catalan. Confidential treatment is fully assured."
+
+proofreading:
+  title: Proofreading
+  desc: "Do you need a hand with your highly visible documents? Make sure your message is perfectly
+  conveyed with a good proofreading."
+
+editing: 
+  title: Editing
+  desc: "The attractiveness of a well written text cannot be overstated and can make a difference for
+  your clients."
