@@ -139,7 +139,7 @@ font header .navbar-default .navbar-nav li a:hover {
 	wrapper Start
 --*/
 #intro {
-  padding: 100px 0;
+  padding-top: 100px;
 }
 #intro .block h2 {
   padding-top: 35px;
@@ -150,11 +150,12 @@ font header .navbar-default .navbar-nav li a:hover {
   color: #7B7B7B;
   padding-top: 10px;
 }
+
 #intro .block img {
   width: 100%;
   border-radius: 60%;
   padding-top: 35px;
-  max-width: 400px;
+  max-width: 300px;
 }
 #intro .section-title {
   margin-bottom: 0px;
