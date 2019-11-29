@@ -1,7 +1,16 @@
 name: Elisa Vilches
-title: Certified translator & proofreader
+
+
+title: 
+  en: Certified translator & proofreader
+  fr: voili voulu
+
+
 languages: EN | FR | ES | CA
-aboutme: "<p>Hi, there! My name is Elisa and I am a professional <b>certified 
+
+aboutme: 
+
+  en: "<p>Hi, there! My name is Elisa and I am a professional <b>certified 
 translator</b>. I have run my own translation practice for over 12 years, translating from <b>English</b> and
 <b>French</b> into my native languages, <b>Spanish</b> and <b>Catalan</b>.</p>
 <p>Born and raised in Barcelona, I earned my <b>Bachelor's degree in Translation &amp; Interpreting</b> (majoring in <b>legal and economic</b> studies) in 2006. I also hold a <b>Master's degree in Medical &amp; Health
@@ -9,30 +18,80 @@ Translations </b>(2008).</p>
 <p>With a solid experience in <b>legal, economic, marketing and medical backgrounds</b>, I make sure I
 only offer high-quality, timely and accurate translation services.</p>"
 
-services: "For more information or for a free price quotation, feel free to contact me 
+  fr: "<p>Bonjour, there! My name is Elisa and I am a professional <b>certified 
+translator</b>. I have run my own translation practice for over 12 years, translating from <b>English</b> and
+<b>French</b> into my native languages, <b>Spanish</b> and <b>Catalan</b>.</p>
+<p>Born and raised in Barcelona, I earned my <b>Bachelor's degree in Translation &amp; Interpreting</b> (majoring in <b>legal and economic</b> studies) in 2006. I also hold a <b>Master's degree in Medical &amp; Health
+Translations </b>(2008).</p>
+<p>With a solid experience in <b>legal, economic, marketing and medical backgrounds</b>, I make sure I
+only offer high-quality, timely and accurate translation services.</p>"
+
+
+services: 
+
+  en: "For more information or for a free price quotation, feel free to contact me 
+or send your documents to <b>elisa.vilches@gmail.com.</br>"
+
+  fr: "Pour more information or for a free price quotation, feel free to contact me 
 or send your documents to <b>elisa.vilches@gmail.com.</br>"
 
 
-contact: "For a free price quotation, feel free to contact me 
+contact: 
+
+  en: "For a free price quotation, feel free to contact me 
 or send your documents to <b>elisa.vilches@gmail.com.</br>."
 
+  fr: "Pour a free price quotation, feel free to contact me 
+or send your documents to <b>elisa.vilches@gmail.com.</br>."
+
+
 certified_translation:
-  title: Certified translations
-  desc: "Do you need a certified translation (English/Spanish) for your studies abroad or for an official agency? 
+
+  en:
+    title: Certified translations
+    desc: "Do you need a certified translation (English/Spanish) for your studies abroad or for an official agency? 
     Choose one of my offices in Paris or Barcelona and either pick it up or have it sent to your address."
 
+  fr:
+    title: Certified translations
+    desc: "Es-ce que do you need a certified translation (English/Spanish) for your studies abroad or for an official agency? 
+    Choose one of my offices in Paris or Barcelona and either pick it up or have it sent to your address."
+
+
 translation:
-  title: Translation services
-  desc: "Request a quotation for any translation services you might need in English, French, Spanish or Catalan. Confidential treatment is fully assured."
+
+  en:
+    title: Translation services
+    desc: "Request a quotation for any translation services you might need in English, French, Spanish or Catalan. Confidential treatment is fully assured."
+
+  fr:
+    title: Translation services
+    desc: "Demandez a quotation for any translation services you might need in English, French, Spanish or Catalan. Confidential treatment is fully assured."
+
 
 proofreading:
-  title: Proofreading services
-  desc: "Do you need a hand with your highly visible documents? Make sure your message is perfectly
+
+  en:
+    title: Proofreading services
+    desc: "Do you need a hand with your highly visible documents? Make sure your message is perfectly
   conveyed with a good proofreading service."
 
+  fr:
+    title: Proofreading services
+    desc: "Est-ce Do you need a hand with your highly visible documents? Make sure your message is perfectly
+  conveyed with a good proofreading service."
+
+
 editing: 
-  title: Editing services
-  desc: "The attractiveness of a well written text cannot be understated. Editing services for language and style can make a difference for
+
+  en:
+    title: Editing services
+    desc: "The attractiveness of a well written text cannot be understated. Editing services for language and style can make a difference for
+  your texts."
+
+  fr:
+    title: Editing services
+    desc: "Les attractiveness of a well written text cannot be understated. Editing services for language and style can make a difference for
   your texts."
   
 

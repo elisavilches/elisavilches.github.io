@@ -36,3 +36,25 @@ descriptions:
 
   - cat: dummy
     desc: "Just some placeholder posts, lorem ipsum and the rest."
+
+languages: [ 'es', 'ca', 'fr' ]
+
+defaults:
+  - scope:
+      path: ''
+    values:
+      lang: en
+      description: ''
+  - scope:
+      path: 'fr'
+    values:
+      lang: fr
+      description: ''
+  - scope:
+      path: 'ca'
+    values:
+      lang: ca
+  - scope:
+      path: 'es'
+    values:
+      lang: es

@@ -3,6 +3,17 @@
  * To find the original style.css that ships with Airspace, read airspace.css
  *
  */
+ .nav li {
+  display: inline-block;
+}
+
+.lang>li>a {
+  padding: 18px 5px;
+}
+
+.lang ul {
+  padding: 0px 1px;
+}
 
  .italic {
    font-style: italic;
