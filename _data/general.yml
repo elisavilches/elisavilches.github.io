@@ -3,7 +3,7 @@ name: Elisa Vilches
 
 title: 
   en: Certified translator & proofreader
-  fr: voili voulu
+  fr: Traductrice assermentée et correctrice
 
 
 languages: EN | FR | ES | CA
@@ -18,13 +18,11 @@ Translations </b>(2008).</p>
 <p>With a solid experience in <b>legal, economic, marketing and medical backgrounds</b>, I make sure I
 only offer high-quality, timely and accurate translation services.</p>"
 
-  fr: "<p>Bonjour, there! My name is Elisa and I am a professional <b>certified 
-translator</b>. I have run my own translation practice for over 12 years, translating from <b>English</b> and
-<b>French</b> into my native languages, <b>Spanish</b> and <b>Catalan</b>.</p>
-<p>Born and raised in Barcelona, I earned my <b>Bachelor's degree in Translation &amp; Interpreting</b> (majoring in <b>legal and economic</b> studies) in 2006. I also hold a <b>Master's degree in Medical &amp; Health
-Translations </b>(2008).</p>
-<p>With a solid experience in <b>legal, economic, marketing and medical backgrounds</b>, I make sure I
-only offer high-quality, timely and accurate translation services.</p>"
+  fr: "<p>Bonjour à tous ! Je m’appelle Elisa, <b>traductrice professionnelle assermentée</b>. Je dispose d’une expérience de plus de 12 ans dans la traduction de l’<b>anglais</b> et
+du <b>français</b> vers mes deux langues maternelles, l'<b>espagnol</b> et le <b>catalan</b>.</p>
+<p>Je suis née et j’ai grandi à Barcelone, où j’ai obtenu mon <b>Diplôme de Traduction et Interprétation</b> à l'Université Pompeu Fabra (spécialité <b>juridique et économique</b>) en 2006. En 2008, j’ai également obtenu un <b>
+Master de Traduction médico-sanitaire </b>à l’Université Jaume I.</p>
+<p>Forte d’une solide expérience dans les <b>domaines juridique, économique, commercial et médical</b>, e propose un service de traduction fiable, dans les délais, de grande qualité et de précision.</p>"
 
 
 services: 
@@ -32,8 +30,7 @@ services:
   en: "For more information or for a free price quotation, feel free to contact me 
 or send your documents to <b>elisa.vilches@gmail.com.</br>"
 
-  fr: "Pour more information or for a free price quotation, feel free to contact me 
-or send your documents to <b>elisa.vilches@gmail.com.</br>"
+  fr: "Pour de plus amples informations ou obtenir un devis gratuit, vous pouvez me contacter ou envoyer vos documents à <b>elisa.vilches@gmail.com.</br>"
 
 
 contact: 
@@ -41,8 +38,7 @@ contact:
   en: "For a free price quotation, feel free to contact me 
 or send your documents to <b>elisa.vilches@gmail.com.</br>."
 
-  fr: "Pour a free price quotation, feel free to contact me 
-or send your documents to <b>elisa.vilches@gmail.com.</br>."
+  fr: "Pour de plus amples informations ou obtenir un devis gratuit, vous pouvez me contacter ou envoyer vos documents à <b>elisa.vilches@gmail.com.</br>."
 
 
 certified_translation:
@@ -53,9 +49,8 @@ certified_translation:
     Choose one of my offices in Paris or Barcelona and either pick it up or have it sent to your address."
 
   fr:
-    title: Certified translations
-    desc: "Es-ce que do you need a certified translation (English/Spanish) for your studies abroad or for an official agency? 
-    Choose one of my offices in Paris or Barcelona and either pick it up or have it sent to your address."
+    title: Traductions assermentées
+    desc: "Besoin d’une traduction assermentée (anglais-espagnol) pour étudier à l’étranger ou pour un organisme officiel ? Vous choisissez un de mes bureaux à Paris ou à Barcelone. Vous pourrez ensuite y récupérer vos traductions ou demander un envoi postal."
 
 
 translation:
@@ -65,8 +60,8 @@ translation:
     desc: "Request a quotation for any translation services you might need in English, French, Spanish or Catalan. Confidential treatment is fully assured."
 
   fr:
-    title: Translation services
-    desc: "Demandez a quotation for any translation services you might need in English, French, Spanish or Catalan. Confidential treatment is fully assured."
+    title: Services de traduction
+    desc: "Demandez votre devis pour toute traduction en anglais, français, espagnol ou catalan, avec la garantie d’un traitement strictement confidentiel."
 
 
 proofreading:
@@ -77,9 +72,8 @@ proofreading:
   conveyed with a good proofreading service."
 
   fr:
-    title: Proofreading services
-    desc: "Est-ce Do you need a hand with your highly visible documents? Make sure your message is perfectly
-  conveyed with a good proofreading service."
+    title: Services de révision-correction
+    desc: "Besoin d’aide pour une bonne visibilité de vos documents ? Assurez-vous d’adapter à la perfection votre message à votre public grâce à un bon service de révision et de correction."
 
 
 editing: 
@@ -90,8 +84,7 @@ editing:
   your texts."
 
   fr:
-    title: Editing services
-    desc: "Les attractiveness of a well written text cannot be understated. Editing services for language and style can make a difference for
-  your texts."
+    title: Services d'édition
+    desc: "Un texte bien écrit revêt un attrait à ne pas sous-estimer. Un bon service d’édition au niveau de la langue et du style peut faire la différence."
   
 
