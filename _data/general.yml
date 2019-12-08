@@ -4,6 +4,8 @@ name: Elisa Vilches
 title: 
   en: Certified translator & proofreader
   fr: Traductrice assermentée et correctrice
+  es: Traductora jurada y correctora
+  ca: Traductora jurada i correctora
 
 
 languages: EN | FR | ES | CA
@@ -22,13 +24,12 @@ only offer high-quality, timely and accurate translation services.</p>"
 du <b>français</b> vers mes deux langues maternelles, l'<b>espagnol</b> et le <b>catalan</b>.</p>
 <p>Je suis née et j’ai grandi à Barcelone, où j’ai obtenu mon <b>Diplôme de Traduction et Interprétation</b> à l'Université Pompeu Fabra (spécialité <b>juridique et économique</b>) en 2006. En 2008, j’ai également obtenu un <b>
 Master de Traduction médico-sanitaire </b>à l’Université Jaume I.</p>
-<p>Forte d’une solide expérience dans les <b>domaines juridique, économique, commercial et médical</b>, e propose un service de traduction fiable, dans les délais, de grande qualité et de précision.</p>"
+<p>Forte d’une solide expérience dans les <b>domaines juridique, économique, commercial et médical</b>, je propose un service de traduction fiable, dans les délais, de grande qualité et de précision.</p>"
 
-  es: "<p>Bonjour à tous ! Je m’appelle Elisa, <b>traductrice professionnelle assermentée</b>. Je dispose d’une expérience de plus de 12 ans dans la traduction de l’<b>anglais</b> et
-du <b>français</b> vers mes deux langues maternelles, l'<b>espagnol</b> et le <b>catalan</b>.</p>
-<p>Je suis née et j’ai grandi à Barcelone, où j’ai obtenu mon <b>Diplôme de Traduction et Interprétation</b> à l'Université Pompeu Fabra (spécialité <b>juridique et économique</b>) en 2006. En 2008, j’ai également obtenu un <b>
-Master de Traduction médico-sanitaire </b>à l’Université Jaume I.</p>
-<p>Forte d’une solide expérience dans les <b>domaines juridique, économique, commercial et médical</b>, e propose un service de traduction fiable, dans les délais, de grande qualité et de précision.</p>"
+  es: "<p>¡Hola! Soy Elisa, <b>traductora jurada</b> profesional. Tengo más de 12 años de experiencia en la traducción del <b>inglés</b> y el <b>francés</b> a mis dos idiomas maternos, el <b>castellano</b> y el <b>catalán</b>.</p>
+<p>He nacido y crecido en Barcelona, donde obtuve mi </b>Grado en Traducción e Interpretación</b> por la UPF (especialidad <b>jurídico-económica</b>) en 2006. 
+En 2008 también obtuve mi <b>Máster en Traducción Médico-Sanitaria</b> por la UJI.</p>
+<p>Gracias a mi amplia experiencia en <b>textos legales, económicos, de marketing y médicos</b>, ofrezco un servicio garantizado, puntual, de alta calidad y con la mayor precisión.</p>"
 
   ca: "<p>Bonjour à tous ! Je m’appelle Elisa, <b>traductrice professionnelle assermentée</b>. Je dispose d’une expérience de plus de 12 ans dans la traduction de l’<b>anglais</b> et
 du <b>français</b> vers mes deux langues maternelles, l'<b>espagnol</b> et le <b>catalan</b>.</p>
@@ -44,7 +45,7 @@ services_title:
 
   es: "Mis servicios"
 
-  ca: "My services"
+  ca: "Els meus serveis"
 
 services: 
 
@@ -53,7 +54,7 @@ or send your documents to <b>elisa.vilches@gmail.com.</br>"
 
   fr: "Pour de plus amples informations ou obtenir un devis gratuit, vous pouvez me contacter ou envoyer vos documents à <b>elisa.vilches@gmail.com.</br>"
 
-  es: "Pour de plus amples informations ou obtenir un devis gratuit, vous pouvez me contacter ou envoyer vos documents à <b>elisa.vilches@gmail.com.</br>"
+  es: "Para obtener más información o solicitar un presupuesto gratis, póngase en contacto conmigo o envíe tus documentos a  <b>elisa.vilches@gmail.com.</br>"
 
   ca: "Pour de plus amples informations ou obtenir un devis gratuit, vous pouvez me contacter ou envoyer vos documents à <b>elisa.vilches@gmail.com.</br>"
 
@@ -65,7 +66,7 @@ or send your documents to <b>elisa.vilches@gmail.com.</br>."
 
   fr: "Pour de plus amples informations ou obtenir un devis gratuit, vous pouvez me contacter ou envoyer vos documents à <b>elisa.vilches@gmail.com.</br>."
 
-  es: "Pour de plus amples informations ou obtenir un devis gratuit, vous pouvez me contacter ou envoyer vos documents à <b>elisa.vilches@gmail.com.</br>."
+  es: "Para obtener más información o solicitar un presupuesto gratis, póngase en contacto conmigo o envíe tus documentos a <b>elisa.vilches@gmail.com.</br>."
 
   ca: "Pour de plus amples informations ou obtenir un devis gratuit, vous pouvez me contacter ou envoyer vos documents à <b>elisa.vilches@gmail.com.</br>."
 
@@ -82,8 +83,8 @@ certified_translation:
     desc: "Besoin d’une traduction assermentée (anglais-espagnol) pour étudier à l’étranger ou pour un organisme officiel ? Vous choisissez un de mes bureaux à Paris ou à Barcelone. Vous pourrez ensuite y récupérer vos traductions ou demander un envoi postal."
 
   es:
-    title: Traductions assermentées
-    desc: "Besoin d’une traduction assermentée (anglais-espagnol) pour étudier à l’étranger ou pour un organisme officiel ? Vous choisissez un de mes bureaux à Paris ou à Barcelone. Vous pourrez ensuite y récupérer vos traductions ou demander un envoi postal."
+    title: Traducciones juradas
+    desc: "¿Necesita una traducción jurada (inglés-español) para poder estudiar en el extranjero o para entregarla a una institución oficial? Elija una de mis oficinas en París o Barcelona. Podrá venir a recoger sus traducciones o bien solicitar que se le envíen por correo postal."
 
   ca:
     title: Traductions assermentées
@@ -101,8 +102,8 @@ translation:
     desc: "Demandez votre devis pour toute traduction en anglais, français, espagnol ou catalan, avec la garantie d’un traitement strictement confidentiel."
 
   es:
-    title: Translation services
-    desc: "Request a quotation for any translation services you might need in English, French, Spanish or Catalan. Confidential treatment is fully assured."
+    title: Servicios de traducción
+    desc: "Solicite presupuesto para cualquier servicio de traducción que necesite en inglés, francés, castellano o catalán. Le garantizamos un tratamiento estrictamente confidencial."
 
   ca:
     title: Services de traduction
@@ -121,9 +122,8 @@ proofreading:
     desc: "Besoin d’aide pour une bonne visibilité de vos documents ? Assurez-vous d’adapter à la perfection votre message à votre public grâce à un bon service de révision et de correction."
 
   es:
-    title: Proofreading services
-    desc: "Do you need a hand with your highly visible documents? Make sure your message is perfectly
-  conveyed with a good proofreading service."
+    title: Servicios de revisión
+    desc: "¿Necesita ayuda con unos documentos altamente visibles? Asegúrese de que su mensaje se ha adaptado a la perfección a su audiencia con un buen servicio de revisión."
 
   ca:
     title: Services de révision-correction
@@ -142,12 +142,12 @@ editing:
     desc: "Un texte bien écrit revêt un attrait à ne pas sous-estimer. Un bon service d’édition au niveau de la langue et du style peut faire la différence."
   
   ca:
-    title: Editing services
+    title: Serveis d'edició
     desc: "The attractiveness of a well written text cannot be understated. Editing services for language and style can make a difference for
   your texts."
 
   es:
-    title: Services d'édition
-    desc: "Un texte bien écrit revêt un attrait à ne pas sous-estimer. Un bon service d’édition au niveau de la langue et du style peut faire la différence."
+    title: Servicios de edición
+    desc: "Un texto bien escrito posee un atractivo que no podemos subestimar. Un buen servicio de edición lingüística y estilo de sus textos puede marcar la diferencia."
   
 
