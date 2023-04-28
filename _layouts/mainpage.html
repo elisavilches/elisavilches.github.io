@@ -85,16 +85,28 @@ layout: default
     </div>
   </section>
 
+
 <!--FAQ section-->
-<section id="faq">
+<section>
   <div class="container">
     <div class="row">
       <div class="section-title">
         <h2>FAQs</h2>
       </div>
     </div>
-    {% for item in site.data.faq %}
+    <!-- TOC -->
     <div class="row">
+      <div class="col-md-12">
+        <ol class="faq-toc">
+          {% for item in site.data.faq %}
+            <li><a href="#{{ item.id }}">{{ item.question[page.lang] }}</a></li>
+          {% endfor %}
+        </ol>
+      </div>
+    </div>
+
+    {% for item in site.data.faq %}
+    <div class="row" id="{{ item.id }}">
       <div class="col-md-12">
         <div class="faq-question"><h2>{{ item.question[page.lang] }}</h2></div>
         <div class="faq-answer"><p>{{ item.answer[page.lang] | markdownify }}</p></div>
