@@ -50,6 +50,7 @@ a:active {
   text-decoration: none !important;
 }
 .section-title {
+  text-align: center;
   margin-bottom: 70px;
 }
 .section-title h2 {
@@ -171,15 +172,19 @@ font header .navbar-default .navbar-nav li a:hover {
   text-align: center;
   padding: 10px 0;
 }
-#service .service-item {
-  padding-bottom: 30px;
-}
+
 #service .service-item i {
   font-size: 60px;
   color: #4A4656;
 }
-#service .service-item h3 {
+#service .service-item h2 {
+  font-size: 18px;
   padding-top: 20px;
+  margin: 0;
+  color: #666;
+}
+#service .service-item h3 {
+  padding-top: 16px;
   margin: 0;
   color: #666;
 }
@@ -190,6 +195,27 @@ font header .navbar-default .navbar-nav li a:hover {
   font-size: 14px;
   line-height: 1.8;
 }
+
+    
+#faq {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.faq-question h2{
+  font-size: 18px;
+  text-align: left;
+  padding-bottom: 0px;
+}
+
+.faq-answer p{
+  font-size: 18px;
+  font-weight: normal;
+  color: #7B7B7B;
+  text-align: left;
+  padding-bottom: 0px;
+}
+
 /*--
 	call-to-action Start
 --*/
