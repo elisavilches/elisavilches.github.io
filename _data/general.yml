@@ -68,20 +68,19 @@ certified_translation:
 
   en:
     title: Certified translations
-    desc: "Do you need a certified translation (English/Spanish) for your studies abroad or for an official agency? 
-    Choose one of my offices in Paris or Barcelona and either pick it up or have it sent to your address."
+    desc: "Do you need a certified translation (English/Spanish) for your studies abroad, visa application or move your business offshore? Choose one of my offices in Paris or Barcelona, and either pick it up or have it sent to your address. Do you need to act urgently? Ask for a digital certified translation with verified e-signature."
 
   fr:
     title: Traductions assermentées
-    desc: "Besoin d’une traduction assermentée (anglais-espagnol) pour étudier à l’étranger ou pour un organisme officiel ? Vous choisissez un de mes bureaux à Paris ou à Barcelone. Vous pourrez ensuite y récupérer vos traductions ou demander un envoi postal."
+    desc: "Besoin d’une traduction assermentée (anglais-espagnol) pour étudier à l’étranger, demander un visa ou transférer le siège de votre entreprise à l'étranger ? Choisissez un de mes bureaux à Paris ou à Barcelone. Vous pourrez ensuite y récupérer vos traductions ou demander un envoi postal. En cas d'urgence, demandez une traduction assermentée à signature numérique."
 
   es:
     title: Traducciones juradas
-    desc: "¿Necesita una traducción jurada (inglés-español) para poder estudiar en el extranjero o para entregarla a una institución oficial? Elija una de mis oficinas en París o Barcelona. Podrá venir a recoger sus traducciones o bien solicitar que se le envíen por correo postal."
+    desc: "¿Necesita una traducción jurada (inglés-español) para poder estudiar en el extranjero, solicitar un visado o trasladar su empresa al extranjero? Elija una de mis oficinas en París o Barcelona. Podrá venir a recoger sus traducciones o bien solicitar que se le envíen por correo postal. ¿Su solicitud es muy urgente? Solicite una traducción jurada digitalizada con firma electrónica."
 
   ca:
     title: Traduccions jurades
-    desc: "Necessiteu una traducció jurada (anglès-castellà) per estudiar a l'estranger o per entregar una documentació a una institució oficial? Podeu triar una de les meves oficines a París o Barcelona per venir a recollir les vostres traduccions o demaneu que us l'enviem a casa vostra per correu postal."
+    desc: "Necessiteu una traducció jurada (anglès-castellà) per estudiar a l'estranger, sol·licitar un visat traslladar la seva empresa a l'estranger? Podeu triar una de les meves oficines a París o Barcelona per venir a recollir les vostres traduccions o demaneu que us l'enviem a casa vostra per correu postal. Teniu una urgència? Demaneu una traducció jurada digitalitzada amb signatura electrònica."
 
 
 translation:
