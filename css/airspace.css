@@ -39,10 +39,11 @@ p {
   padding-bottom: 0px;
 }
 ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+  margin-left: 0; /* Ajusta el margen izquierdo de la lista aquí */
+  padding-left: 1em; /* Ajusta el padding izquierdo de la lista aquí */
 }
+
+
 a,
 a:active,
 a:focus,
@@ -196,11 +197,16 @@ font header .navbar-default .navbar-nav li a:hover {
   line-height: 1.8;
 }
 
-    
 #faq {
   text-align: center;
   padding: 10px 0;
 }
+
+.faq-toc{
+  font-size: 16px;
+  font-weight: normal;
+  padding-bottom: 20px;
+} 
 
 .faq-question h2{
   font-size: 18px;
@@ -215,6 +221,15 @@ font header .navbar-default .navbar-nav li a:hover {
   text-align: left;
   padding-bottom: 0px;
 }
+
+.faq-answer ul{
+  font-size: 18px;
+  font-weight: normal;
+  color: #7B7B7B;
+  text-align: left;
+  padding-bottom: 0px;
+}
+
 
 /*--
 	call-to-action Start
