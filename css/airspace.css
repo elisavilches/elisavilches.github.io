@@ -143,17 +143,17 @@ font header .navbar-default .navbar-nav li a:hover {
 #intro {
   padding-top: 100px;
 }
-#intro .block h2 {
+#intro h2 {
   padding-top: 35px;
   line-height: 27px;
   margin: 0;
 }
-#intro .block p {
+#intro p {
   color: #7B7B7B;
   padding-top: 10px;
 }
 
-#intro .block img {
+#intro img {
   width: 100%;
   border-radius: 60%;
   padding-top: 35px;
@@ -208,20 +208,18 @@ font header .navbar-default .navbar-nav li a:hover {
   padding-bottom: 20px;
 } 
 
-/*----
-.faq-toc a{
-  color: #ea0d0d;
+.faq-question {
+  cursor: pointer;
+  margin: 0;
 }
-
-.faq-toc a:hover{
-  color: #7B7B7B;
-}
------*/
 
 .faq-question h2{
   font-size: 18px;
+  font-weight: 500;
   text-align: left;
   padding-bottom: 0px;
+  cursor: pointer;
+  margin: 0;
 }
 
 .faq-answer p{
@@ -240,6 +238,27 @@ font header .navbar-default .navbar-nav li a:hover {
   padding-bottom: 0px;
 }
 
+.faq-box {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.faq-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: #666;
+}
+
+.toggle-symbol {
+  margin: 0;
+  padding: 0;
+}
 
 /*--
 	call-to-action Start

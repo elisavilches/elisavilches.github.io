@@ -2,7 +2,6 @@
 layout: default
 ---          
 
-
 <!-- Slider Start -->
 <section id="slider">
     <div class="container">
@@ -18,30 +17,21 @@ layout: default
     </div>	
   </section>
   
-  <!-- Wrapper Start -->
+  <!-- Presentation -->
   <section id="intro">
     <div class="container">
       <div class="row">
         <div class="col-md-7 col-sm-12">
-          <div class="block">
-            <div class="section-title">
-            </div>
-              <p>{{ site.data.general.aboutme[page.lang] }} </p>
-          </div>
-        </div><!-- .col-md-7 close -->
+            <p>{{ site.data.general.aboutme[page.lang] }} </p>
+        </div>
         <div class="col-md-5 col-sm-12">
-          <div class="block">
             <img src="/img/elisa.png" alt="{{ site.data.general.name }} - {{ site.data.general.title[page.lang] }}">
-          </div>
-        </div><!-- .col-md-5 close -->
+        </div>
       </div>
     </div>
   </section>
   
 
-
-<!-- Service Start -->
-<!-- TODO: service.icon alone to the left. Then, to the right, title and description-->
 
 <!-- Service Start -->
 <section id="service">
@@ -70,7 +60,6 @@ layout: default
 </section>
 <!-- Service End -->
 
-
 <!--FAQ section-->
 <section>
   <div class="container">
@@ -79,24 +68,41 @@ layout: default
         <h2>FAQs</h2>
       </div>
     </div>
-    <!-- TOC -->
+    {% for item in site.data.faq %}
     <div class="row">
       <div class="col-md-12">
-        <ol class="faq-toc">
-          {% for item in site.data.faq %}
-            <li><a href="#{{ item.id }}">{{ item.question[page.lang] }}</a></li>
-          {% endfor %}
-        </ol>
-      </div>
-    </div>
-
-    {% for item in site.data.faq %}
-    <div class="row" id="{{ item.id }}">
-      <div class="col-md-12">
-        <div class="faq-question"><h2>{{ item.question[page.lang] }}</h2></div>
-        <div class="faq-answer"><p>{{ item.answer[page.lang] | markdownify }}</p></div>
+        <div class="faq-question faq-box" id="{{ item.id }}">
+          <div class="d-flex justify-content-between align-items-center">
+            <h2>{{ item.question[page.lang] }}</h2>
+            <span class="faq-icon">+</span>
+          </div>
+        </div>
+        <div class="faq-answer faq-box" style="display: none;">
+          <p>{{ item.answer[page.lang] | markdownify }}</p>
+        </div>
       </div>
     </div>
     {% endfor %}
   </div>
 </section>
+
+
+<script>
+  $(document).ready(function() {
+    $(".faq-question").click(function() {
+      $(this).next(".faq-answer").slideToggle("slow");
+
+      const id = $(this).attr("id");
+      toggleAnswer(id);
+    });
+  });
+
+  function toggleAnswer(id) {
+    let symbol = $("#" + id + " .faq-icon");
+    if (symbol.text() === '+') {
+      symbol.text('-');
+    } else {
+      symbol.text('+');
+    }
+  }
+</script>
