@@ -1,144 +1,99 @@
 name: Elisa Vílchez
 
-
 title: 
   en: Certified translator & proofreader
   fr: Traductrice assermentée et correctrice
   es: Traductora jurada y correctora
   ca: Traductora jurada i correctora
 
-
 languages: EN | FR | ES | CA
 
 aboutme: 
-
-  en: "<p>Professional <b>certified translator</b> (English & Spanish) appointed by the Spanish Ministry of Foreign Affairs, European Union and Cooperation (MAEC). I have run my own translation practice for over 14 years, translating from <b>English</b> and <b>French</b> into my native languages, <b>Spanish</b> and <b>Catalan</b>.
-  </p><p>Born and raised in Barcelona, I earned my <b>Bachelor's degree in Translation &amp; Interpreting</b> from the Universitat Pompeu Fabra (major in <b>legal and economic</b> studies) in 2006. 
-  I also hold a <b>Master's degree in Medical &amp; Health Translations </b>(2008).</p> <p>With a solid experience in <b>legal, economic, marketing and medical backgrounds</b>, I make sure I only offer high-quality, timely and accurate translation services.</p>"
-
-  fr: "<p><b>Traductrice et interprète assermentée</b> (anglais, espagnol) auprès du Ministère espagnol des Affaires étrangères, de l'Union européenne et de la Coopération (MAEC). Je dispose d’une expérience de plus de 14 ans dans la traduction de l’<b>anglais</b> et du <b>français</b> vers mes deux langues maternelles, l'<b>espagnol</b> et le <b>catalan</b>.</p>
-<p>Je suis née et j’ai grandi à Barcelone, où j’ai obtenu mon <b>Diplôme de Traduction et Interprétation</b> à l'Université Pompeu Fabra (spécialité <b>juridique et économique</b>) en 2006. En 2008, j’ai également obtenu un <b>
-Master de Traduction médico-sanitaire </b>à l’Université Jaume I.</p>
-<p>Forte d’une solide expérience dans les <b>domaines juridique, économique, commercial et médical</b>, je propose un service de traduction fiable, dans les délais, de grande qualité et de précision.</p>"
-
-  es: "<p><b>Traductora e intérprete jurada profesional</b> acreditada por el Ministerio de Asuntos Exteriores, UE y Cooperación (MAEC). Más de 14 años de experiencia en la traducción del <b>inglés</b> y el <b>francés</b> a mis dos idiomas maternos, el <b>castellano</b> y el <b>catalán</b>.</p>
-<p>He nacido y crecido en Barcelona, donde obtuve mi </b>Grado en Traducción e Interpretación</b> por la Universitat Pompeu Fabra (especialidad <b>jurídico-económica</b>) en 2006. 
-En 2008 también obtuve mi <b>Máster en Traducción Médico-Sanitaria</b> por la Universitat Jaume I.</p>
-<p>Gracias a mi amplia experiencia en <b>textos legales, económicos, de marketing y médicos</b>, ofrezco un servicio garantizado, puntual, de alta calidad y con la mayor precisión.</p>"
-
-  ca: "<p><b>Traductora i intèrpret jurada professional</b> acreditada pel Ministeri d'Afers Exteriors, UE i Cooperació (MAEC). Tinc més de 14 anys d'experiència en la traducció de l'<b>anglès</b> i el <b>francès</b> a les meves dues llengües maternes, el <b>castellà</b> i el <b>català</b>.</p>
-<p>He nascut i crescut a Barcelona, on vaig obtenir el <b>Grau en Traducció i Interpretació</b> (especialització en <b>traducció juridicoeconòmica</b>) per la Universitat Pompeu Fabra el 2006. El 2008 també vaig obtenir un <b>Màster en Traducció Medicosanitària</b> per la Universitat Jaume I.</p>
-<p>Gràcies a una àmplia experiència en </b>textos legals, econòmics, de màrqueting i mèdics</b>, ofereixo un servei garantit, puntual, d'alta qualitat i amb la màxima precisió.</p>"
+  en: "
+  <p>Professional <b>certified translator</b> (English & Spanish) appointed by the Spanish Ministry of Foreign Affairs, European Union and Cooperation (MAEC). I have run my own translation practice for over 14 years, translating from <b>English</b> and <b>French</b> into my native languages, <b>Spanish</b> and <b>Catalan</b>.</p>
+  <p>Born and raised in Barcelona, I earned my <b>Bachelor's degree in Translation &amp; Interpreting</b> from the Universitat Pompeu Fabra (major in <b>legal and economic</b> studies) in 2006. I also hold a <b>Master's degree in Medical &amp; Health Translations </b>(2008).</p> 
+  <p>With a solid experience in <b>legal, economic, marketing and medical backgrounds</b>, I make sure I only offer high-quality, timely and accurate translation services.</p>
+  "
+  fr: "
+  <p><b>Traductrice et interprète assermentée</b> (anglais, espagnol) auprès du Ministère espagnol des Affaires étrangères, de l'Union européenne et de la Coopération (MAEC). Je dispose d’une expérience de plus de 14 ans dans la traduction de l’<b>anglais</b> et du <b>français</b> vers mes deux langues maternelles, l'<b>espagnol</b> et le <b>catalan</b>.</p>
+  <p>Je suis née et j’ai grandi à Barcelone, où j’ai obtenu mon <b>Diplôme de Traduction et Interprétation</b> à l'Université Pompeu Fabra (spécialité <b>juridique et économique</b>) en 2006. En 2008, j’ai également obtenu un <b> Master de Traduction médico-sanitaire </b>à l’Université Jaume I.</p>
+  <p>Forte d’une solide expérience dans les <b>domaines juridique, économique, commercial et médical</b>, je propose un service de traduction fiable, dans les délais, de grande qualité et de précision.</p>
+  "
+  es: "
+  <p><b>Traductora e intérprete jurada profesional</b> acreditada por el Ministerio de Asuntos Exteriores, UE y Cooperación (MAEC). Más de 14 años de experiencia en la traducción del <b>inglés</b> y el <b>francés</b> a mis dos idiomas maternos, el <b>castellano</b> y el <b>catalán</b>.</p>
+  <p>He nacido y crecido en Barcelona, donde obtuve mi </b>Grado en Traducción e Interpretación</b> por la Universitat Pompeu Fabra (especialidad <b>jurídico-económica</b>) en 2006. En 2008 también obtuve mi <b>Máster en Traducción Médico-Sanitaria</b> por la Universitat Jaume I.</p>
+  <p>Gracias a mi amplia experiencia en <b>textos legales, económicos, de marketing y médicos</b>, ofrezco un servicio garantizado, puntual, de alta calidad y con la mayor precisión.</p>
+  "
+  ca: "
+  <p><b>Traductora i intèrpret jurada professional</b> acreditada pel Ministeri d'Afers Exteriors, UE i Cooperació (MAEC). Tinc més de 14 anys d'experiència en la traducció de l'<b>anglès</b> i el <b>francès</b> a les meves dues llengües maternes, el <b>castellà</b> i el <b>català</b>.</p>
+  <p>He nascut i crescut a Barcelona, on vaig obtenir el <b>Grau en Traducció i Interpretació</b> (especialització en <b>traducció juridicoeconòmica</b>) per la Universitat Pompeu Fabra el 2006. El 2008 també vaig obtenir un <b>Màster en Traducció Medicosanitària</b> per la Universitat Jaume I.</p>
+  <p>Gràcies a una àmplia experiència en </b>textos legals, econòmics, de màrqueting i mèdics</b>, ofereixo un servei garantit, puntual, d'alta qualitat i amb la màxima precisió.</p>
+  "
 
 services_title:
 
   en: "My services"
-
   fr: "My services"
-
   es: "Mis servicios"
-
   ca: "Els meus serveis"
 
 services: 
 
-  en: "For more information or for a free price quotation, feel free to contact me 
-or send your documents to <b>elisa.vilches@gmail.com.</br>"
-
-  fr: "Pour de plus amples informations ou obtenir un devis gratuit, vous pouvez me contacter ou envoyer vos documents à <b>elisa.vilches@gmail.com.</br>"
-
-  es: "Para obtener más información o solicitar un presupuesto gratis, póngase en contacto conmigo o envíe tus documentos a  <b>elisa.vilches@gmail.com.</br>"
-
-  ca: "Per obtenir més informació o per sol·licitar un pressupost gratuït, poseu-vos en contacte amb mi o envieu els vostres documents a <b>elisa.vilches@gmail.com.</br>"
-
+  en: "For more information or for a free price quotation, feel free to contact me or send your documents to <b>elisa.vilches@gmail.com.</b>"
+  fr: "Pour de plus amples informations ou obtenir un devis gratuit, vous pouvez me contacter ou envoyer vos documents à <b>elisa.vilches@gmail.com.</b>"
+  es: "Para obtener más información o solicitar un presupuesto gratis, póngase en contacto conmigo o envíe tus documentos a  <b>elisa.vilches@gmail.com.</b>"
+  ca: "Per obtenir més informació o per sol·licitar un pressupost gratuït, poseu-vos en contacte amb mi o envieu els vostres documents a <b>elisa.vilches@gmail.com.<b>"
 
 contact: 
 
-  en: "For a free price quotation, feel free to contact me 
-or send your documents to <b>elisa.vilches@gmail.com.</br>."
+  en: "For a free price quotation, feel free to contact me or send your documents to <b>elisa.vilches@gmail.com.</b>."
+  fr: "Pour de plus amples informations ou obtenir un devis gratuit, vous pouvez me contacter ou envoyer vos documents à <b>elisa.vilches@gmail.com.</b>."
+  es: "Para obtener más información o solicitar un presupuesto gratis, póngase en contacto conmigo o envíe tus documentos a <b>elisa.vilches@gmail.com.</b>."
+  ca: "Per obtenir més informació o per sol·licitar un pressupost gratuït, poseu-vos en contacte amb mi o envieu els vostres documents a <b>elisa.vilches@gmail.com.</b>."
 
-  fr: "Pour de plus amples informations ou obtenir un devis gratuit, vous pouvez me contacter ou envoyer vos documents à <b>elisa.vilches@gmail.com.</br>."
-
-  es: "Para obtener más información o solicitar un presupuesto gratis, póngase en contacto conmigo o envíe tus documentos a <b>elisa.vilches@gmail.com.</br>."
-
-  ca: "Per obtenir més informació o per sol·licitar un pressupost gratuït, poseu-vos en contacte amb mi o envieu els vostres documents a <b>elisa.vilches@gmail.com.</br>."
-
-
-certified_translation:
-
-  en:
-    title: Certified translations
-    desc: "Do you need a certified translation (English/Spanish) for your studies abroad, visa application or move your business offshore? Choose one of my offices in Paris or Barcelona, and either pick it up or have it sent to your address. Do you need to act urgently? Ask for a digital certified translation with verified e-signature."
-
-  fr:
-    title: Traductions assermentées
-    desc: "Besoin d’une traduction assermentée (anglais-espagnol) pour étudier à l’étranger, demander un visa ou transférer le siège de votre entreprise à l'étranger ? Choisissez un de mes bureaux à Paris ou à Barcelone. Vous pourrez ensuite y récupérer vos traductions ou demander un envoi postal. En cas d'urgence, demandez une traduction assermentée à signature numérique."
-
-  es:
-    title: Traducciones juradas
-    desc: "¿Necesita una traducción jurada (inglés-español) para poder estudiar en el extranjero, solicitar un visado o trasladar su empresa al extranjero? Elija una de mis oficinas en París o Barcelona. Podrá venir a recoger sus traducciones o bien solicitar que se le envíen por correo postal. ¿Su solicitud es muy urgente? Solicite una traducción jurada digitalizada con firma electrónica."
-
-  ca:
-    title: Traduccions jurades
-    desc: "Necessiteu una traducció jurada (anglès-castellà) per estudiar a l'estranger, sol·licitar un visat traslladar la seva empresa a l'estranger? Podeu triar una de les meves oficines a París o Barcelona per venir a recollir les vostres traduccions o demaneu que us l'enviem a casa vostra per correu postal. Teniu una urgència? Demaneu una traducció jurada digitalitzada amb signatura electrònica."
-
-
-translation:
-
-  en:
-    title: Translation services
-    desc: "Request a quotation for any translation services you might need in English, French, Spanish or Catalan. Confidential treatment is fully assured."
-
-  fr:
-    title: Services de traduction
-    desc: "Demandez votre devis pour toute traduction en anglais, français, espagnol ou catalan, avec la garantie d’un traitement strictement confidentiel."
-
-  es:
-    title: Servicios de traducción
-    desc: "Solicite presupuesto para cualquier servicio de traducción que necesite en inglés, francés, castellano o catalán. Le garantizamos un tratamiento estrictamente confidencial."
-
-  ca:
-    title: Serveis de traducció
-    desc: "Sol·liciteu un pressupost per a qualsevol servei de traducció que necessiteu en anglès, francès, català o castellà. Us garantim un tractament estrictament confidencial."
-
-
-proofreading:
-
-  en:
-    title: Proofreading services
-    desc: "Do you need a hand with your highly visible documents? Make sure your message is perfectly
-  conveyed with a good proofreading service."
-
-  fr:
-    title: Services de révision-correction
-    desc: "Besoin d’aide pour une bonne visibilité de vos documents ? Assurez-vous d’adapter à la perfection votre message à votre public grâce à un bon service de révision et de correction."
-
-  es:
-    title: Servicios de revisión
-    desc: "¿Necesita ayuda con unos documentos altamente visibles? Asegúrese de que su mensaje se ha adaptado a la perfección a su audiencia con un buen servicio de revisión."
-
-  ca:
-    title: Serveis de revisió
-    desc: "Necessiteu ajuda amb uns documents altament visibles? Assegureu-vos que missatge que voleu donar s'hagi adaptat a la perfecció a la vostra audiència amb un bon servei de revisió."
-
-
-editing: 
-
-  en:
-    title: Editing services
-    desc: "The attractiveness of a well written text cannot be understated. Editing services for language and style can make a difference for
-  your texts."
-
-  fr:
-    title: Services d'édition
-    desc: "Un texte bien écrit revêt un attrait à ne pas sous-estimer. Un bon service d’édition au niveau de la langue et du style peut faire la différence."
+services_list:
+  - title:
+      en: "Certified translations"
+      es: "Traducciones juradas"
+      ca: "Traduccions jurades"
+      fr: "Traductions assermentées"
+    desc:
+      en: "Do you need a certified translation (English/Spanish) for your studies abroad, visa application or move your business offshore? Choose one of my offices in Paris or Barcelona, and either pick it up or have it sent to your address. Do you need to act urgently? Ask for a digital certified translation with verified e-signature."
+      es: "¿Necesita una traducción jurada (inglés-español) para poder estudiar en el extranjero, solicitar un visado o trasladar su empresa al extranjero? Elija una de mis oficinas en París o Barcelona. Podrá venir a recoger sus traducciones o bien solicitar que se le envíen por correo postal. ¿Su solicitud es muy urgente? Solicite una traducción jurada digitalizada con firma electrónica."
+      ca: "Necessiteu una traducció jurada (anglès-castellà) per estudiar a l'estranger, sol·licitar un visat traslladar la seva empresa a l'estranger? Podeu triar una de les meves oficines a París o Barcelona per venir a recollir les vostres traduccions o demaneu que us l'enviem a casa vostra per correu postal. Teniu una urgència? Demaneu una traducció jurada digitalitzada amb signatura electrònica."
+      fr: "Besoin d’une traduction assermentée (anglais-espagnol) pour étudier à l’étranger, demander un visa ou transférer le siège de votre entreprise à l'étranger ? Choisissez un de mes bureaux à Paris ou à Barcelone. Vous pourrez ensuite y récupérer vos traductions ou demander un envoi postal. En cas d'urgence, demandez une traduction assermentée à signature numérique."
+    icon: "fa fa-certificate"
+  - title:
+      en: "Translation services"
+      es: "Servicios de traducción"
+      ca: "Serveis de traducció"
+      fr: "Services de traduction"
+    desc:
+      en: "Request a quotation for any translation services you might need in English, French, Spanish or Catalan. Confidential treatment is fully assured."
+      es: "Solicite presupuesto para cualquier servicio de traducción que necesite en inglés, francés, castellano o catalán. Le garantizamos un tratamiento estrictamente confidencial."
+      ca: "Sol·liciteu un pressupost per a qualsevol servei de traducció que necessiteu en anglès, francès, català o castellà. Us garantim un tractament estrictament confidencial."
+      fr: "Demandez votre devis pour toute traduction en anglais, français, espagnol ou catalan, avec la garantie d’un traitement strictement confidentiel."
+    icon: "fa fa-language"
+  - title:
+      en: "Proofreading services"
+      es: "Servicios de revisión"
+      ca: "Serveis de revisió"
+      fr: "Services de révision-correction"
+    desc:
+      en: "Do you need a hand with your highly visible documents? Make sure your message is perfectly conveyed with a good proofreading service."
+      es: "¿Necesita ayuda con unos documentos altamente visibles? Asegúrese de que su mensaje se ha adaptado a la perfección a su audiencia con un buen servicio de revisión."
+      ca: "Necessiteu ajuda amb uns documents altament visibles? Assegureu-vos que missatge que voleu donar s'hagi adaptat a la perfecció a la vostra audiència amb un bon servei de revisió."
+      fr: "Besoin d’aide pour une bonne visibilité de vos documents ? Assurez-vous d’adapter à la perfection votre message à votre public grâce à un bon service de révision et de correction."
+    icon: "fa fa-eye"
+  - title:
+      en: "Editing services"
+      es: "Servicios de edición"
+      ca: "Serveis d'edició"
+      fr: "Services d'édition"
+    desc:
+      en: "The attractiveness of a well written text cannot be understated. Editing services for language and style can make a difference for your texts."
+      es: "Un texto bien escrito posee un atractivo que no podemos subestimar. Un buen servicio de edición lingüística y estilo de sus textos puede marcar la diferencia."
+      ca: "Un text ben escrit té un atractiu que no podem subestimar. Un bon servei d'edició lingüística i d'estil dels vostres textos pot marcar la diferència."
+      fr: "Un texte bien écrit revêt un attrait à ne pas sous-estimer. Un bon service d’édition au niveau de la langue et du style peut faire la différence."
+    icon: "fa fa-pencil-square-o"
   
-  ca:
-    title: Serveis d'edició
-    desc: "Un text ben escrit té un atractiu que no podem subestimar. Un bon servei d'edició lingüística i d'estil dels vostres textos pot marcar la diferència."
-
-  es:
-    title: Servicios de edición
-    desc: "Un texto bien escrito posee un atractivo que no podemos subestimar. Un buen servicio de edición lingüística y estilo de sus textos puede marcar la diferencia."
-  
-
