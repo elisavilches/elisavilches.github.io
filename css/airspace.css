@@ -45,14 +45,14 @@ ul {
 
 
 a,
-a:active,
 a:focus,
 a:active {
   text-decoration: none !important;
 }
+
 .section-title {
   text-align: center;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
 }
 .section-title h2 {
   font-size: 28px;
@@ -174,27 +174,27 @@ font header .navbar-default .navbar-nav li a:hover {
   padding: 10px 0;
 }
 
-#service .service-item i {
-  font-size: 60px;
-  color: #4A4656;
+#service .service-row {
+  padding-top: 0px;
+  padding-bottom: 20px;
 }
+
+#service .service-item {
+  text-align: left;
+}
+
 #service .service-item h2 {
   font-size: 18px;
-  padding-top: 20px;
+  font-weight: 600;
+  padding-top: 0px;
   margin: 0;
+  margin-top: 0px;
   color: #666;
 }
-#service .service-item h3 {
-  padding-top: 16px;
-  margin: 0;
-  color: #666;
-}
+
 #service .service-item p {
   color: #888;
   padding-top: 10px;
-  margin: 0;
-  font-size: 14px;
-  line-height: 1.8;
 }
 
 #faq {
@@ -207,6 +207,16 @@ font header .navbar-default .navbar-nav li a:hover {
   font-weight: normal;
   padding-bottom: 20px;
 } 
+
+/*----
+.faq-toc a{
+  color: #ea0d0d;
+}
+
+.faq-toc a:hover{
+  color: #7B7B7B;
+}
+-----*/
 
 .faq-question h2{
   font-size: 18px;

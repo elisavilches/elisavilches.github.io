@@ -38,52 +38,37 @@ layout: default
     </div>
   </section>
   
-  <!-- Service Start -->
-  <section id="service">
-    <div class="container">
-      <div class="row">
-        <div class="section-title">
-          <h2>{{ site.data.general.services_title[page.lang] }}</h2>
-          <p>{{ site.data.general.services[page.lang] }}</p>
-        </div>
-      </div>
 
-      <div class="row ">
-        <!-- Certified translation -->
-        <div class="col-sm-6 col-md-3">
-          <div class="service-item">
-            <i class="fa fa-certificate"></i>
-            <h2> {{ site.data.general.certified_translation[page.lang].title }}</h2>
-            <p> {{ site.data.general.certified_translation[page.lang].desc }} </p>
-          </div>
-        </div>
-        <!-- Translation services -->
-        <div class="col-sm-6 col-md-3">
-          <div class="service-item">
-            <i class="fa fa-language"></i>
-             <h2> {{ site.data.general.translation[page.lang].title }} </h2>
-            <p> {{ site.data.general.translation[page.lang].desc }} </p>
-          </div>
-        </div>
-        <!-- Proofreading services -->
-        <div class="col-sm-6 col-md-3">
-          <div class="service-item">
-            <i class="fa fa-check-square-o"></i>
-            <h2> {{ site.data.general.proofreading[page.lang].title }} </h2>
-            <p> {{ site.data.general.proofreading[page.lang].desc }} </p>
-          </div>
-        </div>
-        <!-- Editing services -->
-        <div class="col-sm-6 col-md-3">
-          <div class="service-item">
-            <i class="fa fa-pencil-square-o"></i>
-            <h2> {{ site.data.general.editing[page.lang].title }} </h2>
-            <p> {{ site.data.general.editing[page.lang].desc }} </p>
-          </div>
+
+<!-- Service Start -->
+<!-- TODO: service.icon alone to the left. Then, to the right, title and description-->
+
+<!-- Service Start -->
+<section id="service">
+  <div class="container">
+    <div class="row">
+      <div class="section-title">
+        <h2>{{ site.data.general.services_title[page.lang] }}</h2>
+        <p>{{ site.data.general.services[page.lang] }}</p>
+      </div>
+    </div>
+
+    {% for service in site.data.general.services_list %}
+    <div class="row mb-4 service-row">
+      <div class="col-md-2 d-flex justify-content-center">
+        <i class="{{ service.icon }}" style="font-size: 4rem;"></i>
+      </div>
+      <div class="col-md-10">
+        <div class="service-item">
+          <h2>{{ service.title[page.lang] }}</h2>
+          <p>{{ service.desc[page.lang] }}</p>
         </div>
       </div>
     </div>
-  </section>
+    {% endfor %}
+  </div>
+</section>
+<!-- Service End -->
 
 
 <!--FAQ section-->
