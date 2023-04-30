@@ -63,6 +63,7 @@ a:active {
   font-style: italic;
   color: #666;
 }
+
 /*--
 	Header Start
 --*/
@@ -92,14 +93,12 @@ header .navbar-default .navbar-nav li a {
 font header .navbar-default .navbar-nav li a:hover {
   color: #000;
 }
-/*---------------------------------------------
-					Index Start
------------------------------------------------*/
+
+
 /*--
-	Slider Start
+	Slider Start (Name and Job Title)
 --*/
 #slider {
-  /*background: url("../img/slider-bg.jpg") no-repeat;*/
   background-size: cover;
   background-attachment: fixed;
   background-position: 10% 0%;
@@ -123,8 +122,8 @@ font header .navbar-default .navbar-nav li a:hover {
 }
 #slider .block h1 {
   font-family: 'Times New Roman', Times, serif;
-  font-weight: 100;
   font-size: 45px;
+  font-weight: 100;
   line-height: 60px;
   letter-spacing: 10px;
   font-variant: small-caps;
@@ -138,7 +137,7 @@ font header .navbar-default .navbar-nav li a:hover {
   letter-spacing: 3px;
 }
 /*--
-	wrapper Start
+	Intro Start
 --*/
 #intro {
   padding-top: 100px;
@@ -149,10 +148,10 @@ font header .navbar-default .navbar-nav li a:hover {
   margin: 0;
 }
 #intro p {
+  font-size: 18px;
   color: #7B7B7B;
   padding-top: 10px;
 }
-
 #intro img {
   width: 100%;
   border-radius: 60%;
@@ -165,6 +164,7 @@ font header .navbar-default .navbar-nav li a:hover {
 #intro .section-title p {
   padding-top: 20px;
 }
+
 /*--
 	service Start
 --*/
