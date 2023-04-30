@@ -4,18 +4,20 @@ layout: default
 
 <!-- Slider Start -->
 <section id="slider">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="block">
-            <h1 class="animated fadeInUp title"> {{ site.data.general.title[page.lang] }} </h1>
-            <p><hr></p>
-            <p class="animated fadeInUp"> {{ site.data.general.name }} </p>
-          </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <h1 class="animated fadeInUp title">{{ site.data.general.title[page.lang] }}</h1>
+          <p><hr></p>
+          <p class="animated fadeInUp subtitle">{{ site.data.general.name }}</p>
+          <p class="animated fadeInUp contact-info">{{ site.data.general.phone }} &#183; {{ site.data.general.email }}</p>
         </div>
       </div>
-    </div>	
-  </section>
+    </div>
+  </div>	
+</section>
+
   
   <!-- Intro -->
   <section id="intro">
@@ -88,8 +90,9 @@ layout: default
     {% endfor %}
   </div>
 </section>
+<!-- FAQ End -->
 
-
+<!--jQueries used in this page-->
 <script>
   $(document).ready(function() {
     $(".faq-question").click(function() {
@@ -109,3 +112,4 @@ layout: default
     }
   }
 </script>
+<!-- End jQueries -->
