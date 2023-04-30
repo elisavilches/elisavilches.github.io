@@ -5,9 +5,6 @@ testimonials_title:
   fr: Avis
 
 testimonials_comments:
-  - name: Emma
-    position:
-    comment: "Elisa was quick, helpful, thorough, and professional. I really appreciated her work and help during a long process. Thank you, Elisa!"
   - name: Anthony
     position: Student.
     comment: " 
@@ -56,3 +53,6 @@ testimonials_comments:
     experience with her. Everything was done smoothly and in a very timely manner. If
     you’re looking for a translator, look no further!
     "
+- name: Emma
+    position:
+    comment: "Elisa was quick, helpful, thorough, and professional. I really appreciated her work and help during a long process. Thank you, Elisa!"
