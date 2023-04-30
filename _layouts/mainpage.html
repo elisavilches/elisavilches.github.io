@@ -38,19 +38,23 @@ layout: default
     <div class="row">
       <div class="section-title">
         <h2>{{ site.data.general.services_title[page.lang] }}</h2>
+      </div>
+      <div class="service-call-to-action">
         <p>{{ site.data.general.services[page.lang] }}</p>
       </div>
     </div>
 
     {% for service in site.data.general.services_list %}
-    <div class="row mb-4 service-row">
-      <div class="col-md-2 d-flex justify-content-center">
-        <i class="{{ service.icon }}" style="font-size: 4rem;"></i>
-      </div>
-      <div class="col-md-10">
-        <div class="service-item">
-          <h2>{{ service.title[page.lang] }}</h2>
-          <p>{{ service.desc[page.lang] }}</p>
+    <div class="service-row">
+    <div class="row mb-4"> 
+        <div class="col-md-2 d-flex justify-content-center">
+          <i class="{{ service.icon }}" style="font-size: 4rem; padding-bottom: 10px;"></i>
+        </div>
+        <div class="col-md-10">
+          <div class="service-item">
+            <h2>{{ service.title[page.lang] }}</h2>
+            <p>{{ service.desc[page.lang] }}</p>
+          </div>
         </div>
       </div>
     </div>

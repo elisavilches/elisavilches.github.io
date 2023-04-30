@@ -59,6 +59,7 @@ a:active {
   font-weight: 600;
 }
 .section-title p {
+  font-size: 18px;
   font-family: serif;
   font-style: italic;
   color: #666;
@@ -174,6 +175,13 @@ font header .navbar-default .navbar-nav li a:hover {
   padding: 10px 0;
 }
 
+#service .service-call-to-action p {
+  font-size: 18px;
+  font-weight: normal;
+  font-style: italic;
+  padding-bottom: 20px;
+}
+
 #service .service-row {
   padding-top: 0px;
   padding-bottom: 20px;
@@ -193,6 +201,7 @@ font header .navbar-default .navbar-nav li a:hover {
 }
 
 #service .service-item p {
+  font-size: 18px;
   color: #888;
   padding-top: 10px;
 }
