@@ -92,6 +92,35 @@ layout: default
 </section>
 <!-- FAQ End -->
 
+<section id="testimonial">
+  <div class="container">
+    
+    <div class="row">
+      <div class="section-title">
+        <h2>{{site.data.testimonials.testimonials_title[page.lang] }}</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="testimonial-carousel">
+          <div id="testimonial-slider" class="owl-carousel">
+            {% for testimonial in site.data.testimonials.testimonials_comments %}
+            <div>
+              <img src="/img/cotation.png" alt="IMG">
+              <p>{{ testimonial.comment }}</p>
+              <div class="user">
+                <p><span>{{ testimonial.name }}</span>{{ testimonial.position }}</p>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!--jQueries used in this page-->
 <script>
   $(document).ready(function() {
