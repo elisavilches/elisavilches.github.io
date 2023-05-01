@@ -1,5 +1,5 @@
 - id: q1
-   question:
+  question:
     es: ¿Qué debe incluir una traducción jurada?
     ca: Què ha d'incloure una traducció jurada?
     en: What does a certified translation have to include?
@@ -47,7 +47,7 @@
     en: It will always depend on the type of job and the availability at the time. However, it is usual for jobs that contain 1,000 words or less to be delivered within 1-2 working days. In the case of urgent jobs, consideration will be given to the content, any work that has to be done outside of normal working hours and the urgency.
 
 - id: q5
-   question:
+  question:
     es: ¿En qué influye el precio de una traducción jurada en comparación con una traducción simple?
     ca: En què influeix el preu d'una traducció jurada en comparació amb una traducció simple?
     en: What influence does a certified translation have on price compared to a simple translation?
@@ -57,7 +57,7 @@
     en: Certified translators have civil liability (extracontractual and, sometimes, contractual) regarding our work, which is exclusively limited to the correct translation of a source text. We are obliged to convey, with the words that we choose, all the information that is included in the original document with legal certainty. In addition, we are obliged to guarantee the absence of any errors, imprecisions, omissions, or inaccuracies in the final content (with the exception of any that appear in the original).
 
 - id: q6
-   question:
+  question:
     es: Hay otro organismo que me pide el mismo documento, con su traducción jurada. ¿Puedo fotocopiar mi traducción jurada?
     ca: Hi ha un altre organisme que em demana el mateix document, amb la corresponent traducció jurada. Puc fotocopiar la traducció jurada?
     en: Another body has asked me for the same document, together with its certified translation. Can I just photocopy the certified translation I was given?
@@ -67,7 +67,7 @@
     en: "No. And yes. In theory, a photocopy of a certified translation is not an original document and, therefore, it is highly possible that the requesting body may not accept it. Certified copies can be made (at a notary&#39;s office, for example) or you can request a second copy from the translator who did the work for you. However, since 2020, there is now another possibility that is cheaper, greener, and faster: you can request a certified translation with digital signature."
 
 - id: q7
- question:
+  question:
     es: ¿Qué ventajas tiene una traducción jurada con firma digital en comparación con su versión en papel?
     ca: Quins avantatges té una traducció jurada amb signatura digital en comparació amb la versió en paper
     en: What advantages does a certified translation with digital signature have over its paper version?
@@ -106,15 +106,15 @@
         <li> It will save you a lot of time.</li>
         <li> You can keep the PDF file for future use in other procedures</li>
         <li> You will be collaborating in the digitization of documents that previously had to be printed out on paper, altogether a green action.</li>
- 
+       </ul>
+        "
 - id: q8
   question:
     es: ¿Qué es una traducción jurada?
     ca: Què és una traducció jurada?
     en: What is a certified translation?
   answer:
-    es: 
-        <p>Una traducción jurada es la traducción de un documento a otro idioma que realiza un profesional reconocido por el organismo competente en el país donde se presenta el documento. En el caso de los documentos que deben surtir efectos en España, el organismo que nos habilita es el Ministerio de Asuntos Exteriores, UE y Cooperación (MAEC).<p>
+    es: <p>Una traducción jurada es la traducción de un documento a otro idioma que realiza un profesional reconocido por el organismo competente en el país donde se presenta el documento. En el caso de los documentos que deben surtir efectos en España, el organismo que nos habilita es el Ministerio de Asuntos Exteriores, UE y Cooperación (MAEC).<p>
         <p>Es el caso de muchos trámites oficiales, que exigen que los documentos emitidos en otras lenguas sean traducidos oficialmente al castellano –o a otras lenguas oficiales del estado– por traductores jurados. </p>
         <p>Por ejemplo, es frecuente que para la homologación de un título universitario se exija la traducción jurada del diploma, del expediente académico o del suplemento al diploma que emite una universidad extranjera al otorgar un título. </p>
         <p>La traducción jurada actúa, por tanto, como certificación de que el contenido traducido es fiel y exacto a –y que se corresponde con– un original de forma precisa y sin errores.<p>
@@ -141,7 +141,7 @@
         <p>A typical case is that of clients who ask for a certified translation of their company&#39;s annual financial statements and annual report when, in reality, what they want is for a person with knowledge and experience in finance and taxation to carry out these translations.</p>
 
 - id: q10
- question:
+  question:
     es: ¿Cuál es la función del traductor jurado?
     ca: Quina és la funció del traductor jurat?
     en: What is the role of a certified translator?
@@ -159,6 +159,3 @@
     es: No lo incluiremos en la traducción jurada. Por ejemplo, hay documentos con sellos en relieve o blancos que no aparecen en el escaneo por falta de contraste o por mala resolución. Si no vemos esos sellos, la traducción jurada quedará incompleta y el cliente corre el riesgo de que su traducción no sea aceptada, provocando un retraso que a veces puede representar un gran problema.
     ca: No l'inclourem a la traducció jurada. Per exemple, hi ha documents amb segells en relleu o blancs que no apareixen a l'escaneig perquè el contrast és baix o per baixa resolució. Si no veiem aquests segells, la traducció jurada quedarà incompleta i el client corre el risc de veure com li rebutgen la traducció, fet que produeix retards que a vegades poden representar un problema greu.
     en: It will not be included in the certified translation. For example, there are documents with embossed or white seals that do not appear in the scan due to lack of contrast or poor resolution. If we cannot see these seals, the certified translation will be incomplete and the client runs the risk of their translation not being accepted, causing a delay that sometimes can lead to a major problem.
-
-       </ul>
-        "
