@@ -6,9 +6,9 @@ testimonials_title:
 
 testimonials_comments:
   - name: Anthony
-    position: Student.
+    position: Student
     comment: " 
-    I had been previously recommended Elisa&#39;s translation services by several others 
+    I had been previously recommended Elisa's translation services by several others 
     who needed translations for their visa process. By far the easiest, fastest, and most
     pleasant to work with by far. I had attempted to contact other translators prior but
     either received no response, cost was absurd, or processing was going to take too
@@ -18,7 +18,7 @@ testimonials_comments:
     provided.
     "
   - name: Seta
-    position: 
+    position:
     comment: "
     Elisa responded to all of my emails very quickly and had a fast turnaround. She
     communicated clearly and concisely and made sure everything was easily
@@ -35,8 +35,8 @@ testimonials_comments:
     position: 
     comment: "
     Very quick turnaround, reasonably priced, and very professional. Elisa provided all
-    of her credentials and information to make choosing her as a translator a &quot;no-
-    brainer&quot;.
+    of her credentials and information to make choosing her as a translator a 'no-
+    brainer'.
     "
   - name: Syed
     position: 
@@ -51,8 +51,11 @@ testimonials_comments:
     comment: "
     I highly recommend Elisa. She is quick, professional, and very kind! I had a great
     experience with her. Everything was done smoothly and in a very timely manner. If
-    you’re looking for a translator, look no further!
+    you're looking for a translator, look no further!
     "
-- name: Emma
-    position:
-    comment: "Elisa was quick, helpful, thorough, and professional. I really appreciated her work and help during a long process. Thank you, Elisa!"
+  - name: Emma
+    position: 
+    comment: "
+    Elisa was quick, helpful, thorough, and professional. 
+    I really appreciated her work and help during a long process. Thank you, Elisa!
+    "
