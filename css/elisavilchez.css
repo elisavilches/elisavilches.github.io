@@ -514,7 +514,9 @@ font header .navbar-default .navbar-nav li a:hover {
   font-size: 20px;
   width: 20px;
 }
-/* CSS */
+
+/* Language selector */
+
 ul.nav.language-selector {
   display: inline-block;
   margin-left: 40px;
@@ -537,6 +539,12 @@ ul.nav.language-selector .active a {
   color:  #DA2802;
 }
 
+/* For some reason, I can't get the menu to show up unless I declare this*/
+.collapse.show {
+  visibility: visible !important;
+}
+
+/* Contact Box */
 #contact-box {
   padding-top: 35px;
   padding-bottom: 58px;
