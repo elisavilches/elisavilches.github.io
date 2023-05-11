@@ -90,15 +90,25 @@ header .navbar {
   margin-bottom: 0px;
   border: 0px;
 }
-header .navbar-brand {
-  padding-top: 5px;
+
+/*overwrite bootstrap default*/
+.navbar-brand {
+  height: 65px;
 }
+
+header .navbar-brand img {
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 header .navbar-default {
   background: none;
   border: 0px;
 }
 header .navbar-default .navbar-nav {
   padding-top: 10px;
+  padding-bottom: 10px;
 }
 header .navbar-default .navbar-nav li a {
   color: #333333;
