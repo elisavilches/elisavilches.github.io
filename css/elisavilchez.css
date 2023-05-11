@@ -119,6 +119,14 @@ font header .navbar-default .navbar-nav li a:hover {
   color: #000;
 }
 
+.navbar-nav li a img.icon {
+  width: 20px; /* Ajusta el ancho según tus necesidades */
+  height: 20px; /* Ajusta la altura según tus necesidades */
+  margin-right: 5px; /* Ajusta el margen derecho según tus necesidades */
+  vertical-align: middle;
+}
+
+
 
 /*--
 	Slider Start (Name and Job Title)
