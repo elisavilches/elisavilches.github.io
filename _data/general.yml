@@ -8,7 +8,13 @@ title:
   es: Traductora jurada y correctora
   ca: Traductora jurada i correctora
 
-languages: EN | FR | ES | CA
+#languages: EN | FR | ES | CA
+
+languages:
+  - code: EN
+  - code: ES
+  - code: FR
+  - code: CA
 
 aboutme: 
   en: "

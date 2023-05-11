@@ -37,7 +37,8 @@ descriptions:
   - cat: dummy
     desc: "Just some placeholder posts, lorem ipsum and the rest."
 
-languages: [ 'es', 'ca', 'fr' ]
+languages: [ 'en', 'es', 'fr', 'ca' ]
+lang: 'es'
 
 defaults:
   - scope:
