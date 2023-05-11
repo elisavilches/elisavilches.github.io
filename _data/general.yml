@@ -8,14 +8,6 @@ title:
   es: Traductora jurada y correctora
   ca: Traductora jurada i correctora
 
-#languages: EN | FR | ES | CA
-
-languages:
-  - code: EN
-  - code: ES
-  - code: FR
-  - code: CA
-
 aboutme: 
   en: "
   <p>Professional <b>certified translator</b> (English & Spanish) appointed by the Spanish Ministry of Foreign Affairs, European Union and Cooperation (MAEC). I have run my own translation practice for over 14 years, translating from <b>English</b> and <b>French</b> into my native languages, <b>Spanish</b> and <b>Catalan</b>.</p>
