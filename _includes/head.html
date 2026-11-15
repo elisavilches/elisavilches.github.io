@@ -17,6 +17,9 @@
 {% if is_home %}{% for l in site.languages %}
 <link rel="alternate" hreflang="{{ l }}" href="{{ site.url }}/{{ l }}/">{% endfor %}
 <link rel="alternate" hreflang="x-default" href="{{ site.url }}/en/">
+{% elsif page.ref %}{% assign versions = site.pages | where: "ref", page.ref %}{% for v in versions %}
+<link rel="alternate" hreflang="{{ v.lang }}" href="{{ site.url }}{{ v.url }}">{% endfor %}{% assign en_version = versions | where: "lang", "en" | first %}{% if en_version %}
+<link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ en_version.url }}">{% endif %}
 {% endif %}
 <!-- Open Graph -->
 <meta property="og:type" content="website">

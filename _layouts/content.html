@@ -1,0 +1,26 @@
+---
+layout: default
+---
+{% comment %}Content page (About, visas, documents, guides): the hero holds the page's single H1.{% endcomment %}
+<section id="slider">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <h1 class="title">{{ page.heading | default: page.title }}</h1>
+          <p><hr></p>
+          <p class="subtitle">{{ site.data.general.name }} · {{ site.data.general.title[page.lang] }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-page">
+  <div class="container">
+    {{ content }}
+    {% if page.last_updated %}
+    <p class="last-updated">{% if page.lang == "es" %}Última actualización{% else %}Last updated{% endif %}: <time datetime="{{ page.last_updated }}">{{ page.last_updated | date: "%d/%m/%Y" }}</time></p>
+    {% endif %}
+  </div>
+</section>

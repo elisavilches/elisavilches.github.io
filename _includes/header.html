@@ -28,6 +28,8 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right">
+                {% assign about_page = site.pages | where: "ref", "about" | where: "lang", page.lang | first %}
+                {% if about_page %}<li{% if page.ref == "about" %} class="active"{% endif %}><a href="{{ about_page.url }}">{% if page.lang == "es" %}Sobre mí{% else %}About{% endif %}</a></li>{% endif %}
                 <!-- Social links -->
                 <li>
                   <a href="{{ site.data.general.google_maps }}" target="_blank" rel="noopener" aria-label="Google Maps">
@@ -50,8 +52,10 @@
                 <!-- Language selector -->
                 <ul class="nav language-selector">
                   {% for lang in site.languages %}
+                    {% assign lang_url = site.baseurl | append: "/" | append: lang | append: "/" %}
+                    {% if page.ref %}{% assign twin = site.pages | where: "ref", page.ref | where: "lang", lang | first %}{% if twin %}{% assign lang_url = twin.url %}{% endif %}{% endif %}
                     <li{% if lang == page.lang %} class="active"{% endif %}>
-                      <a href="{{ site.baseurl }}/{{ lang }}/" hreflang="{{ lang }}" lang="{{ lang }}">
+                      <a href="{{ lang_url }}" hreflang="{{ lang }}" lang="{{ lang }}">
                         {{ lang | upcase }}
                       </a>
                     </li>{% if forloop.last == false %}

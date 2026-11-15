@@ -62,7 +62,15 @@
         ]
       },
       "sameAs": [{{ g.linkedin | jsonify }}, {{ g.facebook | jsonify }}, {{ g.google_maps | jsonify }}]
-    }{% assign faqs = site.data.faq | where_exp: "f", "f.question[page.lang]" %}{% if page.layout == "mainpage" and faqs.size > 0 %},
+    }{% if page.ref == "about" %},
+    {
+      "@type": "ProfilePage",
+      "url": "{{ site.url }}{{ page.url }}",
+      "name": {{ page.title | jsonify }},
+      "inLanguage": "{{ page.lang }}",
+      "dateModified": "{{ page.last_updated | date: '%Y-%m-%d' }}",
+      "mainEntity": {"@id": "{{ site.url }}/#elisa"}
+    }{% endif %}{% assign faqs = site.data.faq | where_exp: "f", "f.question[page.lang]" %}{% if page.layout == "mainpage" and faqs.size > 0 %},
     {
       "@type": "FAQPage",
       "inLanguage": "{{ page.lang }}",

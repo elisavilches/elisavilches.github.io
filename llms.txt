@@ -27,3 +27,5 @@ Also known as: {{ site.data.general.other_names | join: ", " }} (same person; th
 ## Key pages
 - [English home]({{ site.url }}/en/): services, credentials and FAQ about sworn translations
 - [Spanish home]({{ site.url }}/es/): servicios, credenciales y preguntas frecuentes
+- [About / credentials]({{ site.url }}/en/about/): MAEC appointment no. 6774, education, how to verify
+- [Sobre mí / credenciales]({{ site.url }}/es/sobre-mi/)
