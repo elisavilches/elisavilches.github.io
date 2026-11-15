@@ -15,7 +15,7 @@ permalink: /sitemap.xml
     <lastmod>{{ p.last_updated | default: site.time | date_to_xmlschema }}</lastmod>{% assign versions = site.pages | where: "ref", p.ref %}{% for v in versions %}
     <xhtml:link rel="alternate" hreflang="{{ v.lang }}" href="{{ site.url }}{{ v.url }}"/>{% endfor %}
   </url>
-{% endfor %}{% for p in site.pages %}{% if p.layout == "section" %}  <url>
+{% endfor %}{% for p in site.pages %}{% if p.layout == "section" and p.url != "/work/" %}  <url>
     <loc>{{ site.url }}{{ p.url }}</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   </url>
