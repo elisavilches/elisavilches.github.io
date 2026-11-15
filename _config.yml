@@ -8,8 +8,6 @@ exclude:
   - "*.gemspec"
   - "multilingual.txt"
   - "screenshots/"
-  - "AUDITORIA-SEO.md"
-  - "PENDIENTES.md"
 
 keep_files:
   - "CNAME"
