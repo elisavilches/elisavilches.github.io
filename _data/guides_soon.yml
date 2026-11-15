@@ -1,0 +1,11 @@
+# Guías previstas que aún no existen: salen como tarjetas «en preparación».
+# Cuando se publique la guía de verdad, se quita de aquí (su tarjeta sale sola de la página).
+en:
+  visas:
+    - audience: "Spouses · children"
+      title: "Family reunification"
+      summary: "Join a family member who lives in Spain."
+      docs: ["Birth certificate", "Marriage certificate"]
+  documents:
+    - title: "Birth & marriage certificates"
+    - title: "Bank statements"

@@ -7,7 +7,7 @@
   <div class="sh-inner">
     <a class="sh-brand" href="{{ site.baseurl }}/{{ L }}/">
       <img src="{{ site.baseurl }}/{{ site.logo }}" alt="" width="40" height="40">
-      <span>{{ g.name }}</span>
+      <span class="sh-name"><b>{{ g.name }}</b><small>{{ t.brand_sub[L] }}</small></span>
     </a>
 
     <a class="sh-quote sh-quote-mobile" href="{{ quote_href }}">{{ t.quote_short[L] }}</a>
@@ -20,7 +20,9 @@
     <div class="sh-menu" id="sh-menu">
       <ul class="sh-pages">
         {% if hub_page %}<li><a href="{{ hub_page.url }}"{% if page.ref == "hub-visas" or page.kind %} aria-current="page"{% endif %}>{{ t.nav_guides[L] }}</a></li>{% endif %}
+        <li><a href="{{ site.baseurl }}/{{ L }}/#service">{{ t.nav_services[L] }}</a></li>
         {% if about_page %}<li><a href="{{ about_page.url }}"{% if page.ref == "about" %} aria-current="page"{% endif %}>{{ t.nav_about[L] }}</a></li>{% endif %}
+        <li><a href="{{ site.baseurl }}/{{ L }}/#faq">{{ t.nav_faq[L] }}</a></li>
       </ul>
 
       <ul class="sh-langs" aria-label="{{ t.languages[L] }}">

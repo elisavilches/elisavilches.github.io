@@ -1,0 +1,80 @@
+# Textos de la portada nueva (maqueta del rediseño). PENDIENTES DE REVISIÓN DE ELISA.
+# Se tocan aquí sin tocar las plantillas.
+
+kicker:
+  en: "MAEC sworn translator no. 6774 · since 2008"
+  es: "Traductora jurada del MAEC n.º 6774 · desde 2008"
+  fr: "Traductrice assermentée MAEC n° 6774 · depuis 2008"
+  ca: "Traductora jurada del MAEC núm. 6774 · des del 2008"
+
+title:
+  en: "Sworn translations English–Spanish for your Spanish visa"
+  es: "Traducciones juradas de inglés para su visado y sus trámites en España"
+  fr: "Traductions assermentées anglais-espagnol pour vos démarches en Espagne"
+  ca: "Traduccions jurades d’anglès per al vostre visat i els vostres tràmits a Espanya"
+
+lede:
+  en: "Official translations accepted by Spanish consulates and authorities: FBI and ACRO checks, birth and marriage certificates, bank statements. Delivered with a qualified e-signature or on paper."
+  es: "Traducciones oficiales aceptadas por consulados y administraciones españolas: antecedentes penales, partidas de nacimiento y matrimonio, extractos bancarios. Con firma electrónica cualificada o en papel."
+  fr: "Traductions officielles acceptées par les consulats et les administrations espagnols : casiers judiciaires, actes de naissance et de mariage, relevés bancaires. Avec signature électronique qualifiée ou sur papier."
+  ca: "Traduccions oficials acceptades pels consolats i les administracions espanyoles: antecedents penals, partides de naixement i matrimoni, extractes bancaris. Amb signatura electrònica qualificada o en paper."
+
+trust:
+  en: ["Fixed quote", "Digital or paper", "Clients in the US and UK"]
+  es: ["Presupuesto cerrado", "Digital o en papel", "Clientes en EE. UU. y Reino Unido"]
+  fr: ["Devis ferme", "Numérique ou papier", "Clients aux États-Unis et au Royaume-Uni"]
+  ca: ["Pressupost tancat", "Digital o en paper", "Clients als EUA i al Regne Unit"]
+
+cta_quote:
+  en: "Get a free quote"
+  es: "Pedir presupuesto gratis"
+  fr: "Demander un devis gratuit"
+  ca: "Demanar pressupost gratuït"
+
+cta_visa:
+  en: "Find your visa"
+  es: "Buscar mi visado"
+  fr: "Trouver mon visa"
+  ca: "Trobar el meu visat"
+
+visas_title:
+  en: "Which visa are you applying for?"
+  es: "¿Qué visado está solicitando?"
+  fr: "Quel visa demandez-vous ?"
+  ca: "Quin visat sol·liciteu?"
+
+visas_sub:
+  en: "Each guide lists the documents that usually need a sworn translation, consulate by consulate."
+  es: "Cada guía recoge los documentos que suelen necesitar traducción jurada, consulado por consulado."
+  fr: "Chaque guide liste les documents qui demandent généralement une traduction assermentée, consulat par consulat."
+  ca: "Cada guia recull els documents que solen necessitar traducció jurada, consolat per consolat."
+
+docs_title:
+  en: "Or start from your document"
+  es: "O empiece por su documento"
+  fr: "Ou commencez par votre document"
+  ca: "O comenceu pel vostre document"
+
+docs_sub:
+  en: "What to request, how to apostille it and the mistakes that delay applications."
+  es: "Qué pedir, cómo apostillarlo y los errores que retrasan las solicitudes."
+  fr: "Quoi demander, comment l’apostiller et les erreurs qui retardent les demandes."
+  ca: "Què demanar, com apostillar-lo i els errors que endarrereixen les sol·licituds."
+
+coming_soon:
+  en: "Guide coming soon"
+  es: "Guía en preparación"
+  fr: "Guide en préparation"
+  ca: "Guia en preparació"
+
+reviews_title:
+  en: "What clients say"
+  es: "Lo que dicen mis clientes"
+  fr: "Ce que disent mes clients"
+  ca: "El que diuen els meus clients"
+
+reviews_sub:
+  en: "Reviews from people who used my translations for their visas."
+  es: "Opiniones de personas que usaron mis traducciones para sus visados."
+  fr: "Avis de personnes qui ont utilisé mes traductions pour leur visa."
+  ca: "Opinions de persones que van fer servir les meves traduccions per als seus visats."

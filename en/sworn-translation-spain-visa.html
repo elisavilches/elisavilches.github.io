@@ -22,10 +22,12 @@ last_updated: 2026-11-15
 </ol>
 <p>Each consulate publishes its own requirements, and they differ in the details. I link to the official pages I've checked on each guide.</p>
 
-<h2>{{ site.data.i18n.guides_by_visa[page.lang] }}</h2>
+<h2>{{ site.data.home.visas_title[page.lang] }}</h2>
+<p class="sub">{{ site.data.home.visas_sub[page.lang] }}</p>
 {% include guide-cards.html kind="visa" %}
 
-<h2>{{ site.data.i18n.guides_by_document[page.lang] }}</h2>
+<h2>{{ site.data.home.docs_title[page.lang] }}</h2>
+<p class="sub">{{ site.data.home.docs_sub[page.lang] }}</p>
 {% include guide-cards.html kind="document" %}
 
 <h2>Digital or paper</h2>

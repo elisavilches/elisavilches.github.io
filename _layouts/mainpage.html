@@ -6,35 +6,51 @@ layout: default
 {% assign hub_page = site.pages | where: "ref", "hub-visas" | where: "lang", page.lang | first %}
 {% assign about_page = site.pages | where: "ref", "about" | where: "lang", page.lang | first %}
 
-<section class="hero">
+{% assign h = site.data.home %}
+{% assign visa_pages = site.pages | where: "lang", L | where: "kind", "visa" %}
+<section class="hero hero-home">
   <div class="hero-inner">
     <div class="hero-text">
-      <h1>{{ g.title[page.lang] }}</h1>
-      <hr class="rule">
-      <p>{{ g.name }}</p>
-      <p class="hero-contact">{{ g.phone }} · <a href="mailto:{{ g.email }}">{{ g.email }}</a></p>
+      <p class="hero-kicker">{{ h.kicker[L] }}</p>
+      <h1>{{ h.title[L] }}</h1>
+      <p class="hero-lede">{{ h.lede[L] }}</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="{{ quote_href }}">{% include icon.html name="mail" %}{{ t.quote[L] }}</a>
-        {% if hub_page %}<a class="btn btn-ghost" href="{{ hub_page.url }}">{{ t.nav_guides[L] }}</a>
+        <a class="btn btn-primary" href="{{ quote_href }}">{{ h.cta_quote[L] }}</a>
+        {% if visa_pages.size > 0 %}<a class="btn btn-ghost" href="#visas">{{ h.cta_visa[L] }}</a>
         {% elsif about_page %}<a class="btn btn-ghost" href="{{ about_page.url }}">{{ t.about_me[L] }}</a>{% endif %}
       </div>
+      <ul class="hero-trust">{% for x in h.trust[L] %}<li>{{ x }}</li>{% endfor %}</ul>
     </div>
-    <div class="stamp" role="img" aria-label="Traductora-Intérprete Jurada, español-inglés, N.º {{ g.maec_number }} (MAEC)">
-      <span class="stamp-title">Traductora-Intérprete Jurada</span>
-      <span class="stamp-langs">Español ⇄ Inglés</span>
-      <span class="stamp-number">N.º {{ g.maec_number }}</span>
+    <div class="hero-media">
+      <img class="hero-photo" src="/img/elisa.jpg" width="230" height="230" alt="{{ g.name }}, {{ t.brand_sub[L] }}">
+      <div class="stamp" role="img" aria-label="Traductora-Intérprete Jurada, español-inglés, N.º {{ g.maec_number }} (MAEC)">
+        <span class="stamp-title">Traductora-Intérprete Jurada</span>
+        <span class="stamp-langs">Español ⇄ Inglés</span>
+        <span class="stamp-number">N.º {{ g.maec_number }}</span>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="section" id="intro">
-  <div class="wrap intro-grid">
-    <div>{{ g.aboutme[page.lang] }}</div>
-    <img class="intro-photo" src="/img/elisa.jpg" width="280" height="280" alt="{{ g.name }} - {{ g.title[page.lang] }}">
+  <div class="wrap intro-text">
+    {{ g.aboutme[page.lang] }}
   </div>
 </section>
 
-<section class="section section-alt" id="service">
+{% if visa_pages.size > 0 %}
+<section class="section section-alt" id="visas">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>{{ h.visas_title[L] }}</h2>
+      <p>{{ h.visas_sub[L] }}</p>
+    </div>
+    {% include guide-cards.html kind="visa" %}
+  </div>
+</section>
+{% endif %}
+
+<section class="section{% if visa_pages.size == 0 %} section-alt{% endif %}" id="service">
   <div class="wrap">
     <div class="section-head">
       <h2>{{ g.services_title[page.lang] }}</h2>
@@ -54,7 +70,7 @@ layout: default
 
 {% assign faqs = site.data.faq | where_exp: "f", "f.question[page.lang]" %}
 {% if faqs.size > 0 %}
-<section class="section" id="faq">
+<section class="section{% if visa_pages.size > 0 %} section-alt{% endif %}" id="faq">
   <div class="wrap">
     <div class="section-head"><h2>FAQs</h2></div>
     <div class="faq">
@@ -69,16 +85,18 @@ layout: default
 </section>
 {% endif %}
 
-<section class="section section-alt" id="testimonial">
+<section class="section{% if visa_pages.size == 0 %} section-alt{% endif %}" id="testimonial">
   <div class="wrap">
-    <div class="section-head"><h2>{{ site.data.testimonials.testimonials_title[page.lang] }}</h2></div>
+    <div class="section-head">
+      <h2>{{ h.reviews_title[L] }}</h2>
+      <p>{{ h.reviews_sub[L] }}</p>
+    </div>
     <div class="reviews">
-      {% for t in site.data.testimonials.testimonials_comments %}
-      <figure class="review">
-        {% include icon.html name="quote" %}
-        <blockquote>{{ t.comment | strip }}</blockquote>
-        <figcaption><strong>{{ t.name }}</strong>{{ t.position }}</figcaption>
-      </figure>
+      {% for r in site.data.testimonials.testimonials_comments %}
+      <blockquote class="review">
+        <p>“{{ r.comment | strip }}”</p>
+        <cite><b>{{ r.name }}</b>{% if r.position %} · {{ r.position | strip }}{% endif %}</cite>
+      </blockquote>
       {% endfor %}
     </div>
   </div>

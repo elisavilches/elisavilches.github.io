@@ -141,3 +141,33 @@ read_guide:
   es: "Leer la guía"
   fr: "Lire le guide"
   ca: "Llegir la guia"
+brand_sub:
+  en: "Sworn translator English–Spanish"
+  es: "Traductora jurada de inglés"
+  fr: "Traductrice assermentée d’anglais"
+  ca: "Traductora jurada d’anglès"
+nav_services:
+  en: "Services"
+  es: "Servicios"
+  fr: "Services"
+  ca: "Serveis"
+nav_faq:
+  en: "FAQ"
+  es: "Preguntas"
+  fr: "FAQ"
+  ca: "Preguntes"
+footer_contact:
+  en: "Contact"
+  es: "Contacto"
+  fr: "Contact"
+  ca: "Contacte"
+footer_guides:
+  en: "Guides"
+  es: "Guías"
+  fr: "Guides"
+  ca: "Guies"
+footer_elsewhere:
+  en: "Elsewhere"
+  es: "En otros sitios"
+  fr: "Ailleurs"
+  ca: "En altres llocs"

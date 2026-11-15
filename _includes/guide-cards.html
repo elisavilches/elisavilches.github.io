@@ -1,14 +1,35 @@
-{% comment %}Tarjetas de guías. Uso: {% include guide-cards.html kind="visa" %}{% endcomment %}
-{% assign items = site.pages | where: "lang", page.lang | where: "kind", include.kind %}
-{% if items.size > 0 %}
-<div class="guide-cards">
+{% comment %}
+Tarjetas de guías, generadas a partir de las páginas (kind, order, audience, summary, docs, card_title)
+más las guías previstas de _data/guides_soon.yml.
+Uso: {% include guide-cards.html kind="visa" %}  → tarjetas de visados
+     {% include guide-cards.html kind="document" %} → tira de documentos
+{% endcomment %}
+{% assign L = page.lang %}{% assign soon = site.data.guides_soon[L] %}{% assign h = site.data.home %}
+{% assign items = site.pages | where: "lang", L | where: "kind", include.kind | sort: "order" %}
+{% if include.kind == "visa" %}
+<div class="v-cards">
   {% for p in items %}
-  {% assign blurb = p.description | split: ". By " | first | split: ", by a MAEC" | first %}
-  <a class="guide-card" href="{{ p.url }}">
-    <span class="guide-card-title">{{ p.short | default: p.title }}</span>
-    <span class="guide-card-text">{{ blurb }}.</span>
-    <span class="guide-card-more">{{ site.data.i18n.read_guide[page.lang] }} →</span>
+  <a class="v-card" href="{{ p.url }}">
+    {% if p.audience %}<span class="v-who">{{ p.audience }}</span>{% endif %}
+    <h3>{{ p.short | default: p.title }}</h3>
+    <p>{{ p.summary | default: p.description }}</p>
+    {% if p.docs %}<span class="v-docs">{% for d in p.docs %}<span>{{ d }}</span>{% endfor %}</span>{% endif %}
+    <span class="v-go">{{ site.data.i18n.read_guide[L] }} →</span>
   </a>
   {% endfor %}
+  {% for s in soon.visas %}
+  <div class="v-card soon">
+    <span class="v-who">{{ s.audience }}</span>
+    <h3>{{ s.title }}</h3>
+    <p>{{ s.summary }}</p>
+    {% if s.docs %}<span class="v-docs">{% for d in s.docs %}<span>{{ d }}</span>{% endfor %}</span>{% endif %}
+    <span class="v-go">{{ h.coming_soon[L] }}</span>
+  </div>
+  {% endfor %}
+</div>
+{% else %}
+<div class="d-strip">
+  {% for p in items %}<a href="{{ p.url }}"><b>{{ p.card_title | default: p.short }}</b><span>{{ p.summary }}</span></a>{% endfor %}
+  {% for s in soon.documents %}<div class="soon"><b>{{ s.title }}</b><span>{{ h.coming_soon[L] }}</span></div>{% endfor %}
 </div>
 {% endif %}

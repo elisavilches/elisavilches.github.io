@@ -1,28 +1,48 @@
 {% assign g = site.data.general %}{% assign t = site.data.i18n %}{% assign L = page.lang | default: "en" %}
 {% assign legal_page = site.pages | where: "ref", "legal" | where: "lang", L | first %}
 {% assign privacy_page = site.pages | where: "ref", "privacy" | where: "lang", L | first %}
+{% assign hub_page = site.pages | where: "ref", "hub-visas" | where: "lang", L | first %}
+{% assign about_page = site.pages | where: "ref", "about" | where: "lang", L | first %}
+{% assign quote_page = site.pages | where: "ref", "quote" | where: "lang", L | first %}
 <footer class="site-footer">
   <div class="sf-inner">
-    <div class="sf-id">
+    <div class="sf-col sf-id">
       <p class="sf-name">{{ g.name }}</p>
-      <p>{{ t.footer_title[L] }} {{ g.maec_number }} (<a href="https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Buscador-STIJ.aspx" target="_blank" rel="noopener">MAEC</a>)</p>
+      <p>{{ t.brand_sub[L] }}</p>
+      <p><a href="https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Buscador-STIJ.aspx" target="_blank" rel="noopener">MAEC</a> {{ t.number_abbr[L] }} {{ g.maec_number }} · {{ g.city }} (Barcelona)</p>
     </div>
-    <div class="sf-contact">
+    <div class="sf-col">
+      <p class="sf-h">{{ t.footer_contact[L] }}</p>
       <p><a href="mailto:{{ g.email }}">{{ g.email }}</a></p>
       <p>{{ g.phone }}</p>
+      {% if quote_page %}<p><a href="{{ quote_page.url }}">{{ t.quote[L] }}</a></p>{% endif %}
     </div>
-    <ul class="sf-social" aria-label="{{ t.follow[L] }}">
-      <li><a href="{{ g.google_maps }}" target="_blank" rel="noopener" aria-label="Google Maps">{% include icon.html name="pin" %}</a></li>
-      <li><a href="{{ g.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">in</a></li>
-      <li><a href="{{ g.facebook }}" target="_blank" rel="noopener" aria-label="Facebook">f</a></li>
-    </ul>
+    <div class="sf-col">
+      <p class="sf-h">{{ t.footer_guides[L] }}</p>
+      {% if hub_page %}<p><a href="{{ hub_page.url }}">{{ t.nav_guides[L] }}</a></p>{% endif %}
+      <p><a href="{{ site.baseurl }}/{{ L }}/#faq">{{ t.nav_faq[L] }}</a></p>
+      {% if about_page %}<p><a href="{{ about_page.url }}">{{ t.nav_about[L] }}</a></p>{% endif %}
+    </div>
+    <div class="sf-col">
+      <p class="sf-h">{{ t.footer_elsewhere[L] }}</p>
+      <p><a href="{{ g.linkedin }}" target="_blank" rel="noopener">LinkedIn</a></p>
+      <p><a href="{{ g.facebook }}" target="_blank" rel="noopener">Facebook</a></p>
+      <p><a href="{{ g.google_maps }}" target="_blank" rel="noopener">Google Maps</a></p>
+    </div>
   </div>
   <div class="sf-legal">
-    <p>© {{ site.time | date: "%Y" }} {{ g.name }}</p>
+    <ul class="sf-langs" aria-label="{{ t.languages[L] }}">
+      {% for lang in site.languages %}
+        {% assign lang_url = site.baseurl | append: "/" | append: lang | append: "/" %}
+        {% if page.ref %}{% assign twin = site.pages | where: "ref", page.ref | where: "lang", lang | first %}{% if twin %}{% assign lang_url = twin.url %}{% endif %}{% endif %}
+        <li><a href="{{ lang_url }}" hreflang="{{ lang }}" lang="{{ lang }}"{% if lang == L %} aria-current="true"{% endif %}>{% case lang %}{% when "en" %}English{% when "es" %}Español{% when "fr" %}Français{% when "ca" %}Català{% endcase %}</a></li>
+      {% endfor %}
+    </ul>
     <ul>
       {% if legal_page %}<li><a href="{{ legal_page.url }}">{{ t.legal_notice[L] }}</a></li>{% endif %}
       {% if privacy_page %}<li><a href="{{ privacy_page.url }}">{{ t.privacy[L] }}</a></li>{% endif %}
       <li><button type="button" class="link-button" data-cookie-settings>{{ t.cookie_settings[L] }}</button></li>
+      <li>© {{ site.time | date: "%Y" }} {{ g.name }}</li>
     </ul>
   </div>
 </footer>
