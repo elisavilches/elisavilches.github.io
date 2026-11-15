@@ -78,3 +78,14 @@ reviews_sub:
   es: "Opiniones de personas que usaron mis traducciones para sus visados."
   fr: "Avis de personnes qui ont utilisé mes traductions pour leur visa."
   ca: "Opinions de persones que van fer servir les meves traduccions per als seus visats."
+
+badge_top:
+  en: "Sworn translator"
+  es: "Traductora jurada"
+  fr: "Traductrice assermentée"
+  ca: "Traductora jurada"
+badge_bottom:
+  en: "MAEC · Spain"
+  es: "MAEC · España"
+  fr: "MAEC · Espagne"
+  ca: "MAEC · Espanya"

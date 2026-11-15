@@ -23,11 +23,7 @@ layout: default
     </div>
     <div class="hero-media">
       <img class="hero-photo" src="/img/elisa.jpg" width="230" height="230" alt="{{ g.name }}, {{ t.brand_sub[L] }}">
-      <div class="stamp" role="img" aria-label="Traductora-Intérprete Jurada, español-inglés, N.º {{ g.maec_number }} (MAEC)">
-        <span class="stamp-title">Traductora-Intérprete Jurada</span>
-        <span class="stamp-langs">Español ⇄ Inglés</span>
-        <span class="stamp-number">N.º {{ g.maec_number }}</span>
-      </div>
+      <span class="badge"><span class="badge-top">{{ h.badge_top[L] }}</span><strong>{{ t.number_abbr[L] }} {{ g.maec_number }}</strong><span class="badge-bottom">{{ h.badge_bottom[L] }}</span></span>
     </div>
   </div>
 </section>
