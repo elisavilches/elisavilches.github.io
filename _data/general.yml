@@ -73,10 +73,10 @@ services_title:
 
 services: 
 
-  en: "For more information or for a free quote, feel free to contact me or send your documents to <b>elisa@elisavilchez.com.</b>"
-  fr: "Pour de plus amples informations ou obtenir un devis gratuit, vous pouvez me contacter ou envoyer vos documents à <b>elisa@elisavilchez.com.</b>"
-  es: "Para obtener más información o solicitar un presupuesto gratis, póngase en contacto conmigo o envíe sus documentos a <b>elisa@elisavilchez.com.</b>"
-  ca: "Per obtenir més informació o per sol·licitar un pressupost gratuït, poseu-vos en contacte amb mi o envieu els vostres documents a <b>elisa@elisavilchez.com.</b>"
+  en: "For more information or a free quote, send me your documents through the <a href='/en/quote/'>quote form</a> or by email to <b>elisa@elisavilchez.com</b>."
+  fr: "Pour plus d’informations ou un devis gratuit, envoyez-moi vos documents via le <a href='/fr/devis/'>formulaire de devis</a> ou par e-mail à <b>elisa@elisavilchez.com</b>."
+  es: "Para más información o un presupuesto gratis, envíeme sus documentos con el <a href='/es/presupuesto/'>formulario de presupuesto</a> o por email a <b>elisa@elisavilchez.com</b>."
+  ca: "Per a més informació o un pressupost gratuït, envieu-me els documents amb el <a href='/ca/pressupost/'>formulari de pressupost</a> o per correu a <b>elisa@elisavilchez.com</b>."
 
 contact: 
 
