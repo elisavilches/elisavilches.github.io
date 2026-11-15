@@ -11,6 +11,7 @@
       "@type": "Person",
       "@id": "{{ site.url }}/#elisa",
       "name": {{ g.name | jsonify }},
+      "alternateName": {{ g.official_name | jsonify }},
       "jobTitle": {{ g.title[page.lang] | jsonify }},
       "url": "{{ site.url }}/{{ page.lang }}/",
       "image": "{{ site.url }}/img/elisa.png",
@@ -27,6 +28,7 @@
         "name": "Traductora-Intérprete Jurada de inglés / Sworn Translator-Interpreter (English)",
         "credentialCategory": "Professional appointment",
         {% if g.maec_number != "" %}"identifier": {{ g.maec_number | jsonify }},
+        "dateCreated": {{ g.maec_appointed | jsonify }},
         {% endif %}"recognizedBy": {
           "@type": "GovernmentOrganization",
           "name": "Ministerio de Asuntos Exteriores, Unión Europea y Cooperación (MAEC)",
