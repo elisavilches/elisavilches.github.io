@@ -54,27 +54,11 @@ layout: default
 </section>
 {% endif %}
 
-<section class="section{% if visa_pages.size == 0 %} section-alt{% endif %}" id="service">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>{{ g.services_title[page.lang] }}</h2>
-      <p>{{ g.services[page.lang] }}</p>
-    </div>
-    <div class="cards">
-      {% for service in g.services_list %}
-      {% case service.icon %}{% when "fa fa-certificate" %}{% assign ic = "seal" %}{% when "fa fa-language" %}{% assign ic = "language" %}{% when "fa fa-eye" %}{% assign ic = "proofread" %}{% else %}{% assign ic = "edit" %}{% endcase %}
-      <div class="card">
-        <h3>{% include icon.html name=ic %}{{ service.title[page.lang] }}</h3>
-        <p>{{ service.desc[page.lang] }}</p>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
+
 
 {% assign faqs = site.data.faq | where_exp: "f", "f.question[page.lang]" %}
 {% if faqs.size > 0 %}
-<section class="section{% if visa_pages.size > 0 %} section-alt{% endif %}" id="faq">
+<section class="section{% if visa_pages.size == 0 %} section-alt{% endif %}" id="faq">
   <div class="wrap">
     <div class="section-head"><h2>FAQs</h2></div>
     <div class="faq">
@@ -94,7 +78,7 @@ layout: default
 </section>
 {% endif %}
 
-<section class="section{% if visa_pages.size == 0 %} section-alt{% endif %}" id="testimonial">
+<section class="section{% if visa_pages.size > 0 %} section-alt{% endif %}" id="testimonial">
   <div class="wrap">
     <div class="section-head">
       <h2>{{ h.reviews_title[L] }}</h2>

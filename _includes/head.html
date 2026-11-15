@@ -71,7 +71,7 @@
   });
   // Navegación (sin datos personales): desde dónde se pide presupuesto, qué guías, FAQ e idiomas
   function where(el) {
-    var m = [['.site-header','header'],['.hero','hero'],['.guide-side','sidebar'],['.cta','page_end'],['#service','services'],['.site-footer','footer']];
+    var m = [['.site-header','header'],['.hero','hero'],['.guide-side','sidebar'],['.cta','page_end'],['.site-footer','footer']];
     for (var i = 0; i < m.length; i++) if (el.closest(m[i][0])) return m[i][1];
     return 'other';
   }

@@ -86,7 +86,8 @@ contact:
   ca: "Per obtenir més informació o per sol·licitar un pressupost gratuït, poseu-vos en contacte amb mi o envieu els vostres documents a <b>elisa@elisavilchez.com.</b>."
 
 services_list:
-  # Tres tarjetas (15/11, propuesta del rediseño; pendiente de visto bueno de Elisa).
+  # Solo traducción jurada (15/11, decisión de Elisa: la web se centra en la traducción jurada).
+  # Ya no se muestra en la portada; se usa en los datos estructurados (OfferCatalog).
   - title:
       en: "Sworn translations"
       es: "Traducciones juradas"
@@ -98,25 +99,3 @@ services_list:
       ca: "Anglès ⇄ castellà, signades i segellades com a traductora jurada del MAEC núm. 6774. Vàlides davant consolats i administracions espanyoles. En format digital amb signatura electrònica qualificada o en paper."
       fr: "Anglais ⇄ espagnol, signées et tamponnées en tant que traductrice assermentée MAEC n° 6774. Acceptées par les consulats et les administrations espagnols. Au format numérique avec signature électronique qualifiée, ou sur papier."
     icon: "fa fa-certificate"
-  - title:
-      en: "Translations"
-      es: "Traducciones"
-      ca: "Traduccions"
-      fr: "Traductions"
-    desc:
-      en: "Non-sworn translations between English, French, Spanish and Catalan: legal, financial, marketing and medical texts. Confidential."
-      es: "Traducciones no juradas entre inglés, francés, español y catalán: textos jurídicos, económicos, de marketing y médicos. Con total confidencialidad."
-      ca: "Traduccions no jurades entre anglès, francès, castellà i català: textos jurídics, econòmics, de màrqueting i mèdics. Amb total confidencialitat."
-      fr: "Traductions non assermentées entre l’anglais, le français, l’espagnol et le catalan : textes juridiques, financiers, marketing et médicaux. En toute confidentialité."
-    icon: "fa fa-language"
-  - title:
-      en: "Proofreading and editing"
-      es: "Revisión y corrección"
-      ca: "Revisió i correcció"
-      fr: "Révision et correction"
-    desc:
-      en: "Revision of texts already written or translated, for language and style, before you publish or submit them."
-      es: "Revisión de textos ya escritos o traducidos, de lengua y estilo, antes de publicarlos o presentarlos."
-      ca: "Revisió de textos ja escrits o traduïts, de llengua i estil, abans de publicar-los o presentar-los."
-      fr: "Révision de textes déjà rédigés ou traduits, sur la langue et le style, avant de les publier ou de les déposer."
-    icon: "fa fa-eye"
