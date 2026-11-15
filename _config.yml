@@ -16,9 +16,9 @@ keep_files:
 
 
 # Site settings
-title: Certified translator (English-Spanish) - Elisa Vilches
-shorttitle: Certified translator (English-Spanish) - Elisa Vilches
-subtitle: "Certified Translator"
+title: Sworn translator (English–Spanish) - Elisa Vílchez
+shorttitle: Sworn translator (English–Spanish) - Elisa Vílchez
+subtitle: "Sworn Translator"
 url: "https://elisavilchez.com" # base hostname (used for canonical, hreflang, sitemap)
 #baseurl: "/the/subpath/of/your/site" # Set this value to "" if you want your site to be root
 baseurl: ""

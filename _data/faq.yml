@@ -2,7 +2,7 @@
   question:
     es: ¿Qué debe incluir una traducción jurada?
     ca: Què ha d'incloure una traducció jurada?
-    en: What does a certified translation have to include?
+    en: What does a sworn translation have to include?
   answer:
     es: "
         <p>La forma en que se realiza y presenta una traducción jurada está regulada por el Real Decreto 724/2020, de 4 de agosto, por el que se aprueba el Reglamento de la Oficina de Interpretación de Lenguas del MAEC. </p>
@@ -12,8 +12,8 @@
         <p>Tant si es tracta d'una traducció jurada amb signatura digital com si es tracta d'una versió impresa en paper, ha d'incloure: la còpia de l'**original** (totes les pàgines segellades i datades), seguit de la **traducció** (segellada i signada). A aquest paquet cal afegir-hi sempre una certificació final, també segellada i signada, que fa de declaració i que inclou la informació que s'exigeix a l'annex I del Reial decret esmentat anteriorment: el nom i cognoms del traductor, el seu número de registre i la combinació d'idiomes per a la qual està acreditat.</p>
         "
     en: "
-        <p>The way in which a certified translation is carried out and presented is regulated by Royal Decree 724/2020, of 4 August, which approves the Regulations of the Language Interpreting Office (Oficina de Interpretación de Lenguas) of the MAEC.</p> 
-        <p>Certified translations both with digital signature and those printed on paper must include: a copy of the original document (stamped and dated on all pages), followed by its translation (stamped and signed). This package must also contain a final certification, also stamped, and signed, which serves as a declaration and includes the information required in Annex I of the Royal Decree: the first name and last name/s of the translator, their registration number, and the language combination for which they are accredited.</p>
+        <p>The way in which a sworn translation is carried out and presented is regulated by Royal Decree 724/2020, of 4 August, which approves the Regulations of the Language Interpreting Office (Oficina de Interpretación de Lenguas) of the MAEC.</p> 
+        <p>Sworn translations both with digital signature and those printed on paper must include: a copy of the original document (stamped and dated on all pages), followed by its translation (stamped and signed). This package must also contain a final certification, also stamped, and signed, which serves as a declaration and includes the information required in Annex I of the Royal Decree: the first name and last name/s of the translator, their registration number, and the language combination for which they are accredited.</p>
         "
 
 - id: q2
@@ -24,23 +24,23 @@
   answer:
     es: No. No obstante, es probable que para cualquier trámite importante las autoridades exijan ver o quedarse con el original. No obstante, no es obligatorio entregarlo al traductor jurado para que este realice la traducción jurada. Si, por motivos geográficos u otros, no se puede entregar, se adjuntará una copia escaneada del original (en alta resolución) al paquete de traducción jurada. Eso sí, es imprescindible que el escaneo muestre todo el contenido, incluidos los sellos/timbres y firmas.
     ca: No. No obstant això, és probable que per a qualsevol tràmit important les autoritats exigeixin veure o quedar-se amb l'original. Tanmateix, no és obligatori entregar-lo al traductor jurat per obtenir-ne una traducció jurada. Si, per motius geogràfics o altres, no es pot entregar, s'adjuntarà una còpia escanejada de l'original (en alta resolució) al paquet de traducció jurada. No obstant això, és imprescindible que a l'escaneig aparegui tot el contingut, inclosos els segells/timbres i les signatures.
-    en: No. Nevertheless, it is likely that, for any important procedure, the authorities need to see or keep the original. However, it is not mandatory to hand it over to the certified translator for them to carry out the translation. If, for geographical or other reasons, it cannot be handed over, a scanned copy of the original (in high resolution) will be added to the translation package. However, it is essential that the scan shows the full content, including seals/stamps and signatures.
+    en: No. Nevertheless, it is likely that, for any important procedure, the authorities need to see or keep the original. However, it is not mandatory to hand it over to the sworn translator for them to carry out the translation. If, for geographical or other reasons, it cannot be handed over, a scanned copy of the original (in high resolution) will be added to the translation package. However, it is essential that the scan shows the full content, including seals/stamps and signatures.
  
 - id: q3
   question:
     es: En el consulado me piden una compulsa de mi original (o de la traducción). ¿Puedo solicitar una traducción jurada compulsada?
     ca: Al consolat em demanen una compulsa del meu original (o de la traducció jurada). Puc sol·licitar una traducció jurada compulsada?
-    en: At my consulate, they have asked me for a certified copy of my original (or a certified/notarized copy of the translation). Can I request a notarized, certified translation?
+    en: At my consulate, they have asked me for a certified copy of my original (or a certified/notarized copy of the translation). Can I request a notarized sworn translation?
   answer:
     es: "No. Los traductores jurados no podemos compulsar copias ni legalizar o apostillar documentos. Esta función es competencia exclusiva de los fedatarios públicos u otros funcionarios competentes. El motivo es bien sencillo: son estos últimos quienes tienen que dar fe de que un documento es original, veraz o auténtico. Nosotros nos ocupamos de que el contenido de estos sí esté traducido de forma veraz."
     ca: "No. Els traductors jurats no podem compulsar còpies ni legalitzar o postil·lar documents. Aquesta funció és competència exclusiva dels fedataris públics o d'altres funcionaris competents. El motiu és molt senzill: aquests últims són els que han de donar fe que un document és original, veraç o autèntic. Nosaltres ens encarreguem de traduir de manera veraç el contingut d'un original."
-    en: "No. Certified translators cannot notarize copies or legalize or issue an apostille for documents. This role is the exclusive competence of notaries or other competent public servants. The reason is very simple: they are the ones who have to attest that a document is original, truthful, or authentic. Our job is to ensure that its content is translated accurately."
+    en: "No. Sworn translators cannot notarize copies or legalize or issue an apostille for documents. This role is the exclusive competence of notaries or other competent public servants. The reason is very simple: they are the ones who have to attest that a document is original, truthful, or authentic. Our job is to ensure that its content is translated accurately."
 
 - id: q4
   question:
     es: Cuál es el plazo de entrega habitual de una traducción jurada?
     ca: Quin és el termini d'entrega habitual d'una traducció jurada?
-    en: How long does it usually take to deliver a certified translation?
+    en: How long does it usually take to deliver a sworn translation?
   answer:
     es: Siempre dependerá del tipo de encargo y de la disponibilidad en ese momento. Lo habitual, sin embargo, es que los encargos que no superen las 1000 palabras puedan entregarse entre 1 y 2 días laborables. En el caso de los encargos con urgencia, se valora el contenido, el posible trabajo en horario no laboral y la premura.
     ca: Sempre dependrà del tipus d'encàrrec i de la disponibilitat en aquell moment. El més habitual, però, és que els encàrrecs que no superin les 1000 paraules es puguin entregar en un termini entre 1 i 2 dies laborables. En el cas dels encàrrecs amb urgència, es valora el contingut, la possibilitat de treballar en horari no laboral i la urgència.
@@ -50,27 +50,27 @@
   question:
     es: ¿En qué influye el precio de una traducción jurada en comparación con una traducción simple?
     ca: En què influeix el preu d'una traducció jurada en comparació amb una traducció simple?
-    en: What influence does a certified translation have on price compared to a simple translation?
+    en: What influence does a sworn translation have on price compared to a simple translation?
   answer:
     es: Los traductores jurados tenemos una responsabilidad civil (extracontractual y, a veces, contractual) con respecto a nuestro trabajo, que se limita exclusivamente a la correcta traducción de un texto de origen. Estamos obligados a transmitir, con las palabras que escogemos, toda la información que se incluye en el documento original con seguridad jurídica. Además, estamos obligados a garantizar la ausencia de errores, imprecisiones, omisiones o inexactitudes en el contenido final (a excepción de las que aparecen en el original).
     ca: Els traductors jurats tenim una responsabilitat civil (extracontractual i, de vegades, contractual) pel que fa a la nostra feina, que es limita exclusivament a la correcta traducció d'un text origen. Estem obligats a transmetre, amb les paraules que triem, tota la informació que s'inclou al document original amb seguretat jurídica. A més, estem obligats a garantir que no hi ha errors, imprecisions, omissions o inexactituds al contingut final (llevat de les que apareixen a l'original).
-    en: Certified translators have civil liability (extracontractual and, sometimes, contractual) regarding our work, which is exclusively limited to the correct translation of a source text. We are obliged to convey, with the words that we choose, all the information that is included in the original document with legal certainty. In addition, we are obliged to guarantee the absence of any errors, imprecisions, omissions, or inaccuracies in the final content (with the exception of any that appear in the original).
+    en: Sworn translators have civil liability (extracontractual and, sometimes, contractual) regarding our work, which is exclusively limited to the correct translation of a source text. We are obliged to convey, with the words that we choose, all the information that is included in the original document with legal certainty. In addition, we are obliged to guarantee the absence of any errors, imprecisions, omissions, or inaccuracies in the final content (with the exception of any that appear in the original).
 
 - id: q6
   question:
     es: Hay otro organismo que me pide el mismo documento, con su traducción jurada. ¿Puedo fotocopiar mi traducción jurada?
     ca: Hi ha un altre organisme que em demana el mateix document, amb la corresponent traducció jurada. Puc fotocopiar la traducció jurada?
-    en: Another body has asked me for the same document, together with its certified translation. Can I just photocopy the certified translation I was given?
+    en: Another body has asked me for the same document, together with its sworn translation. Can I just photocopy the sworn translation I was given?
   answer:
     es: "No. Y sí. En principio, una fotocopia de una traducción jurada no tiene calidad de original y, por tanto, es muy posible que el organismo solicitante no la acepte. Se pueden hacer copias compulsadas (en un notario, por ejemplo) o bien solicitar un segundo ejemplar al traductor que se ha contratado. Pero, desde tan solo 2020, hay otra posibilidad más barata, ecológica y rápida: solicitar una traducción jurada con firma digital."
     ca: "No. I sí. En principi, una fotocòpia d'una traducció jurada no és un original i, per tant, és molt possible que l'organisme que la sol·licita no l'accepti. Se'n poden fer còpies compulsades (en una notaria, per exemple) o bé sol·licitar-ne un segon exemplar al traductor que s'ha contractat. Però, des del 2020, hi ha una altra possibilitat més barata, ecològica i ràpida: sol·licitar una traducció jurada amb signatura digital."
-    en: "No. And yes. In theory, a photocopy of a certified translation is not an original document and, therefore, it is highly possible that the requesting body may not accept it. Certified copies can be made (at a notary&#39;s office, for example) or you can request a second copy from the translator who did the work for you. However, since 2020, there is now another possibility that is cheaper, greener, and faster: you can request a certified translation with digital signature."
+    en: "No. And yes. In theory, a photocopy of a sworn translation is not an original document and, therefore, it is highly possible that the requesting body may not accept it. Certified copies can be made (at a notary&#39;s office, for example) or you can request a second copy from the translator who did the work for you. However, since 2020, there is now another possibility that is cheaper, greener, and faster: you can request a sworn translation with digital signature."
 
 - id: q7
   question:
     es: ¿Qué ventajas tiene una traducción jurada con firma digital en comparación con su versión en papel?
     ca: Quins avantatges té una traducció jurada amb signatura digital en comparació amb la versió en paper
-    en: What advantages does a certified translation with digital signature have over its paper version?
+    en: What advantages does a sworn translation with digital signature have over its paper version?
   answer:
     es: "
         <p>Todas. Una de las pocas cosas buenas que trajo la pandemia de 2020 fue la necesidad de dar una solución a la cantidad de trámites que anteriormente exigían presencialidad o bien el envío postal de documentación. Habida cuenta de la situación excepcional, esto representó grandes problemas para todas las personas que debían cumplir unos plazos y unos requisitos imposibles en tiempos pandémicos.</p>
@@ -102,7 +102,7 @@
       <p>What are the advantages?</p>
       <ul>
         <li> You do not have to have any additional copies certified at a notary's office or request any other copy for the corresponding cost of the copy.</li>
-        <li> You can (if allowed) email certified translations without having to attend in person, trusting in messenger services or going to the Post Office.</li>
+        <li> You can (if allowed) email sworn translations without having to attend in person, trusting in messenger services or going to the Post Office.</li>
         <li> It will save you a lot of time.</li>
         <li> You can keep the PDF file for future use in other procedures</li>
         <li> You will be collaborating in the digitization of documents that previously had to be printed out on paper, altogether a green action.</li>
@@ -112,7 +112,7 @@
   question:
     es: ¿Qué es una traducción jurada?
     ca: Què és una traducció jurada?
-    en: What is a certified translation?
+    en: What is a sworn translation?
   answer:
     es: <p>Una traducción jurada es la traducción de un documento a otro idioma que realiza un profesional reconocido por el organismo competente en el país donde se presenta el documento. En el caso de los documentos que deben surtir efectos en España, el organismo que nos habilita es el Ministerio de Asuntos Exteriores, UE y Cooperación (MAEC).<p>
         <p>Es el caso de muchos trámites oficiales, que exigen que los documentos emitidos en otras lenguas sean traducidos oficialmente al castellano –o a otras lenguas oficiales del estado– por traductores jurados. </p>
@@ -122,33 +122,33 @@
         <p>És el cas de molts tràmits oficials, que exigeixen que els documents emesos en altres llengües es tradueixin oficialment al castellà –o a altres llengües oficials de l'estat– per part d'un traductor jurat.<br>
         <p>Per exemple, és freqüent que per a l'**homologació d'un títol universitari** s'exigeixi la traducció jurada del diploma, de l'expedient acadèmic o del suplement al diploma que emet una universitat estrangera en atorgar el títol.<p>
         <p>La traducció jurada actua, per tant, com a certificació de que el contingut traduït és fidel i exacte a –i que es correspon amb– un original de forma precisa i sense errors.<p>
-    en: <p>A certified translation is the translation of a document into another language that is carried out by a professional recognized by the competent body in the country in which the document is presented. In the case of a document that is to take effect in Spain, the body that authorizes certified translators is the Ministry of Foreign Affairs, EU and Cooperation (MAEC).<p>
-        <p>Many official procedures require documents issued in other languages to be officially translated into Spanish –or into other official languages of the State– by certified translators.<p>
-        <p>For example, it is usual for recognition of a university degree to require a certified translation of the diploma, the academic record/transcript or the supplement to the diploma issued by a foreign university on awarding the degree.<p>
-        <p>A certified translation therefore serves as certification that the translated content is a true and accurate translation of the original, and that it corresponds to it exactly and without errors.<p>
+    en: <p>A sworn translation is the translation of a document into another language that is carried out by a professional recognized by the competent body in the country in which the document is presented. In the case of a document that is to take effect in Spain, the body that authorizes sworn translators is the Ministry of Foreign Affairs, EU and Cooperation (MAEC).<p>
+        <p>Many official procedures require documents issued in other languages to be officially translated into Spanish –or into other official languages of the State– by sworn translators.<p>
+        <p>For example, it is usual for recognition of a university degree to require a sworn translation of the diploma, the academic record/transcript or the supplement to the diploma issued by a foreign university on awarding the degree.<p>
+        <p>A sworn translation therefore serves as certification that the translated content is a true and accurate translation of the original, and that it corresponds to it exactly and without errors.<p>
 
 - id: q9
   question:
     es: ¿Qué diferencia hay entre una traducción jurada y una traducción jurídica?
     ca: Quina diferència hi ha entre una traducció jurada i una traducció jurídica?
-    en: What is the difference between a certified translation and a legal/sworn translation?
+    en: What is the difference between a sworn translation and a legal translation?
   answer:
     es: <p>En función de la finalidad y del trámite, a veces no es necesario que una traducción esté certificada por un traductor jurado. Hay clientes que solicitan una traducción jurada cuando, en realidad, lo que desean es una traducción especializada de alta calidad porque el texto pertenece a un ámbito especializado. En tal caso, lo ideal es asegurarse de que el traductor es especialista en la materia, aunque este no esté reconocido por el MAEC. </p>
         <p>Un caso práctico habitual es el de los clientes que solicitan la traducción jurada de las cuentas anuales y la memoria de su empresa cuando, en realidad, lo que quieren es que se encargue de estas traducciones una persona con conocimientos y experiencia en el ámbito económico y fiscal.</p>
     ca: <p>En funció de la finalitat i del tràmit, a vegades no cal que una traducció estigui certificada per un traductor jurat. Hi ha clients que sol·liciten una traducció jurada quan, de fet, el que necessiten és una **traducció especialitzada** d'alta qualitat perquè el text pertany a un àmbit especialitzat. En aquest cas, el millor és assegurar-se que el traductor és especialista en la matèria, encara que no estigui reconegut pel MAEC.</p>
         <p>Un cas pràctic habitual n'és el dels clients que sol·liciten la traducció jurada dels comptes anuals i la memòria de la seva empresa quan, de fet, el que volen és que una persona amb coneixements i experiència en l'àmbit econòmic i fiscal s'encarregui d'aquestes traduccions.</p>
-    en: <p>Depending on the purpose of the procedure, sometimes it is not necessary for a translation to be certified by an approved translator. There are clients who request a certified translation when, in reality, what they want is a high-quality specialized translation because the text belongs to a specialized field. In this case, the ideal thing is to ensure that the translator is a specialist in the subject matter, even though they are not recognized by the MAEC. </p>
-        <p>A typical case is that of clients who ask for a certified translation of their company&#39;s annual financial statements and annual report when, in reality, what they want is for a person with knowledge and experience in finance and taxation to carry out these translations.</p>
+    en: <p>Depending on the purpose of the procedure, sometimes it is not necessary for a translation to be certified by an approved translator. There are clients who request a sworn translation when, in reality, what they want is a high-quality specialized translation because the text belongs to a specialized field. In this case, the ideal thing is to ensure that the translator is a specialist in the subject matter, even though they are not recognized by the MAEC. </p>
+        <p>A typical case is that of clients who ask for a sworn translation of their company&#39;s annual financial statements and annual report when, in reality, what they want is for a person with knowledge and experience in finance and taxation to carry out these translations.</p>
 
 - id: q10
   question:
     es: ¿Cuál es la función del traductor jurado?
     ca: Quina és la funció del traductor jurat?
-    en: What is the role of a certified translator?
+    en: What is the role of a sworn translator?
   answer:
     es: El traductor jurado tiene el deber de acreditar la veracidad del contenido de un documento que tendrá carácter oficial ante una autoridad u organismo público. Por tanto, está obligado a constatar que su traducción se corresponde exactamente con el original, incluso aunque este último contenga errores (en cuyo caso, siempre hay soluciones intermedias).
     ca: El traductor jurat té l'obligació d'acreditar la veracitat del contingut d'un document que tindrà caràcter oficial davant d'una autoritat o d'un organisme públic. Per tant, està obligat a constatar que la seva traducció es correspon exactament amb l'original, fins i tot encara que aquest últim contingui errors (en aquest últim cas, sempre hi ha solucions intermèdies).
-    en: A certified translator has a duty to accredit the truthfulness of the content of a document that will be of an official nature for a public authority or body. Therefore, they are obliged to confirm that their translation corresponds exactly to the original, even when the original contains errors (in which case, there are always intermediate solutions).
+    en: A sworn translator has a duty to accredit the truthfulness of the content of a document that will be of an official nature for a public authority or body. Therefore, they are obliged to confirm that their translation corresponds exactly to the original, even when the original contains errors (in which case, there are always intermediate solutions).
     
 - id: q11
   question:
@@ -158,4 +158,4 @@
   answer:
     es: No lo incluiremos en la traducción jurada. Por ejemplo, hay documentos con sellos en relieve o blancos que no aparecen en el escaneo por falta de contraste o por mala resolución. Si no vemos esos sellos, la traducción jurada quedará incompleta y el cliente corre el riesgo de que su traducción no sea aceptada, provocando un retraso que a veces puede representar un gran problema.
     ca: No l'inclourem a la traducció jurada. Per exemple, hi ha documents amb segells en relleu o blancs que no apareixen a l'escaneig perquè el contrast és baix o per baixa resolució. Si no veiem aquests segells, la traducció jurada quedarà incompleta i el client corre el risc de veure com li rebutgen la traducció, fet que produeix retards que a vegades poden representar un problema greu.
-    en: It will not be included in the certified translation. For example, there are documents with embossed or white seals that do not appear in the scan due to lack of contrast or poor resolution. If we cannot see these seals, the certified translation will be incomplete and the client runs the risk of their translation not being accepted, causing a delay that sometimes can lead to a major problem.
+    en: It will not be included in the sworn translation. For example, there are documents with embossed or white seals that do not appear in the scan due to lack of contrast or poor resolution. If we cannot see these seals, the sworn translation will be incomplete and the client runs the risk of their translation not being accepted, causing a delay that sometimes can lead to a major problem.
