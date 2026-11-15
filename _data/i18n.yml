@@ -122,10 +122,10 @@ quote_box_title:
   fr: "Besoin de cette traduction ?"
   ca: "Necessiteu aquesta traducció?"
 quote_box_text:
-  en: "Email me a scan of your documents. I'll reply with a fixed quote and a delivery date."
-  es: "Envíeme un escaneo de sus documentos y le responderé con un presupuesto cerrado y una fecha de entrega."
-  fr: "Envoyez-moi une copie numérisée de vos documents. Je vous répondrai avec un devis ferme et une date de livraison."
-  ca: "Envieu-me una còpia escanejada dels documents i us respondré amb un pressupost tancat i una data de lliurament."
+  en: "Send me a scan of your documents through the quote form. I'll reply with a fixed quote and a delivery date."
+  es: "Envíeme un escaneo de sus documentos con el formulario y le responderé con un presupuesto cerrado y una fecha de entrega."
+  fr: "Envoyez-moi une copie numérisée de vos documents via le formulaire. Je vous répondrai avec un devis ferme et une date de livraison."
+  ca: "Envieu-me una còpia escanejada dels documents amb el formulari i us respondré amb un pressupost tancat i una data de lliurament."
 guides_by_visa:
   en: "Guides by visa"
   es: "Guías por visado"
