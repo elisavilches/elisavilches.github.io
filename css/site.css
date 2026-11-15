@@ -143,6 +143,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .section-alt { background: var(--mist); }
 .section-head { max-width: 720px; margin: 0 0 32px; }
 .section-head p { color: var(--muted); }
+.section-head-sub { margin-top: 44px; margin-bottom: 22px; }
+.section-head-sub h2 { font-size: 22px; }
 @media (max-width: 760px) { .section { padding: 44px 0; } }
 
 .intro-text { max-width: 760px; }
@@ -258,6 +260,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .content-page.hub .container { max-width: var(--wrap); }
 .content-page.hub .container > p, .content-page.hub .container > ol, .content-page.hub .container > div.cta { max-width: 760px; }
 .content-page .sub, .section-head p { color: var(--muted); }
+.section-head-sub { margin-top: 44px; margin-bottom: 22px; }
+.section-head-sub h2 { font-size: 22px; }
 .content-page h2 + .sub { margin-top: -6px; margin-bottom: 22px; }
 .v-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 0 0 8px; }
 .v-card { display: flex; flex-direction: column; gap: 8px; border: 1px solid var(--line); border-radius: 10px; padding: 18px 18px 16px; text-decoration: none; background: #fff; color: var(--text); min-width: 0; transition: border-color .15s; }

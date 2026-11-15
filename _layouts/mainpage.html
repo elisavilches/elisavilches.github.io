@@ -42,6 +42,14 @@ layout: default
       <p>{{ h.visas_sub[L] }}</p>
     </div>
     {% include guide-cards.html kind="visa" %}
+    {% assign doc_pages = site.pages | where: "lang", L | where: "kind", "document" %}
+    {% if doc_pages.size > 0 %}
+    <div class="section-head section-head-sub">
+      <h2>{{ h.docs_title[L] }}</h2>
+      <p>{{ h.docs_sub[L] }}</p>
+    </div>
+    {% include guide-cards.html kind="document" %}
+    {% endif %}
   </div>
 </section>
 {% endif %}
