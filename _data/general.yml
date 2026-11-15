@@ -1,6 +1,25 @@
 name: Elisa Vílchez
 phone: (+33) 629223015
 email: elisa@elisavilchez.com
+telephone: "+33629223015"
+city: Badalona
+country: ES
+# Datos oficiales del listado de Traductores-Intérpretes Jurados del MAEC
+official_name: "Elisa María Vílchez Sánchez"
+# Grafía con S usada profesionalmente; se declara como nombre alternativo (solo datos estructurados)
+other_names: ["Elisa Vilches", "Elisa Vilches Sánchez"]
+maec_number: "6774"
+maec_appointed: "2008-07-17"
+google_maps: "https://goo.gl/maps/ojvZ35eo4Y6d25127?coh=178571&entry=tt"
+linkedin: "https://www.linkedin.com/in/elisavilches/"
+facebook: "https://www.facebook.com/profile.php?id=100082074211975"
+
+# Descripción para datos estructurados (schema.org)
+seo_description:
+  en: "Sworn translations English–Spanish by a MAEC-appointed sworn translator, accepted by Spanish consulates and authorities. Visa documents: FBI and ACRO background checks, birth and marriage certificates, bank statements. Digital or paper delivery. Free quote."
+  es: "Traducciones juradas de inglés a español por traductora jurada nombrada por el MAEC, válidas ante consulados y administraciones. Documentos para visados: antecedentes penales del FBI, partidas de nacimiento, extractos bancarios. Firma digital o papel."
+  fr: "Traductions assermentées anglais-espagnol par une traductrice jurée nommée par le ministère espagnol des Affaires étrangères (MAEC). Documents pour visas, état civil, casiers judiciaires. Devis gratuit."
+  ca: "Traduccions jurades d'anglès a castellà per una traductora jurada nomenada pel MAEC, vàlides davant consolats i administracions. Documents per a visats, antecedents penals, partides de naixement. Pressupost gratuït."
 
 title: 
   en: Certified translator & proofreader

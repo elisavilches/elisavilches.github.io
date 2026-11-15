@@ -1,0 +1,83 @@
+{% comment %}
+  schema.org JSON-LD. Only verifiable facts. Prices (Offer), reviews (Review/AggregateRating)
+  and the MAEC number are added only when real data exists in _data/general.yml.
+{% endcomment %}
+{% assign g = site.data.general %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "{{ site.url }}/#elisa",
+      "name": {{ g.name | jsonify }},
+      "alternateName": [{{ g.official_name | jsonify }}{% for n in g.other_names %}, {{ n | jsonify }}{% endfor %}],
+      "jobTitle": {{ g.title[page.lang] | jsonify }},
+      "url": "{{ site.url }}/{{ page.lang }}/",
+      "image": "{{ site.url }}/img/elisa.png",
+      "email": "mailto:{{ g.email }}",
+      "telephone": {{ g.telephone | jsonify }},
+      "nationality": "ES",
+      "knowsLanguage": ["es", "en", "fr", "ca"],
+      "alumniOf": [
+        {"@type": "CollegeOrUniversity", "name": "Universitat Pompeu Fabra"},
+        {"@type": "CollegeOrUniversity", "name": "Universitat Jaume I"}
+      ],
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Traductora-Intérprete Jurada de inglés / Sworn Translator-Interpreter (English)",
+        "credentialCategory": "Professional appointment",
+        {% if g.maec_number != "" %}"identifier": {{ g.maec_number | jsonify }},
+        "dateCreated": {{ g.maec_appointed | jsonify }},
+        {% endif %}"recognizedBy": {
+          "@type": "GovernmentOrganization",
+          "name": "Ministerio de Asuntos Exteriores, Unión Europea y Cooperación (MAEC)",
+          "url": "https://www.exteriores.gob.es"
+        }
+      },
+      "worksFor": {"@id": "{{ site.url }}/#business"},
+      "sameAs": [{{ g.linkedin | jsonify }}, {{ g.facebook | jsonify }}]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "{{ site.url }}/#business",
+      "name": {{ g.name | append: " – " | append: g.title[page.lang] | jsonify }},
+      "url": "{{ site.url }}/",
+      "image": "{{ site.url }}/img/elisa.png",
+      "logo": "{{ site.url }}/{{ site.logo }}",
+      "email": "mailto:{{ g.email }}",
+      "telephone": {{ g.telephone | jsonify }},
+      "description": {{ g.seo_description[page.lang] | jsonify }},
+      "founder": {"@id": "{{ site.url }}/#elisa"},
+      "address": {"@type": "PostalAddress", "addressLocality": {{ g.city | jsonify }}, "addressCountry": {{ g.country | jsonify }}},
+      "areaServed": [{"@type": "Country", "name": "Spain"}, "Online / Worldwide"],
+      "availableLanguage": ["English", "Spanish", "French", "Catalan"],
+      "hasMap": {{ g.google_maps | jsonify }},
+      "knowsAbout": ["Sworn translation", "Spanish visa applications", "Non-lucrative visa", "Digital nomad visa", "Student visa", "Family reunification", "FBI background check", "ACRO police certificate", "Apostille"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services",
+        "itemListElement": [{% for s in g.services_list %}
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": {{ s.title[page.lang] | jsonify }}, "description": {{ s.desc[page.lang] | jsonify }}}}{% unless forloop.last %},{% endunless %}{% endfor %}
+        ]
+      },
+      "sameAs": [{{ g.linkedin | jsonify }}, {{ g.facebook | jsonify }}, {{ g.google_maps | jsonify }}]
+    }{% if page.ref == "about" %},
+    {
+      "@type": "ProfilePage",
+      "url": "{{ site.url }}{{ page.url }}",
+      "name": {{ page.title | jsonify }},
+      "inLanguage": "{{ page.lang }}",
+      "dateModified": "{{ page.last_updated | date: '%Y-%m-%d' }}",
+      "mainEntity": {"@id": "{{ site.url }}/#elisa"}
+    }{% endif %}{% assign faqs = site.data.faq | where_exp: "f", "f.question[page.lang]" %}{% if page.layout == "mainpage" and faqs.size > 0 %},
+    {
+      "@type": "FAQPage",
+      "inLanguage": "{{ page.lang }}",
+      "mainEntity": [{% for f in faqs %}
+        {"@type": "Question", "name": {{ f.question[page.lang] | strip | jsonify }}, "acceptedAnswer": {"@type": "Answer", "text": {{ f.answer[page.lang] | markdownify | strip_html | strip_newlines | strip | jsonify }}}}{% unless forloop.last %},{% endunless %}{% endfor %}
+      ]
+    }{% endif %}
+  ]
+}
+</script>

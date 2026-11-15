@@ -1,3 +1,7 @@
+---
+layout: null
+permalink: /robots.txt
+---
 # Search engines and AI assistants are welcome to crawl and cite this site.
 User-agent: *
 Allow: /
@@ -31,3 +35,5 @@ Allow: /
 
 User-agent: Bingbot
 Allow: /
+
+Sitemap: {{ site.url }}/sitemap.xml
