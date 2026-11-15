@@ -133,6 +133,11 @@ layout: default
       const id = $(this).attr("id");
       toggleAnswer(id);
     });
+    // Abre la pregunta enlazada desde otras páginas (p. ej. /en/#q2)
+    if (/^#q\d+$/.test(location.hash) && $(location.hash).length) {
+      $(location.hash).next(".faq-answer").show();
+      toggleAnswer(location.hash.slice(1));
+    }
   });
 
   function toggleAnswer(id) {
