@@ -1,13 +1,24 @@
-<!-- footer Start -->
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="footer-manu">
-          <ul>
-          </ul>
-        </div>
-      </div>
+{% assign g = site.data.general %}
+{% case page.lang %}
+  {% when "es" %}{% assign t_no = "Traductora jurada de inglés n.º" %}{% assign t_follow = "Sígueme" %}
+  {% when "fr" %}{% assign t_no = "Traductrice assermentée d’anglais n°" %}{% assign t_follow = "Suivez-moi" %}
+  {% when "ca" %}{% assign t_no = "Traductora jurada d’anglès núm." %}{% assign t_follow = "Segueix-me" %}
+  {% else %}{% assign t_no = "Sworn translator English–Spanish no." %}{% assign t_follow = "Follow me" %}
+{% endcase %}
+<footer class="site-footer">
+  <div class="sf-inner">
+    <div class="sf-id">
+      <p class="sf-name">{{ g.name }}</p>
+      <p>{{ t_no }} {{ g.maec_number }} (<a href="https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Traductores-Interpretes-Jurados.aspx" target="_blank" rel="noopener">MAEC</a>)</p>
     </div>
+    <div class="sf-contact">
+      <p><a href="mailto:{{ g.email }}">{{ g.email }}</a></p>
+      <p>{{ g.phone }}</p>
+    </div>
+    <ul class="sf-social" aria-label="{{ t_follow }}">
+      <li><a href="{{ g.google_maps }}" target="_blank" rel="noopener" aria-label="Google Maps"><i class="fa fa-map-marker"></i></a></li>
+      <li><a href="{{ g.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+      <li><a href="{{ g.facebook }}" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa fa-facebook"></i></a></li>
+    </ul>
   </div>
 </footer>

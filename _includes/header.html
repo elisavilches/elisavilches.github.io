@@ -1,75 +1,50 @@
-<!-- Header Start -->
-<header>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <!-- header Nav Start -->
-        <nav class="navbar navbar-default">
-          <div class="container-fluid">
+{% assign g = site.data.general %}
+{% case page.lang %}
+  {% when "es" %}{% assign t_quote = "Pedir presupuesto" %}{% assign t_menu = "Menú" %}{% assign t_subject = "Presupuesto de traducción jurada" %}
+  {% when "fr" %}{% assign t_quote = "Demander un devis" %}{% assign t_menu = "Menu" %}{% assign t_subject = "Devis traduction assermentée" %}
+  {% when "ca" %}{% assign t_quote = "Demanar pressupost" %}{% assign t_menu = "Menú" %}{% assign t_subject = "Pressupost de traducció jurada" %}
+  {% else %}{% assign t_quote = "Get a quote" %}{% assign t_menu = "Menu" %}{% assign t_subject = "Sworn translation quote" %}
+{% endcase %}
+<header class="site-header">
+  <div class="sh-inner">
+    <a class="sh-brand" href="{{ site.baseurl }}/{{ page.lang }}/">
+      <img src="{{ site.baseurl }}/{{ site.logo }}" alt="" width="40" height="40">
+      <span>{{ g.name }}</span>
+    </a>
 
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-              <a class="navbar-brand" href="{{ site.baseurl }}/{{ page.lang }}/">
-                <img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.data.general.name }} – {{ site.data.general.title[page.lang] }}">
-              </a>
+    <a class="sh-quote sh-quote-mobile" href="mailto:{{ g.email }}?subject={{ t_subject | uri_escape }}">{{ t_quote }}</a>
 
-              <button type="button" 
-                      class="navbar-toggle collapsed" 
-                      data-toggle="collapse" 
-                      data-target="#bs-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              
-            </div> <!-- /.navbar-header -->
+    <button class="sh-toggle" type="button" aria-expanded="false" aria-controls="sh-menu">
+      <span class="sr-only">{{ t_menu }}</span>
+      <span class="sh-bar"></span><span class="sh-bar"></span><span class="sh-bar"></span>
+    </button>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
-              <ul class="nav navbar-nav navbar-right">
-                {% assign hub_page = site.pages | where: "ref", "hub-visas" | where: "lang", page.lang | first %}
-                {% if hub_page %}<li{% if page.ref == "hub-visas" or page.kind %} class="active"{% endif %}><a href="{{ hub_page.url }}">{% if page.lang == "es" %}Visados{% else %}Visa guides{% endif %}</a></li>{% endif %}
-                {% assign about_page = site.pages | where: "ref", "about" | where: "lang", page.lang | first %}
-                {% if about_page %}<li{% if page.ref == "about" %} class="active"{% endif %}><a href="{{ about_page.url }}">{% if page.lang == "es" %}Sobre mí{% else %}About{% endif %}</a></li>{% endif %}
-                <!-- Social links -->
-                <li>
-                  <a href="{{ site.data.general.google_maps }}" target="_blank" rel="noopener" aria-label="Google Maps">
-                    <i class="fa fa-map-marker"></i>
-                    <!-- <i class="fa fa-thumbs-up"></i> -->
-                    <!-- <i class="fa fa-star"></i> -->
-                    <!-- <i class="fa fa-map-marker"></i> -->
-                  </a>
-                </li>
-                <li> 
-                  <a href="{{ site.data.general.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">
-                      <i class="fa fa-linkedin"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="{{ site.data.general.facebook }}" target="_blank" rel="noopener" aria-label="Facebook">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                </li>
-                <!-- Language selector -->
-                <ul class="nav language-selector">
-                  {% for lang in site.languages %}
-                    {% assign lang_url = site.baseurl | append: "/" | append: lang | append: "/" %}
-                    {% if page.ref %}{% assign twin = site.pages | where: "ref", page.ref | where: "lang", lang | first %}{% if twin %}{% assign lang_url = twin.url %}{% endif %}{% endif %}
-                    <li{% if lang == page.lang %} class="active"{% endif %}>
-                      <a href="{{ lang_url }}" hreflang="{{ lang }}" lang="{{ lang }}">
-                        {{ lang | upcase }}
-                      </a>
-                    </li>{% if forloop.last == false %}
-                    <li class="separator">/</li>{% endif %}
-                  {% endfor %}
-                </ul>
-              </ul>
-            </div><!-- /.navbar-collapse -->
-            
-          </div><!-- /.container-fluid -->
-        </nav><!-- /.navbar-default -->
-      </div><!-- /.col-md-12 -->
-    </div><!-- /.row -->
-  </div><!-- /.container -->
-</header><!-- header close -->
+    <div class="sh-menu" id="sh-menu">
+      <ul class="sh-pages">
+        {% assign hub_page = site.pages | where: "ref", "hub-visas" | where: "lang", page.lang | first %}
+        {% if hub_page %}<li><a href="{{ hub_page.url }}"{% if page.ref == "hub-visas" or page.kind %} aria-current="page"{% endif %}>{% if page.lang == "es" %}Visados{% else %}Visa guides{% endif %}</a></li>{% endif %}
+        {% assign about_page = site.pages | where: "ref", "about" | where: "lang", page.lang | first %}
+        {% if about_page %}<li><a href="{{ about_page.url }}"{% if page.ref == "about" %} aria-current="page"{% endif %}>{% if page.lang == "es" %}Sobre mí{% else %}About{% endif %}</a></li>{% endif %}
+      </ul>
+
+      <ul class="sh-langs" aria-label="Language">
+        {% for lang in site.languages %}
+          {% assign lang_url = site.baseurl | append: "/" | append: lang | append: "/" %}
+          {% if page.ref %}{% assign twin = site.pages | where: "ref", page.ref | where: "lang", lang | first %}{% if twin %}{% assign lang_url = twin.url %}{% endif %}{% endif %}
+          <li><a href="{{ lang_url }}" hreflang="{{ lang }}" lang="{{ lang }}"{% if lang == page.lang %} aria-current="true"{% endif %}>{{ lang | upcase }}</a></li>
+        {% endfor %}
+      </ul>
+
+      <a class="sh-quote" href="mailto:{{ g.email }}?subject={{ t_subject | uri_escape }}">{{ t_quote }}</a>
+    </div>
+  </div>
+</header>
+<script>
+  (function () {
+    var b = document.querySelector('.sh-toggle'), h = document.querySelector('.site-header');
+    if (b) b.addEventListener('click', function () {
+      var open = h.classList.toggle('is-open');
+      b.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  })();
+</script>

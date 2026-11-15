@@ -72,7 +72,8 @@ header .navbar-default .navbar-nav > .active > a:hover {
 #slider .block .contact-info { font-size: 17px; }
 #slider hr { width: 64px; height: 3px; margin: 18px auto; background: var(--seal); }
 @media only screen and (max-width: 767px) {
-  #slider .block { padding: 36px 0 32px; }
+  #slider { padding: 0; }
+  #slider .block { padding: 32px 0 28px; }
   #slider .block .title { font-size: 32px; line-height: 1.2; letter-spacing: 0; }
   #slider .block .subtitle { font-size: 17px; line-height: 1.4; letter-spacing: 0; }
 }
@@ -100,3 +101,52 @@ header .navbar-default .navbar-nav > .active > a:hover {
 .content-page table.facts th, .content-page table.facts td { border-color: var(--line); }
 .content-page .cta { background: var(--paper); border-left-color: var(--seal); }
 .content-page .last-updated, .content-page .small { font-size: 14px; color: var(--muted); }
+
+/* ---------- Paso 2: cabecera ---------- */
+.site-header { background: #fff; padding: 0; border-bottom: 1px solid var(--line); position: relative; z-index: 10; }
+.sh-inner { max-width: 1140px; margin: 0 auto; padding: 14px 16px; display: flex; align-items: center; gap: 16px; }
+.sh-brand { display: flex; align-items: center; gap: 10px; margin-right: auto; color: var(--ink); font-family: var(--serif); font-size: 20px; font-weight: 600; }
+.sh-brand:hover, .sh-brand:focus { color: var(--ink); }
+.sh-brand img { width: 40px; height: 40px; object-fit: contain; }
+.sh-menu { display: flex; align-items: center; gap: 28px; }
+.site-header ul { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; }
+.site-header li { display: block; }
+.sh-pages { gap: 24px; }
+.sh-pages a { color: var(--text); font-size: 16px; padding: 6px 0; border-bottom: 2px solid transparent; }
+.sh-pages a:hover { color: var(--ink); border-bottom-color: var(--line); }
+.sh-pages a[aria-current] { color: var(--ink); border-bottom-color: var(--seal); }
+.sh-langs { gap: 2px; font-size: 14px; }
+.sh-langs a { color: var(--muted); padding: 4px 6px; border-radius: 4px; letter-spacing: .03em; }
+.sh-langs a:hover { color: var(--ink); background: var(--paper); }
+.sh-langs a[aria-current] { color: var(--ink); font-weight: 600; background: var(--paper); }
+.sh-quote { display: inline-block; background: var(--seal); color: #fff; font-weight: 600; font-size: 16px; padding: 9px 18px; border-radius: 6px; white-space: nowrap; }
+.sh-quote:hover, .sh-quote:focus { background: #8f2717; color: #fff; }
+.sh-quote-mobile, .sh-toggle { display: none; }
+
+@media (max-width: 860px) {
+  .sh-inner { flex-wrap: wrap; gap: 10px; padding: 10px 16px; }
+  .sh-brand span { font-size: 18px; }
+  .sh-quote-mobile { display: inline-block; padding: 7px 12px; font-size: 15px; }
+  .sh-toggle { display: inline-flex; flex-direction: column; justify-content: center; gap: 4px; width: 40px; height: 40px; padding: 0 9px; background: none; border: 1px solid var(--line); border-radius: 6px; }
+  .sh-bar { display: block; height: 2px; background: var(--ink); border-radius: 1px; }
+  .sh-menu { display: none; width: 100%; flex-direction: column; align-items: flex-start; gap: 14px; padding: 8px 0 12px; }
+  .site-header.is-open .sh-menu { display: flex; }
+  .sh-menu > .sh-quote { display: none; }
+  .site-header .sh-pages { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .sh-pages a { font-size: 17px; }
+}
+@media (max-width: 360px) {
+  .sh-brand span { display: none; }
+}
+
+/* ---------- Paso 2: pie ---------- */
+.site-footer { background: var(--ink); color: rgba(255,255,255,.8); text-align: left; padding: 40px 0; }
+.sf-inner { max-width: 1140px; margin: 0 auto; padding: 0 16px; display: flex; flex-wrap: wrap; align-items: center; gap: 24px 48px; }
+.site-footer p { margin: 0; font-size: 15px; line-height: 1.6; color: rgba(255,255,255,.8); }
+.site-footer .sf-name { font-family: var(--serif); font-size: 20px; font-weight: 600; color: #fff; }
+.site-footer a { color: #fff; text-decoration: underline !important; text-decoration-color: rgba(255,255,255,.4) !important; text-underline-offset: 3px; }
+.sf-id { margin-right: auto; }
+.sf-social { list-style: none; margin: 0; padding: 0; display: flex; gap: 10px; }
+.sf-social a { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border: 1px solid rgba(255,255,255,.35); border-radius: 50%; font-size: 18px; text-decoration: none !important; }
+.sf-social a:hover { background: rgba(255,255,255,.1); }
+@media (max-width: 600px) { .sf-inner { flex-direction: column; align-items: flex-start; } }
