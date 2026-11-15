@@ -145,8 +145,17 @@ Todo el detalle está en [`form-service/README.md`](form-service/README.md).
 - **Contactos (`generate_lead`)**, con el parámetro `method`: `email_click` (clic en un
   `mailto:`), `email_copy` o `phone_copy` (copiar el email o el teléfono) y `form` (envío del
   formulario).
-- Desde que hay aviso de cookies, GA4 solo mide a quien acepta. Las cifras bajan sin que baje el
-  tráfico real.
+- **Navegación** (sin datos personales):
+  - grupo de contenido de cada página (`content_group`): `home`, `guides_index`, `guide_visa`,
+    `guide_document`, `quote_form`, `about`, `legal`, `other`;
+  - `quote_click` (`location`: header, hero, sidebar, page_end, services, footer), `guide_click`
+    (`guide`), `faq_open` (`question`), `language_switch` (`to`) y `maec_lookup`;
+  - formulario: `form_start`, `form_error` (`error`) y `generate_lead` con `method: form`, `visa`
+    (código del visado elegido) y `files` (número de adjuntos).
+  - Para filtrar por estos parámetros en los informes hay que registrarlos como dimensiones
+    personalizadas en GA4 (Administrar → Definiciones personalizadas).
+- **Desde el 2026-11-15 (noche)** hay aviso de cookies: GA4 solo mide a quien acepta. Las cifras
+  bajan sin que baje el tráfico real. Ver la tabla de fechas en `CLAUDE.md`.
 
 ## SEO técnico
 

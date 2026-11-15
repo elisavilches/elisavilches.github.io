@@ -44,7 +44,9 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
   gtag('js', new Date());
-  gtag('config', 'G-JNQ2TCMR0S');
+  {% capture cg %}{% if page.layout == "mainpage" %}home{% elsif page.ref == "hub-visas" %}guides_index{% elsif page.kind == "visa" %}guide_visa{% elsif page.kind == "document" %}guide_document{% elsif page.ref == "quote" %}quote_form{% elsif page.ref == "about" %}about{% elsif page.ref == "legal" or page.ref == "privacy" %}legal{% else %}other{% endif %}{% endcapture %}
+  window.__cg = {{ cg | strip | jsonify }};
+  gtag('config', 'G-JNQ2TCMR0S', { content_group: window.__cg });
   window.loadAnalytics = function () {
     if (window.__gaLoaded) return; window.__gaLoaded = true;
     gtag('consent', 'update', { analytics_storage: 'granted' });
@@ -59,6 +61,23 @@
     var a = e.target && e.target.closest ? e.target.closest('a[href^="mailto:"]') : null;
     if (a) gtag('event', 'generate_lead', { method: 'email_click' });
   });
+  // Navegación (sin datos personales): desde dónde se pide presupuesto, qué guías, FAQ e idiomas
+  function where(el) {
+    var m = [['.site-header','header'],['.hero','hero'],['.guide-side','sidebar'],['.cta','page_end'],['#service','services'],['.site-footer','footer']];
+    for (var i = 0; i < m.length; i++) if (el.closest(m[i][0])) return m[i][1];
+    return 'other';
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a') : null; if (!a) return;
+    var href = a.getAttribute('href') || '';
+    if (/\/(quote|presupuesto|devis|pressupost)\/$/.test(href)) gtag('event', 'quote_click', { location: where(a), page_type: window.__cg });
+    else if (a.matches('.v-card, .d-strip a')) gtag('event', 'guide_click', { guide: href, page_type: window.__cg });
+    else if (a.closest('.sh-lang-list, .sf-langs')) gtag('event', 'language_switch', { to: a.getAttribute('hreflang'), page_type: window.__cg });
+    else if (href.indexOf('Buscador-STIJ') > -1) gtag('event', 'maec_lookup', { page_type: window.__cg });
+  });
+  document.addEventListener('toggle', function (e) {
+    var d = e.target; if (d.tagName === 'DETAILS' && d.open && d.closest('.faq')) gtag('event', 'faq_open', { question: d.id });
+  }, true);
   document.addEventListener('copy', function () {
     var t = String(window.getSelection ? window.getSelection() : '');
     if (/elisa(\.vilches)?@(elisavilchez|gmail)\.com/i.test(t)) gtag('event', 'generate_lead', { method: 'email_copy' });

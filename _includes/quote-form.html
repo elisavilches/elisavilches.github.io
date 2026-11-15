@@ -72,11 +72,14 @@
     var err = form.querySelector('.qf-error'), btn = form.querySelector('.qf-submit'), btnText = btn.querySelector('span');
     var fileInput = form.querySelector('input[type=file]'), fileLabel = form.querySelector('[data-files-label]');
     form.elements.t.value = Date.now();
+    var started = false;
+    form.addEventListener('input', function () { if (!started) { started = true; if (window.gtag) gtag('event', 'form_start', { form: 'quote' }); } });
 
     function showError(code) {
       var msg = T.errors[code];
       err.innerHTML = msg ? msg : T.errors.generic + ' <a href="mailto:' + EMAIL + '">' + EMAIL + '</a>.';
       err.hidden = false; err.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      if (window.gtag) gtag('event', 'form_error', { form: 'quote', error: msg ? code : 'generic' });
     }
     fileInput.addEventListener('change', function () {
       var n = fileInput.files.length, size = 0;
@@ -95,7 +98,7 @@
         .then(function (r) { return r.json().catch(function () { return { ok: false }; }); })
         .then(function (res) {
           if (!res.ok) throw res.error || 'generic';
-          if (window.gtag) gtag('event', 'generate_lead', { method: 'form' });
+          if (window.gtag) gtag('event', 'generate_lead', { method: 'form', visa: ['none','non_lucrative','digital_nomad','student','nalcap','family','other'][form.elements.visa.selectedIndex] || 'none', files: fileInput.files.length });
           form.hidden = true;
           var ok = document.querySelector('.qf-ok'); ok.hidden = false; ok.scrollIntoView({ block: 'center' });
         })
