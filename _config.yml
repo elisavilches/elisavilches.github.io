@@ -63,5 +63,5 @@ defaults:
     values:
       lang: es
 
-# Servicio del formulario de presupuesto (form-service/, Cloud Run). Se rellena tras el primer despliegue.
-quote_endpoint: "https://PENDIENTE.run.app/quote"
+# Servicio del formulario de presupuesto (form-service/, Cloud Run, proyecto elisavilchez-web).
+quote_endpoint: "https://quote-form-472931935787.europe-west1.run.app/quote"

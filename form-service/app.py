@@ -8,7 +8,7 @@ Variables de entorno:
   MAIL_BACKEND      "brevo" (producción) o "file" (desarrollo: escribe el email en MAIL_DIR)
   BREVO_API_KEY     clave de la API de Brevo (Secret Manager en producción)
   MAIL_TO           destinatario (por defecto elisa@elisavilchez.com)
-  MAIL_FROM         remitente verificado en Brevo (por defecto info@elisavilchez.com)
+  MAIL_FROM         remitente verificado en Brevo (por defecto web@elisavilchez.com)
   MAIL_DIR          carpeta para MAIL_BACKEND=file
   ALLOWED_ORIGINS   orígenes permitidos, separados por comas
 """
@@ -65,7 +65,7 @@ class Settings:
     backend: str = field(default_factory=lambda: os.environ.get("MAIL_BACKEND", "file"))
     api_key: str = field(default_factory=lambda: os.environ.get("BREVO_API_KEY", ""))
     mail_to: str = field(default_factory=lambda: os.environ.get("MAIL_TO", "elisa@elisavilchez.com"))
-    mail_from: str = field(default_factory=lambda: os.environ.get("MAIL_FROM", "info@elisavilchez.com"))
+    mail_from: str = field(default_factory=lambda: os.environ.get("MAIL_FROM", "web@elisavilchez.com"))
     mail_dir: str = field(default_factory=lambda: os.environ.get("MAIL_DIR", "/tmp/form-service-mail"))
     origins: list[str] = field(
         default_factory=lambda: [

@@ -30,10 +30,10 @@ case "${1:-}" in
       --member "serviceAccount:$SA" --role roles/secretmanager.secretAccessor
     ;;
   deploy)
-    run gcloud run deploy "$SERVICE" --project "$PROJECT" --region "$REGION" --source . \
+    run gcloud run deploy "$SERVICE" --project "$PROJECT" --region "$REGION" --source . --quiet \
       --service-account "$SA" --allow-unauthenticated \
       --min-instances 0 --max-instances 1 --concurrency 10 --memory 512Mi --timeout 60 \
-      --set-env-vars "^#^MAIL_BACKEND=brevo#MAIL_TO=elisa@elisavilchez.com#MAIL_FROM=info@elisavilchez.com#ALLOWED_ORIGINS=$ORIGINS" \
+      --set-env-vars "^#^MAIL_BACKEND=brevo#MAIL_TO=elisa@elisavilchez.com#MAIL_FROM=web@elisavilchez.com#ALLOWED_ORIGINS=$ORIGINS" \
       --set-secrets "BREVO_API_KEY=brevo-api-key:latest"
     ;;
   verify)

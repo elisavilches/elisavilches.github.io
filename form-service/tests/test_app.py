@@ -50,7 +50,7 @@ def test_envia_formulario_con_adjuntos(tmp_path):
     [mail] = written(d)
     assert mail["to"] == [{"email": "elisa@elisavilchez.com"}]
     assert mail["replyTo"]["email"] == "jane@example.com"
-    assert mail["sender"]["email"] == "info@elisavilchez.com"
+    assert mail["sender"]["email"] == "web@elisavilchez.com"
     assert mail["subject"] == "Presupuesto: Jane Doe – Non-lucrative"
     assert base64.b64decode(mail["attachment"][0]["content"]) == b"%PDF-1.4 fake"
     assert "&lt;b&gt;Elisa&lt;/b&gt;" in mail["htmlContent"]  # el HTML del cliente se escapa
