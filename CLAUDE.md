@@ -41,6 +41,9 @@ Instrucciones para trabajar en este repositorio. La descripción técnica comple
 ## Seguimiento pendiente (resumen)
 
 - Completar la autenticación del dominio en Brevo cuando IONOS publique el DMARC nuevo.
-- Marcar `generate_lead` como evento clave en GA4 y anotar en GA4 el 2026-11-15 como cambio de
-  medición.
+- GA4 configurado el 2026-11-15: `generate_lead` es evento clave, anotación del cambio de medición,
+  9 dimensiones personalizadas (location, guide, visa, error, question, method, page_type, to,
+  files), conservación de datos a 14 meses, medición mejorada (scroll, clics de salida,
+  descargas), referencias de spam excluidas, filtro de tráfico interno activo (`?internal=1`) y
+  Search Console vinculado. El canal «AI Assistant» ya viene en el grupo predeterminado de GA4.
 - Revisar cada mes el registro de envíos de Brevo (Transaccional → Logs).
