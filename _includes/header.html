@@ -1,6 +1,8 @@
 {% assign g = site.data.general %}{% assign t = site.data.i18n %}{% assign L = page.lang | default: "en" %}
 {% assign hub_page = site.pages | where: "ref", "hub-visas" | where: "lang", L | first %}
 {% assign about_page = site.pages | where: "ref", "about" | where: "lang", L | first %}
+{% assign quote_page = site.pages | where: "ref", "quote" | where: "lang", L | first %}
+{% capture quote_href %}{% if quote_page %}{{ quote_page.url }}{% else %}mailto:{{ g.email }}?subject={{ t.quote_subject[L] | uri_escape }}{% endif %}{% endcapture %}
 <header class="site-header">
   <div class="sh-inner">
     <a class="sh-brand" href="{{ site.baseurl }}/{{ L }}/">
@@ -8,7 +10,7 @@
       <span>{{ g.name }}</span>
     </a>
 
-    <a class="sh-quote sh-quote-mobile" href="mailto:{{ g.email }}?subject={{ t.quote_subject[L] | uri_escape }}">{{ t.quote_short[L] }}</a>
+    <a class="sh-quote sh-quote-mobile" href="{{ quote_href }}">{{ t.quote_short[L] }}</a>
 
     <button class="sh-toggle" type="button" aria-expanded="false" aria-controls="sh-menu">
       <span class="sr-only">{{ t.menu[L] }}</span>
@@ -29,7 +31,7 @@
         {% endfor %}
       </ul>
 
-      <a class="sh-quote" href="mailto:{{ g.email }}?subject={{ t.quote_subject[L] | uri_escape }}">{{ t.quote[L] }}</a>
+      <a class="sh-quote" href="{{ quote_href }}">{{ t.quote[L] }}</a>
     </div>
   </div>
 </header>

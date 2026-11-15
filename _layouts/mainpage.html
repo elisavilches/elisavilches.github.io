@@ -2,7 +2,7 @@
 layout: default
 ---
 {% assign g = site.data.general %}
-{% assign t = site.data.i18n %}{% assign L = page.lang %}
+{% assign t = site.data.i18n %}{% assign quote_page = site.pages | where: "ref", "quote" | where: "lang", page.lang | first %}{% capture quote_href %}{% if quote_page %}{{ quote_page.url }}{% else %}mailto:{{ site.data.general.email }}?subject={{ site.data.i18n.quote_subject[page.lang] | uri_escape }}{% endif %}{% endcapture %}{% assign L = page.lang %}
 {% assign hub_page = site.pages | where: "ref", "hub-visas" | where: "lang", page.lang | first %}
 {% assign about_page = site.pages | where: "ref", "about" | where: "lang", page.lang | first %}
 
@@ -14,7 +14,7 @@ layout: default
       <p>{{ g.name }}</p>
       <p class="hero-contact">{{ g.phone }} · <a href="mailto:{{ g.email }}">{{ g.email }}</a></p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="mailto:{{ g.email }}?subject={{ t.quote_subject[L] | uri_escape }}">{% include icon.html name="mail" %}{{ t.quote[L] }}</a>
+        <a class="btn btn-primary" href="{{ quote_href }}">{% include icon.html name="mail" %}{{ t.quote[L] }}</a>
         {% if hub_page %}<a class="btn btn-ghost" href="{{ hub_page.url }}">{{ t.nav_guides[L] }}</a>
         {% elsif about_page %}<a class="btn btn-ghost" href="{{ about_page.url }}">{{ t.about_me[L] }}</a>{% endif %}
       </div>

@@ -3,7 +3,7 @@ layout: default
 ---
 {% comment %}Content page (About, visas, documents, guides): the hero holds the page's single H1.
 Guides (page.kind or the visa hub) get a side column with the page index and a quote box.{% endcomment %}
-{% assign t = site.data.i18n %}{% assign L = page.lang %}{% assign g = site.data.general %}
+{% assign t = site.data.i18n %}{% assign quote_page = site.pages | where: "ref", "quote" | where: "lang", page.lang | first %}{% capture quote_href %}{% if quote_page %}{{ quote_page.url }}{% else %}mailto:{{ site.data.general.email }}?subject={{ site.data.i18n.quote_subject[page.lang] | uri_escape }}{% endif %}{% endcapture %}{% assign L = page.lang %}{% assign g = site.data.general %}
 {% assign is_guide = false %}{% if page.kind or page.ref == "hub-visas" %}{% assign is_guide = true %}{% endif %}
 {% assign hub_page = site.pages | where: "ref", "hub-visas" | where: "lang", L | first %}
 <section class="hero hero-page">
@@ -32,7 +32,7 @@ Guides (page.kind or the visa hub) get a side column with the page index and a q
       <div class="quote-box">
         <p class="quote-box-title">{{ t.quote_box_title[L] }}</p>
         <p>{{ t.quote_box_text[L] }}</p>
-        <a class="btn btn-primary" href="mailto:{{ g.email }}?subject={{ t.quote_subject[L] | uri_escape }}">{% include icon.html name="mail" %}{{ t.quote[L] }}</a>
+        <a class="btn btn-primary" href="{{ quote_href }}">{% include icon.html name="mail" %}{{ t.quote[L] }}</a>
         <p class="quote-box-id">{{ t.footer_title[L] }} {{ g.maec_number }} (MAEC)</p>
       </div>
     </aside>

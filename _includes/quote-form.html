@@ -1,0 +1,106 @@
+{% comment %}Formulario de presupuesto. Envía a site.quote_endpoint (servicio form-service en Cloud Run).{% endcomment %}
+{% assign f = site.data.quote_form[page.lang] %}{% assign g = site.data.general %}
+{% assign privacy_page = site.pages | where: "ref", "privacy" | where: "lang", page.lang | first %}
+<form class="quote-form" action="{{ site.quote_endpoint }}" method="post" enctype="multipart/form-data" novalidate>
+  <p class="lead">{{ f.intro }}</p>
+
+  <div class="qf-grid">
+    <label class="qf-field"><span class="qf-label">{{ f.name }}</span>
+      <input type="text" name="name" autocomplete="name" required maxlength="200">
+    </label>
+    <label class="qf-field"><span class="qf-label">{{ f.email }}</span>
+      <input type="email" name="email" autocomplete="email" required maxlength="200">
+    </label>
+    <label class="qf-field"><span class="qf-label">{{ f.visa }}</span>
+      <select name="visa">
+        <option value="">{{ f.choose }}</option>
+        {% for o in f.visa_options %}<option>{{ o }}</option>{% endfor %}
+      </select>
+    </label>
+    <label class="qf-field"><span class="qf-label">{{ f.consulate }} <span class="qf-opt">({{ f.optional }})</span></span>
+      <input type="text" name="consulate" placeholder="{{ f.consulate_hint }}" maxlength="200">
+    </label>
+  </div>
+
+  <label class="qf-field"><span class="qf-label">{{ f.documents }}</span>
+    <textarea name="documents" rows="3" placeholder="{{ f.documents_hint }}" maxlength="2000"></textarea>
+  </label>
+
+  <div class="qf-field">
+    <span class="qf-label">{{ f.files }}</span>
+    <label class="qf-drop">
+      <input type="file" name="files" multiple accept=".pdf,.jpg,.jpeg,.png,.heic,.heif,.webp,.doc,.docx,.tif,.tiff,application/pdf,image/*">
+      <span class="qf-drop-text">{% include icon.html name="proofread" %}<span data-files-label>{{ f.files }}</span></span>
+    </label>
+    <span class="qf-hint">{{ f.files_hint }}</span>
+  </div>
+
+  <div class="qf-grid">
+    <label class="qf-field"><span class="qf-label">{{ f.deadline }} <span class="qf-opt">({{ f.optional }})</span></span>
+      <input type="date" name="deadline">
+    </label>
+    <fieldset class="qf-field qf-radios">
+      <legend>{{ f.delivery }}</legend>
+      {% for o in f.delivery_options %}<label><input type="radio" name="delivery" value="{{ o }}"{% if forloop.last %} checked{% endif %}> {{ o }}</label>{% endfor %}
+    </fieldset>
+  </div>
+
+  <label class="qf-field"><span class="qf-label">{{ f.message }} <span class="qf-opt">({{ f.optional }})</span></span>
+    <textarea name="message" rows="4" maxlength="4000"></textarea>
+  </label>
+
+  {% comment %}Campo trampa para bots (oculto a las personas) y hora de carga de la página.{% endcomment %}
+  <div class="qf-trap" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+  <input type="hidden" name="t" value="">
+  <input type="hidden" name="lang" value="{{ page.lang }}">
+
+  <p class="qf-privacy">{{ f.privacy }} {% if privacy_page %}<a href="{{ privacy_page.url }}">{{ f.privacy_link }}</a>{% else %}{{ f.privacy_link }}{% endif %}.</p>
+
+  <p class="qf-error" role="alert" hidden></p>
+  <button type="submit" class="btn btn-primary qf-submit">{% include icon.html name="mail" %}<span>{{ f.submit }}</span></button>
+</form>
+
+<div class="qf-ok" role="status" hidden>
+  <h2>{{ f.ok_title }}</h2>
+  <p>{{ f.ok_text }}</p>
+</div>
+
+<script>
+  (function () {
+    var form = document.querySelector('.quote-form'); if (!form) return;
+    var T = {{ f | jsonify }}, EMAIL = {{ g.email | jsonify }}, MAX = 15 * 1024 * 1024;
+    var err = form.querySelector('.qf-error'), btn = form.querySelector('.qf-submit'), btnText = btn.querySelector('span');
+    var fileInput = form.querySelector('input[type=file]'), fileLabel = form.querySelector('[data-files-label]');
+    form.elements.t.value = Date.now();
+
+    function showError(code) {
+      var msg = T.errors[code];
+      err.innerHTML = msg ? msg : T.errors.generic + ' <a href="mailto:' + EMAIL + '">' + EMAIL + '</a>.';
+      err.hidden = false; err.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    }
+    fileInput.addEventListener('change', function () {
+      var n = fileInput.files.length, size = 0;
+      for (var i = 0; i < n; i++) size += fileInput.files[i].size;
+      fileLabel.textContent = n ? Array.prototype.map.call(fileInput.files, function (x) { return x.name; }).join(', ') : T.files;
+      err.hidden = true;
+      if (n > 10) showError('too_many_files'); else if (size > MAX) showError('too_large');
+    });
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); err.hidden = true;
+      if (!form.elements.name.value.trim()) return showError('name_required');
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(form.elements.email.value.trim())) return showError('email_invalid');
+      btn.disabled = true; btnText.textContent = T.sending;
+      fetch(form.action, { method: 'POST', body: new FormData(form) })
+        .then(function (r) { return r.json().catch(function () { return { ok: false }; }); })
+        .then(function (res) {
+          if (!res.ok) throw res.error || 'generic';
+          if (window.gtag) gtag('event', 'generate_lead', { method: 'form' });
+          form.hidden = true;
+          var ok = document.querySelector('.qf-ok'); ok.hidden = false; ok.scrollIntoView({ block: 'center' });
+        })
+        .catch(function (code) { showError(typeof code === 'string' ? code : 'generic'); })
+        .then(function () { btn.disabled = false; btnText.textContent = T.submit; });
+    });
+  })();
+</script>

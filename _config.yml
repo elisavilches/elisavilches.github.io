@@ -8,6 +8,7 @@ exclude:
   - "*.gemspec"
   - "multilingual.txt"
   - "screenshots/"
+  - "form-service/"
 
 keep_files:
   - "CNAME"
@@ -61,3 +62,6 @@ defaults:
       path: 'es'
     values:
       lang: es
+
+# Servicio del formulario de presupuesto (form-service/, Cloud Run). Se rellena tras el primer despliegue.
+quote_endpoint: "https://PENDIENTE.run.app/quote"
