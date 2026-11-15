@@ -635,3 +635,6 @@ footer .footer-manu ul li a:hover {
 }
 .content-page .breadcrumb { font-size: 15px; margin-bottom: 20px; }
 .content-page .small { font-size: 14px; color: #777; }
+
+/* Nota al pie con el nombre del registro del MAEC (portada) */
+#intro p.register-note { font-size: 14px; line-height: 1.5; color: #888; border-top: 1px solid #e5e5e5; padding-top: 10px; margin-top: 16px; }
