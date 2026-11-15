@@ -4,6 +4,7 @@ exclude:
   - "Gemfile"
   - "Gemfile.lock"
   - "README.md"
+  - "CLAUDE.md"
   - "LICENSE.md"
   - "*.gemspec"
   - "multilingual.txt"
