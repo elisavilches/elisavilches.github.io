@@ -111,22 +111,20 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .hero-page h1 { font-size: 40px; }
 .hero-page p { font-size: 18px; }
 
-/* Sello */
-.seal { flex: none; width: 168px; height: 168px; border-radius: 50%; border: 2px solid rgba(255,255,255,.9); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; position: relative; color: #fff; }
-.seal::before { content: ""; position: absolute; inset: 7px; border-radius: 50%; border: 1px dashed rgba(255,255,255,.5); }
-.seal-top, .seal-bottom { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.8); }
-.seal-number { font-family: var(--serif); font-size: 40px; font-weight: 600; line-height: 1.05; margin: 2px 0; }
-.seal-number small { font-size: 16px; margin-right: 2px; }
+/* Sello (imita el sello de traductora jurada) */
+.seal { flex: none; width: 200px; height: 200px; color: #fff; }
+.seal text { fill: currentColor; }
+.seal-ring { font-family: var(--sans); font-size: 15px; font-weight: 600; }
+.seal-maec { font-family: var(--sans); font-size: 14px; font-weight: 600; letter-spacing: .3em; opacity: .85; }
+.seal-number { font-family: var(--serif); font-size: 31px; font-weight: 600; }
+.seal-no { font-size: 15px; }
 @media (max-width: 760px) {
   h1 { font-size: 32px; }
   h2 { font-size: 26px; }
   .hero-inner { padding: 36px 16px 32px; gap: 20px; flex-direction: column-reverse; align-items: flex-start; }
   .hero p { font-size: 18px; }
   .hero-page h1 { font-size: 30px; }
-  .seal { width: 112px; height: 112px; }
-  .seal::before { inset: 5px; }
-  .seal-number { font-size: 26px; }
-  .seal-top, .seal-bottom { font-size: 10px; letter-spacing: .1em; }
+  .seal { width: 128px; height: 128px; }
   .hero-actions .btn { flex: 1 1 auto; justify-content: center; }
 }
 
