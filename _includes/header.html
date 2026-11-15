@@ -22,7 +22,7 @@
         {% if hub_page %}<li><a href="{{ hub_page.url }}"{% if page.ref == "hub-visas" or page.kind %} aria-current="page"{% endif %}>{{ t.nav_guides[L] }}</a></li>{% endif %}
         <li><a href="{{ site.baseurl }}/{{ L }}/#service">{{ t.nav_services[L] }}</a></li>
         {% if about_page %}<li><a href="{{ about_page.url }}"{% if page.ref == "about" %} aria-current="page"{% endif %}>{{ t.nav_about[L] }}</a></li>{% endif %}
-        <li><a href="{{ site.baseurl }}/{{ L }}/#faq">{{ t.nav_faq[L] }}</a></li>
+        {% assign faq_lang = site.data.faq | where_exp: "f", "f.question[L]" %}{% if faq_lang.size > 0 %}<li><a href="{{ site.baseurl }}/{{ L }}/#faq">{{ t.nav_faq[L] }}</a></li>{% endif %}
       </ul>
 
       <ul class="sh-langs" aria-label="{{ t.languages[L] }}">

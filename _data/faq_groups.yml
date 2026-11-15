@@ -1,0 +1,22 @@
+# Agrupación de las FAQ de la portada (propuesta del rediseño). Orden de los grupos y de las preguntas.
+- key: what
+  title:
+    en: "What a sworn translation is"
+    es: "Qué es una traducción jurada"
+    fr: "Qu’est-ce qu’une traduction assermentée"
+    ca: "Què és una traducció jurada"
+  ids: [q8, q10, q9, q1]
+- key: order
+  title:
+    en: "Ordering a translation"
+    es: "Cómo pedirla"
+    fr: "Comment la commander"
+    ca: "Com demanar-la"
+  ids: [q2, q4, q5, q11]
+- key: format
+  title:
+    en: "Format and copies"
+    es: "Formato y copias"
+    fr: "Format et copies"
+    ca: "Format i còpies"
+  ids: [q7, q3, q6]

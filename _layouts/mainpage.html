@@ -78,11 +78,16 @@ layout: default
   <div class="wrap">
     <div class="section-head"><h2>FAQs</h2></div>
     <div class="faq">
-      {% for item in faqs %}
+      {% for grp in site.data.faq_groups %}
+      {% capture grp_html %}{% for qid in grp.ids %}{% assign item = faqs | where: "id", qid | first %}{% if item %}
       <details id="{{ item.id }}">
         <summary>{{ item.question[page.lang] }}{% include icon.html name="plus" %}</summary>
         <div class="answer">{{ item.answer[page.lang] | markdownify }}</div>
-      </details>
+      </details>{% endif %}{% endfor %}{% endcapture %}
+      {% if grp_html contains "<details" %}
+      <h3 class="faq-group">{{ grp.title[page.lang] }}</h3>
+      {{ grp_html }}
+      {% endif %}
       {% endfor %}
     </div>
   </div>

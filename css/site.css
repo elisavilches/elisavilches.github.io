@@ -159,6 +159,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 
 /* FAQ */
 .faq { max-width: 860px; }
+.faq-group { font-size: 20px; margin: 28px 0 12px; }
+.faq-group:first-child { margin-top: 0; }
 .faq details { border: 1px solid var(--line); border-radius: var(--radius); margin-bottom: 10px; background: #fff; }
 .faq summary { list-style: none; cursor: pointer; padding: 16px 52px 16px 20px; position: relative; font-weight: 600; color: var(--ink); }
 .faq summary::-webkit-details-marker { display: none; }

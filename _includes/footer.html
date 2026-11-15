@@ -20,7 +20,7 @@
     <div class="sf-col">
       <p class="sf-h">{{ t.footer_guides[L] }}</p>
       {% if hub_page %}<p><a href="{{ hub_page.url }}">{{ t.nav_guides[L] }}</a></p>{% endif %}
-      <p><a href="{{ site.baseurl }}/{{ L }}/#faq">{{ t.nav_faq[L] }}</a></p>
+      {% assign faq_lang = site.data.faq | where_exp: "f", "f.question[L]" %}{% if faq_lang.size > 0 %}<p><a href="{{ site.baseurl }}/{{ L }}/#faq">{{ t.nav_faq[L] }}</a></p>{% endif %}
       {% if about_page %}<p><a href="{{ about_page.url }}">{{ t.nav_about[L] }}</a></p>{% endif %}
     </div>
     <div class="sf-col">
