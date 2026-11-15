@@ -12,10 +12,10 @@ layout: default
 
 <section class="content-page">
   <div class="container">
-    {% if page.kind %}{% assign hub_page = site.pages | where: "ref", "hub-visas" | where: "lang", page.lang | first %}{% if hub_page %}<p class="breadcrumb"><a href="{{ hub_page.url }}">← {% if page.lang == "es" %}Traducción jurada para visados{% else %}Sworn translation for Spanish visas{% endif %}</a></p>{% endif %}{% endif %}
+    {% if page.kind %}{% assign hub_page = site.pages | where: "ref", "hub-visas" | where: "lang", page.lang | first %}{% if hub_page %}<p class="breadcrumb"><a href="{{ hub_page.url }}">← {{ site.data.i18n.back_to_guides[page.lang] }}</a></p>{% endif %}{% endif %}
     {{ content }}
     {% if page.last_updated %}
-    <p class="last-updated">{% if page.lang == "es" %}Última actualización{% else %}Last updated{% endif %}: <time datetime="{{ page.last_updated }}">{{ page.last_updated | date: "%d/%m/%Y" }}</time></p>
+    <p class="last-updated">{{ site.data.i18n.last_updated[page.lang] }}: <time datetime="{{ page.last_updated }}">{{ page.last_updated | date: "%d/%m/%Y" }}</time></p>
     {% endif %}
   </div>
 </section>

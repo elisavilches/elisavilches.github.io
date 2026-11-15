@@ -1,0 +1,38 @@
+---
+layout: content
+lang: es
+ref: legal
+permalink: /es/aviso-legal/
+title: "Aviso legal"
+heading: "Aviso legal"
+description: "Datos de la titular del sitio web elisavilchez.com y condiciones de uso."
+robots: noindex, follow
+last_updated: 2026-11-15
+---
+{% assign g = site.data.general %}
+<h2>Titular del sitio web</h2>
+<p>En cumplimiento del artículo 10 de la Ley 34/2002, de servicios de la sociedad de la información y de comercio electrónico (LSSI), se informa de los datos de la titular de este sitio web:</p>
+<table class="facts">
+  <tr><th>Titular</th><td>{{ g.official_name }}</td></tr>
+  <tr><th>NIF</th><td>{{ g.nif | default: "[pendiente]" }}</td></tr>
+  <tr><th>Domicilio</th><td>{{ g.legal_address }}</td></tr>
+  <tr><th>Correo electrónico</th><td><a href="mailto:{{ g.email }}">{{ g.email }}</a></td></tr>
+  <tr><th>Teléfono</th><td>{{ g.phone }}</td></tr>
+  <tr><th>Actividad</th><td>Traducción, interpretación y revisión de textos</td></tr>
+</table>
+
+<h2>Profesión regulada</h2>
+<p>La titular es traductora-intérprete jurada de inglés, nombrada por el Ministerio de Asuntos Exteriores, Unión Europea y Cooperación (MAEC) el 17 de julio de 2008 con el número {{ g.maec_number }}. La actividad de traducción e interpretación jurada se rige por el Real Decreto 724/2020, de 4 de agosto. Título académico: Licenciatura en Traducción e Interpretación (Universitat Pompeu Fabra, España).</p>
+
+<h2>Condiciones de uso</h2>
+<p>El acceso a este sitio web es gratuito y no exige registro. La información que contiene es de carácter general y no sustituye al asesoramiento sobre un caso concreto: los requisitos de cada trámite los fija la administración o el consulado correspondiente.</p>
+
+<h2>Propiedad intelectual</h2>
+<p>Los textos, fotografías y el diseño de este sitio pertenecen a su titular, salvo que se indique otra cosa. No se pueden reproducir con fines comerciales sin autorización. Se permite citarlos con enlace a la fuente.</p>
+
+<h2>Enlaces externos</h2>
+<p>Este sitio enlaza a páginas de terceros, como el buscador oficial de traductores jurados del MAEC. La titular no es responsable de su contenido.</p>
+
+<h2>Legislación aplicable</h2>
+<p>Este sitio web se rige por la legislación española.</p>
+<p>El tratamiento de datos personales se explica en la <a href="/es/privacidad/">política de privacidad y cookies</a>.</p>

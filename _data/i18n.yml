@@ -1,0 +1,118 @@
+# Textos de la interfaz por idioma. Uso: {{ site.data.i18n.clave[page.lang] }}
+# El contenido de cada página va en la propia página; aquí solo menús, botones y rótulos.
+
+nav_guides:
+  en: "Visa guides"
+  es: "Guías de visados"
+  fr: "Guides visas"
+  ca: "Guies de visats"
+nav_about:
+  en: "About"
+  es: "Sobre mí"
+  fr: "À propos"
+  ca: "Sobre mi"
+about_me:
+  en: "About me"
+  es: "Sobre mí"
+  fr: "À propos"
+  ca: "Sobre mi"
+menu:
+  en: "Menu"
+  es: "Menú"
+  fr: "Menu"
+  ca: "Menú"
+languages:
+  en: "Language"
+  es: "Idioma"
+  fr: "Langue"
+  ca: "Idioma"
+quote:
+  en: "Get a quote"
+  es: "Pedir presupuesto"
+  fr: "Demander un devis"
+  ca: "Demanar pressupost"
+quote_short:
+  en: "Get a quote"
+  es: "Presupuesto"
+  fr: "Devis"
+  ca: "Pressupost"
+quote_subject:
+  en: "Sworn translation quote"
+  es: "Presupuesto de traducción jurada"
+  fr: "Devis traduction assermentée"
+  ca: "Pressupost de traducció jurada"
+seal_ring:
+  en: "Sworn translator · English–Spanish ·"
+  es: "Traductora jurada · Inglés–Español ·"
+  fr: "Traductrice assermentée · Anglais–Espagnol ·"
+  ca: "Traductora jurada · Anglès–Castellà ·"
+number_abbr:
+  en: "no."
+  es: "n.º"
+  fr: "n°"
+  ca: "núm."
+footer_title:
+  en: "Sworn translator English–Spanish no."
+  es: "Traductora jurada de inglés n.º"
+  fr: "Traductrice assermentée d’anglais n°"
+  ca: "Traductora jurada d’anglès núm."
+follow:
+  en: "Follow me"
+  es: "Sígueme"
+  fr: "Suivez-moi"
+  ca: "Segueix-me"
+legal_notice:
+  en: "Legal notice"
+  es: "Aviso legal"
+  fr: "Mentions légales"
+  ca: "Avís legal"
+privacy:
+  en: "Privacy and cookies"
+  es: "Privacidad y cookies"
+  fr: "Confidentialité et cookies"
+  ca: "Privacitat i galetes"
+cookies:
+  en: "Cookies"
+  es: "Cookies"
+  fr: "Cookies"
+  ca: "Galetes"
+cookie_settings:
+  en: "Cookie settings"
+  es: "Configurar cookies"
+  fr: "Paramètres des cookies"
+  ca: "Configurar galetes"
+cookie_text:
+  en: "I use analytics cookies (Google Analytics) to see how the site is used. They are only set if you accept."
+  es: "Uso cookies de analítica (Google Analytics) para saber cómo se usa la web. Solo se instalan si las acepta."
+  fr: "J’utilise des cookies de mesure d’audience (Google Analytics) pour savoir comment le site est utilisé. Ils ne sont déposés que si vous les acceptez."
+  ca: "Faig servir galetes d’analítica (Google Analytics) per saber com s’utilitza el web. Només s’instal·len si les accepteu."
+cookie_accept:
+  en: "Accept"
+  es: "Aceptar"
+  fr: "Accepter"
+  ca: "Acceptar"
+cookie_reject:
+  en: "Reject"
+  es: "Rechazar"
+  fr: "Refuser"
+  ca: "Rebutjar"
+cookie_more:
+  en: "More information"
+  es: "Más información"
+  fr: "En savoir plus"
+  ca: "Més informació"
+last_updated:
+  en: "Last updated"
+  es: "Última actualización"
+  fr: "Dernière mise à jour"
+  ca: "Darrera actualització"
+back_to_guides:
+  en: "Sworn translation for Spanish visas"
+  es: "Traducción jurada para visados"
+  fr: "Traduction assermentée pour les visas espagnols"
+  ca: "Traducció jurada per a visats"
+not_found_title:
+  en: "Page not found"
+  es: "Página no encontrada"
+  fr: "Page introuvable"
+  ca: "Pàgina no trobada"

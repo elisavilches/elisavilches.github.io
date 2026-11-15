@@ -1,41 +1,35 @@
-{% assign g = site.data.general %}
-{% case page.lang %}
-  {% when "es" %}{% assign t_quote = "Pedir presupuesto" %}{% assign t_short = "Presupuesto" %}{% assign t_menu = "Menú" %}{% assign t_subject = "Presupuesto de traducción jurada" %}
-  {% when "fr" %}{% assign t_quote = "Demander un devis" %}{% assign t_short = "Devis" %}{% assign t_menu = "Menu" %}{% assign t_subject = "Devis traduction assermentée" %}
-  {% when "ca" %}{% assign t_quote = "Demanar pressupost" %}{% assign t_short = "Pressupost" %}{% assign t_menu = "Menú" %}{% assign t_subject = "Pressupost de traducció jurada" %}
-  {% else %}{% assign t_quote = "Get a quote" %}{% assign t_short = "Get a quote" %}{% assign t_menu = "Menu" %}{% assign t_subject = "Sworn translation quote" %}
-{% endcase %}
+{% assign g = site.data.general %}{% assign t = site.data.i18n %}{% assign L = page.lang | default: "en" %}
+{% assign hub_page = site.pages | where: "ref", "hub-visas" | where: "lang", L | first %}
+{% assign about_page = site.pages | where: "ref", "about" | where: "lang", L | first %}
 <header class="site-header">
   <div class="sh-inner">
-    <a class="sh-brand" href="{{ site.baseurl }}/{{ page.lang }}/">
+    <a class="sh-brand" href="{{ site.baseurl }}/{{ L }}/">
       <img src="{{ site.baseurl }}/{{ site.logo }}" alt="" width="40" height="40">
       <span>{{ g.name }}</span>
     </a>
 
-    <a class="sh-quote sh-quote-mobile" href="mailto:{{ g.email }}?subject={{ t_subject | uri_escape }}">{{ t_short }}</a>
+    <a class="sh-quote sh-quote-mobile" href="mailto:{{ g.email }}?subject={{ t.quote_subject[L] | uri_escape }}">{{ t.quote_short[L] }}</a>
 
     <button class="sh-toggle" type="button" aria-expanded="false" aria-controls="sh-menu">
-      <span class="sr-only">{{ t_menu }}</span>
+      <span class="sr-only">{{ t.menu[L] }}</span>
       <span class="sh-bar"></span><span class="sh-bar"></span><span class="sh-bar"></span>
     </button>
 
     <div class="sh-menu" id="sh-menu">
       <ul class="sh-pages">
-        {% assign hub_page = site.pages | where: "ref", "hub-visas" | where: "lang", page.lang | first %}
-        {% if hub_page %}<li><a href="{{ hub_page.url }}"{% if page.ref == "hub-visas" or page.kind %} aria-current="page"{% endif %}>{% if page.lang == "es" %}Visados{% else %}Visa guides{% endif %}</a></li>{% endif %}
-        {% assign about_page = site.pages | where: "ref", "about" | where: "lang", page.lang | first %}
-        {% if about_page %}<li><a href="{{ about_page.url }}"{% if page.ref == "about" %} aria-current="page"{% endif %}>{% if page.lang == "es" %}Sobre mí{% else %}About{% endif %}</a></li>{% endif %}
+        {% if hub_page %}<li><a href="{{ hub_page.url }}"{% if page.ref == "hub-visas" or page.kind %} aria-current="page"{% endif %}>{{ t.nav_guides[L] }}</a></li>{% endif %}
+        {% if about_page %}<li><a href="{{ about_page.url }}"{% if page.ref == "about" %} aria-current="page"{% endif %}>{{ t.nav_about[L] }}</a></li>{% endif %}
       </ul>
 
-      <ul class="sh-langs" aria-label="Language">
+      <ul class="sh-langs" aria-label="{{ t.languages[L] }}">
         {% for lang in site.languages %}
           {% assign lang_url = site.baseurl | append: "/" | append: lang | append: "/" %}
           {% if page.ref %}{% assign twin = site.pages | where: "ref", page.ref | where: "lang", lang | first %}{% if twin %}{% assign lang_url = twin.url %}{% endif %}{% endif %}
-          <li><a href="{{ lang_url }}" hreflang="{{ lang }}" lang="{{ lang }}"{% if lang == page.lang %} aria-current="true"{% endif %}>{{ lang | upcase }}</a></li>
+          <li><a href="{{ lang_url }}" hreflang="{{ lang }}" lang="{{ lang }}"{% if lang == L %} aria-current="true"{% endif %}>{{ lang | upcase }}</a></li>
         {% endfor %}
       </ul>
 
-      <a class="sh-quote" href="mailto:{{ g.email }}?subject={{ t_subject | uri_escape }}">{{ t_quote }}</a>
+      <a class="sh-quote" href="mailto:{{ g.email }}?subject={{ t.quote_subject[L] | uri_escape }}">{{ t.quote[L] }}</a>
     </div>
   </div>
 </header>

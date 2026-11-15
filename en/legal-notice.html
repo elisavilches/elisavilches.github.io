@@ -1,0 +1,38 @@
+---
+layout: content
+lang: en
+ref: legal
+permalink: /en/legal-notice/
+title: "Legal notice"
+heading: "Legal notice"
+description: "Details of the owner of elisavilchez.com and terms of use."
+robots: noindex, follow
+last_updated: 2026-11-15
+---
+{% assign g = site.data.general %}
+<h2>Website owner</h2>
+<p>As required by article 10 of Spanish Law 34/2002 on information society services and electronic commerce (LSSI), these are the details of the owner of this website:</p>
+<table class="facts">
+  <tr><th>Owner</th><td>{{ g.official_name }}</td></tr>
+  <tr><th>Tax ID (NIF)</th><td>{{ g.nif | default: "[pending]" }}</td></tr>
+  <tr><th>Address</th><td>{{ g.legal_address }}</td></tr>
+  <tr><th>Email</th><td><a href="mailto:{{ g.email }}">{{ g.email }}</a></td></tr>
+  <tr><th>Phone</th><td>{{ g.phone }}</td></tr>
+  <tr><th>Activity</th><td>Translation, interpreting and proofreading</td></tr>
+</table>
+
+<h2>Regulated profession</h2>
+<p>The owner is a sworn translator-interpreter for English, appointed by Spain's Ministry of Foreign Affairs, European Union and Cooperation (MAEC) on 17 July 2008 with number {{ g.maec_number }}. Sworn translation and interpreting is governed by Royal Decree 724/2020 of 4 August. Academic degree: Bachelor's degree in Translation and Interpreting (Universitat Pompeu Fabra, Spain).</p>
+
+<h2>Terms of use</h2>
+<p>Access to this website is free and requires no registration. The information on it is general and is not advice on a specific case: the requirements for each application are set by the relevant Spanish authority or consulate.</p>
+
+<h2>Intellectual property</h2>
+<p>The texts, photographs and design of this website belong to its owner unless stated otherwise. They may not be reproduced for commercial purposes without permission. Quoting them with a link to the source is allowed.</p>
+
+<h2>External links</h2>
+<p>This website links to third-party pages, such as the MAEC's official search tool for sworn translators. The owner is not responsible for their content.</p>
+
+<h2>Applicable law</h2>
+<p>This website is governed by Spanish law.</p>
+<p>How personal data is handled is explained in the <a href="/en/privacy/">privacy and cookie policy</a>.</p>

@@ -1,0 +1,38 @@
+---
+layout: content
+lang: fr
+ref: legal
+permalink: /fr/mentions-legales/
+title: "Mentions légales"
+heading: "Mentions légales"
+description: "Informations sur la titulaire du site elisavilchez.com et conditions d’utilisation."
+robots: noindex, follow
+last_updated: 2026-11-15
+---
+{% assign g = site.data.general %}
+<h2>Titulaire du site</h2>
+<p>Conformément à l’article 10 de la loi espagnole 34/2002 sur les services de la société de l’information et le commerce électronique (LSSI), voici les informations relatives à la titulaire de ce site :</p>
+<table class="facts">
+  <tr><th>Titulaire</th><td>{{ g.official_name }}</td></tr>
+  <tr><th>N° d’identification fiscale (NIF)</th><td>{{ g.nif | default: "[en attente]" }}</td></tr>
+  <tr><th>Adresse</th><td>{{ g.legal_address }}</td></tr>
+  <tr><th>E-mail</th><td><a href="mailto:{{ g.email }}">{{ g.email }}</a></td></tr>
+  <tr><th>Téléphone</th><td>{{ g.phone }}</td></tr>
+  <tr><th>Activité</th><td>Traduction, interprétation et révision de textes</td></tr>
+</table>
+
+<h2>Profession réglementée</h2>
+<p>La titulaire est traductrice-interprète assermentée d’anglais, nommée par le ministère espagnol des Affaires étrangères, de l’Union européenne et de la Coopération (MAEC) le 17 juillet 2008 sous le numéro {{ g.maec_number }}. La traduction et l’interprétation assermentées sont régies par le décret royal 724/2020 du 4 août. Diplôme : licence en traduction et interprétation (Universitat Pompeu Fabra, Espagne).</p>
+
+<h2>Conditions d’utilisation</h2>
+<p>L’accès à ce site est gratuit et ne nécessite aucune inscription. Les informations qu’il contient sont générales et ne remplacent pas un conseil sur un cas précis : les exigences de chaque démarche sont fixées par l’administration ou le consulat concerné.</p>
+
+<h2>Propriété intellectuelle</h2>
+<p>Les textes, photographies et la conception de ce site appartiennent à sa titulaire, sauf mention contraire. Ils ne peuvent pas être reproduits à des fins commerciales sans autorisation. Il est permis de les citer avec un lien vers la source.</p>
+
+<h2>Liens externes</h2>
+<p>Ce site contient des liens vers des pages de tiers, comme le moteur de recherche officiel des traducteurs assermentés du MAEC. La titulaire n’est pas responsable de leur contenu.</p>
+
+<h2>Droit applicable</h2>
+<p>Ce site est régi par le droit espagnol.</p>
+<p>Le traitement des données personnelles est expliqué dans la <a href="/fr/confidentialite/">politique de confidentialité et de cookies</a>.</p>

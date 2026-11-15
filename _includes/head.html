@@ -14,7 +14,8 @@
 <title>{{ seo_title }}</title>
 <meta name="description" content="{{ seo_desc | strip_html | strip_newlines | escape }}">
 <link rel="canonical" href="{{ canonical }}">
-{% if is_home %}{% for l in site.languages %}
+{% if page.robots %}<meta name="robots" content="{{ page.robots }}">
+{% endif %}{% if is_home %}{% for l in site.languages %}
 <link rel="alternate" hreflang="{{ l }}" href="{{ site.url }}/{{ l }}/">{% endfor %}
 <link rel="alternate" hreflang="x-default" href="{{ site.url }}/en/">
 {% elsif page.ref %}{% assign versions = site.pages | where: "ref", page.ref %}{% for v in versions %}
@@ -37,14 +38,21 @@
 <link rel="preload" href="{{ site.baseurl }}/fonts/source-serif-4-latin-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{{ site.baseurl }}/css/site.css">
 
-<!-- Google tag (gtag.js) GA 4-->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JNQ2TCMR0S"></script>
+<!-- Google Analytics 4: solo se carga si el visitante acepta las cookies (ver cookie-banner.html) -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
   gtag('js', new Date());
-
   gtag('config', 'G-JNQ2TCMR0S');
+  window.loadAnalytics = function () {
+    if (window.__gaLoaded) return; window.__gaLoaded = true;
+    gtag('consent', 'update', { analytics_storage: 'granted' });
+    var s = document.createElement('script'); s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-JNQ2TCMR0S';
+    document.head.appendChild(s);
+  };
+  try { if (localStorage.getItem('cookie-consent') === 'granted') window.loadAnalytics(); } catch (e) {}
 
   // Leads: clic en un enlace de email y copia del email o del teléfono (evento clave «generate_lead»)
   document.addEventListener('click', function (e) {

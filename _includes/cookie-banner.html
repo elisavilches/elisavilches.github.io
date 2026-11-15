@@ -1,0 +1,34 @@
+{% assign t = site.data.i18n %}{% assign L = page.lang | default: "en" %}{% assign privacy_page = site.pages | where: "ref", "privacy" | where: "lang", L | first %}
+<div class="cookie-banner" role="dialog" aria-live="polite" aria-label="{{ t.cookies[L] }}" hidden>
+  <p>{{ t.cookie_text[L] }}{% if privacy_page %} <a href="{{ privacy_page.url }}#cookies">{{ t.cookie_more[L] }}</a>{% endif %}</p>
+  <div class="cookie-actions">
+    <button type="button" class="btn btn-outline" data-consent="denied">{{ t.cookie_reject[L] }}</button>
+    <button type="button" class="btn btn-dark" data-consent="granted">{{ t.cookie_accept[L] }}</button>
+  </div>
+</div>
+<script>
+  (function () {
+    var KEY = 'cookie-consent', banner = document.querySelector('.cookie-banner');
+    function get() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+    function set(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+    function clearGaCookies() {
+      var host = location.hostname, domains = ['', host, '.' + host, '.' + host.replace(/^www\./, '')];
+      document.cookie.split(';').forEach(function (c) {
+        var name = c.split('=')[0].trim();
+        if (/^_ga/.test(name)) domains.forEach(function (d) {
+          document.cookie = name + '=; Max-Age=0; path=/' + (d ? '; domain=' + d : '');
+        });
+      });
+    }
+    if (!get()) banner.hidden = false;
+    banner.addEventListener('click', function (e) {
+      var v = e.target.getAttribute('data-consent'); if (!v) return;
+      var before = get(); set(v); banner.hidden = true;
+      if (v === 'granted') window.loadAnalytics();
+      else { gtag('consent', 'update', { analytics_storage: 'denied' }); clearGaCookies(); if (before === 'granted') location.reload(); }
+    });
+    document.querySelectorAll('[data-cookie-settings]').forEach(function (b) {
+      b.addEventListener('click', function () { banner.hidden = false; banner.querySelector('button').focus(); });
+    });
+  })();
+</script>

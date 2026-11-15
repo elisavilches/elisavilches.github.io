@@ -1,24 +1,29 @@
-{% assign g = site.data.general %}
-{% case page.lang %}
-  {% when "es" %}{% assign t_no = "Traductora jurada de inglés n.º" %}{% assign t_follow = "Sígueme" %}
-  {% when "fr" %}{% assign t_no = "Traductrice assermentée d’anglais n°" %}{% assign t_follow = "Suivez-moi" %}
-  {% when "ca" %}{% assign t_no = "Traductora jurada d’anglès núm." %}{% assign t_follow = "Segueix-me" %}
-  {% else %}{% assign t_no = "Sworn translator English–Spanish no." %}{% assign t_follow = "Follow me" %}
-{% endcase %}
+{% assign g = site.data.general %}{% assign t = site.data.i18n %}{% assign L = page.lang | default: "en" %}
+{% assign legal_page = site.pages | where: "ref", "legal" | where: "lang", L | first %}
+{% assign privacy_page = site.pages | where: "ref", "privacy" | where: "lang", L | first %}
 <footer class="site-footer">
   <div class="sf-inner">
     <div class="sf-id">
       <p class="sf-name">{{ g.name }}</p>
-      <p>{{ t_no }} {{ g.maec_number }} (<a href="https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Traductores-Interpretes-Jurados.aspx" target="_blank" rel="noopener">MAEC</a>)</p>
+      <p>{{ t.footer_title[L] }} {{ g.maec_number }} (<a href="https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Traductores-Interpretes-Jurados.aspx" target="_blank" rel="noopener">MAEC</a>)</p>
     </div>
     <div class="sf-contact">
       <p><a href="mailto:{{ g.email }}">{{ g.email }}</a></p>
       <p>{{ g.phone }}</p>
     </div>
-    <ul class="sf-social" aria-label="{{ t_follow }}">
+    <ul class="sf-social" aria-label="{{ t.follow[L] }}">
       <li><a href="{{ g.google_maps }}" target="_blank" rel="noopener" aria-label="Google Maps">{% include icon.html name="pin" %}</a></li>
       <li><a href="{{ g.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">in</a></li>
       <li><a href="{{ g.facebook }}" target="_blank" rel="noopener" aria-label="Facebook">f</a></li>
     </ul>
   </div>
+  <div class="sf-legal">
+    <p>© {{ site.time | date: "%Y" }} {{ g.name }}</p>
+    <ul>
+      {% if legal_page %}<li><a href="{{ legal_page.url }}">{{ t.legal_notice[L] }}</a></li>{% endif %}
+      {% if privacy_page %}<li><a href="{{ privacy_page.url }}">{{ t.privacy[L] }}</a></li>{% endif %}
+      <li><button type="button" class="link-button" data-cookie-settings>{{ t.cookie_settings[L] }}</button></li>
+    </ul>
+  </div>
 </footer>
+{% include cookie-banner.html %}

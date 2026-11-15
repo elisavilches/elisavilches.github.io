@@ -2,12 +2,7 @@
 layout: default
 ---
 {% assign g = site.data.general %}
-{% case page.lang %}
-  {% when "es" %}{% assign t_quote = "Pedir presupuesto" %}{% assign t_ring = "Traductora jurada · Inglés–Español ·" %}{% assign t_no = "n.º" %}{% assign t_subject = "Presupuesto de traducción jurada" %}
-  {% when "fr" %}{% assign t_quote = "Demander un devis" %}{% assign t_ring = "Traductrice assermentée · Anglais–Espagnol ·" %}{% assign t_no = "n°" %}{% assign t_subject = "Devis traduction assermentée" %}
-  {% when "ca" %}{% assign t_quote = "Demanar pressupost" %}{% assign t_ring = "Traductora jurada · Anglès–Castellà ·" %}{% assign t_no = "núm." %}{% assign t_subject = "Pressupost de traducció jurada" %}
-  {% else %}{% assign t_quote = "Get a quote" %}{% assign t_ring = "Sworn translator · English–Spanish ·" %}{% assign t_no = "no." %}{% assign t_subject = "Sworn translation quote" %}
-{% endcase %}
+{% assign t = site.data.i18n %}{% assign L = page.lang %}
 {% assign hub_page = site.pages | where: "ref", "hub-visas" | where: "lang", page.lang | first %}
 {% assign about_page = site.pages | where: "ref", "about" | where: "lang", page.lang | first %}
 
@@ -19,18 +14,18 @@ layout: default
       <p>{{ g.name }}</p>
       <p class="hero-contact">{{ g.phone }} · <a href="mailto:{{ g.email }}">{{ g.email }}</a></p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="mailto:{{ g.email }}?subject={{ t_subject | uri_escape }}">{% include icon.html name="mail" %}{{ t_quote }}</a>
-        {% if hub_page %}<a class="btn btn-ghost" href="{{ hub_page.url }}">{% if page.lang == "es" %}Guías de visados{% else %}Visa guides{% endif %}</a>
-        {% elsif about_page %}<a class="btn btn-ghost" href="{{ about_page.url }}">{% if page.lang == "es" %}Sobre mí{% else %}About me{% endif %}</a>{% endif %}
+        <a class="btn btn-primary" href="mailto:{{ g.email }}?subject={{ t.quote_subject[L] | uri_escape }}">{% include icon.html name="mail" %}{{ t.quote[L] }}</a>
+        {% if hub_page %}<a class="btn btn-ghost" href="{{ hub_page.url }}">{{ t.nav_guides[L] }}</a>
+        {% elsif about_page %}<a class="btn btn-ghost" href="{{ about_page.url }}">{{ t.about_me[L] }}</a>{% endif %}
       </div>
     </div>
-    <svg class="seal" viewBox="0 0 200 200" role="img" aria-label="{{ t_ring }} MAEC {{ t_no }} {{ g.maec_number }}">
+    <svg class="seal" viewBox="0 0 200 200" role="img" aria-label="{{ t.seal_ring[L] }} MAEC {{ t.number_abbr[L] }} {{ g.maec_number }}">
       <defs><path id="seal-ring" d="M100,100 m-79,0 a79,79 0 1,1 158,0 a79,79 0 1,1 -158,0"/></defs>
       <circle cx="100" cy="100" r="97" fill="none" stroke="currentColor" stroke-width="2.5"/>
       <circle cx="100" cy="100" r="63" fill="none" stroke="currentColor" stroke-width="1.2"/>
-      <text class="seal-ring"><textPath href="#seal-ring" textLength="490" lengthAdjust="spacing">{{ t_ring | upcase }}</textPath></text>
+      <text class="seal-ring"><textPath href="#seal-ring" textLength="490" lengthAdjust="spacing">{{ t.seal_ring[L] | upcase }}</textPath></text>
       <text class="seal-maec" x="100" y="90" text-anchor="middle">MAEC</text>
-      <text class="seal-number" x="100" y="124" text-anchor="middle"><tspan class="seal-no">{{ t_no }} </tspan>{{ g.maec_number }}</text>
+      <text class="seal-number" x="100" y="124" text-anchor="middle"><tspan class="seal-no">{{ t.number_abbr[L] }} </tspan>{{ g.maec_number }}</text>
     </svg>
   </div>
 </section>

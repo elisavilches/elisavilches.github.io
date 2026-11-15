@@ -1,0 +1,42 @@
+---
+layout: content
+lang: en
+ref: privacy
+permalink: /en/privacy/
+title: "Privacy and cookie policy"
+heading: "Privacy and cookies"
+description: "How I handle the personal data of people who contact me, and which cookies elisavilchez.com uses."
+robots: noindex, follow
+last_updated: 2026-11-15
+---
+{% assign g = site.data.general %}
+<h2>Data controller</h2>
+<p>{{ g.official_name }}, tax ID (NIF) {{ g.nif | default: "[pending]" }}, {{ g.legal_address }}. Email: <a href="mailto:{{ g.email }}">{{ g.email }}</a>.</p>
+
+<h2>What data I process</h2>
+<p>The data you send me when you ask for a quote or place an order: your name, your email address or phone number and the documents to be translated. These documents may contain special categories of data, such as criminal records or medical information. I only use them to make the translation.</p>
+<p>This website has no forms and does not ask you to register.</p>
+
+<h2>Purposes and legal basis</h2>
+<ul>
+  <li><strong>Answering your enquiry and preparing a quote:</strong> steps taken at your request before entering into a contract (art. 6(1)(b) GDPR).</li>
+  <li><strong>Making, delivering and invoicing the translation:</strong> performance of the contract (art. 6(1)(b)) and compliance with legal obligations, such as tax obligations (art. 6(1)(c)).</li>
+  <li><strong>Visitor statistics with Google Analytics:</strong> only if you accept them in the cookie notice (art. 6(1)(a)).</li>
+</ul>
+
+<h2>How long I keep it</h2>
+<p>Documents and correspondence are kept for as long as the order and any possible claims require. Invoices are kept for the periods required by Spanish tax and commercial law. Enquiries that do not lead to an order are deleted when they are no longer needed.</p>
+
+<h2>Who it is shared with</h2>
+<p>I do not share your data with third parties unless the law requires it. Some providers process data on my behalf: the email service, the web host (GitHub Pages, by GitHub Inc.) and, if you accept analytics cookies, Google Ireland Ltd. Some of these providers may transfer data to the United States under the EU-US Data Privacy Framework or standard contractual clauses.</p>
+
+<h2>Your rights</h2>
+<p>You can ask to access, correct or delete your data, to restrict or object to its processing, or to receive it in a portable format, by writing to <a href="mailto:{{ g.email }}">{{ g.email }}</a>. If you gave your consent, you can withdraw it at any time. If you think your data has not been handled properly, you can complain to the Spanish Data Protection Agency (<a href="https://www.aepd.es" target="_blank" rel="noopener">aepd.es</a>).</p>
+
+<h2 id="cookies">Cookies</h2>
+<p>This website only uses analytics cookies if you accept them. You can change your choice at any time with the “Cookie settings” link in the footer.</p>
+<table>
+  <tr><th>Name</th><th>Provider</th><th>Purpose</th><th>Duration</th></tr>
+  <tr><td>cookie-consent</td><td>This website (local storage)</td><td>Remembers whether you accepted or rejected cookies. Strictly necessary; no consent needed.</td><td>Until you delete it</td></tr>
+  <tr><td>_ga, _ga_*</td><td>Google Analytics</td><td>Counts visits and which pages are viewed, in aggregate. Only with your consent.</td><td>2 years</td></tr>
+</table>
