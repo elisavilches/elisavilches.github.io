@@ -258,7 +258,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 
 /* Tarjetas de visados y tira de documentos */
 .content-page.hub .container { max-width: var(--wrap); }
-.content-page.hub .container > p, .content-page.hub .container > ol, .content-page.hub .container > div.cta { max-width: 760px; }
+.content-page.hub .guide-main { max-width: none; }
+.content-page.hub .guide-main > p, .content-page.hub .guide-main > ol, .content-page.hub .guide-main > div.cta { max-width: 760px; }
 .content-page .sub, .section-head p { color: var(--muted); }
 .section-head-sub { margin-top: 44px; margin-bottom: 22px; }
 .section-head-sub h2 { font-size: 22px; }
