@@ -1,0 +1,46 @@
+---
+layout: content
+lang: en
+ref: hub-visas
+published: false  # BORRADOR: pendiente de validación de Elisa
+permalink: /en/sworn-translation-spain-visa/
+title: "Sworn Translation for Spanish Visas: Documents and Steps"
+heading: "Sworn translation for your Spanish visa"
+description: "What a sworn translation is, which visa documents need one and in what order to get them. By Elisa Vílchez, MAEC-appointed sworn translator no. 6774."
+last_updated: 2026-11-15
+---
+<p class="lead">Spanish consulates ask for foreign documents to be translated into Spanish. A <strong>sworn translation</strong> (<em>traducción jurada</em>) is made and signed by a translator appointed by Spain's Ministry of Foreign Affairs (MAEC), and Spanish authorities accept it as an official translation.</p>
+
+<p>I'm Elisa Vílchez, <a href="/en/about/">MAEC sworn translator no. 6774</a>. Most of my work is translating documents for Spanish visa and residence applications from the US and the UK.</p>
+
+<h2>The usual order</h2>
+<ol>
+  <li><strong>Get the original document</strong> (for example, your FBI check or a birth certificate).</li>
+  <li><strong>Get it apostilled</strong> in the country that issued it, if your consulate requires it.</li>
+  <li><strong>Get the sworn translation</strong> into Spanish. Send me a clear scan and I'll send you a quote and a delivery date.</li>
+  <li><strong>Submit</strong> the original, the apostille and the sworn translation with your application.</li>
+</ol>
+<p>Each consulate publishes its own requirements, and they differ in the details. I link to the official pages I've checked on each guide.</p>
+
+{% assign visas = site.pages | where: "lang", "en" | where: "kind", "visa" %}
+{% if visas.size > 0 %}
+<h2>Guides by visa</h2>
+<ul>
+{% for p in visas %}  <li><a href="{{ p.url }}">{{ p.short | default: p.title }}</a></li>
+{% endfor %}</ul>
+{% endif %}
+
+{% assign docs = site.pages | where: "lang", "en" | where: "kind", "document" %}
+{% if docs.size > 0 %}
+<h2>Guides by document</h2>
+<ul>
+{% for p in docs %}  <li><a href="{{ p.url }}">{{ p.short | default: p.title }}</a></li>
+{% endfor %}</ul>
+{% endif %}
+
+<h2>Digital or paper</h2>
+<p>I can deliver sworn translations with a qualified electronic signature, which is valid for online applications, or on paper with my original stamp and signature. Check which one your consulate or BLS office accepts.</p>
+
+<div class="cta">
+  <p><strong>Need a quote?</strong> Email scans of your documents to <a href="mailto:{{ site.data.general.email }}">{{ site.data.general.email }}</a> and tell me which visa you're applying for and which consulate.</p>
+</div>

@@ -28,6 +28,8 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right">
+                {% assign hub_page = site.pages | where: "ref", "hub-visas" | where: "lang", page.lang | first %}
+                {% if hub_page %}<li{% if page.ref == "hub-visas" or page.kind %} class="active"{% endif %}><a href="{{ hub_page.url }}">{% if page.lang == "es" %}Visados{% else %}Visa guides{% endif %}</a></li>{% endif %}
                 {% assign about_page = site.pages | where: "ref", "about" | where: "lang", page.lang | first %}
                 {% if about_page %}<li{% if page.ref == "about" %} class="active"{% endif %}><a href="{{ about_page.url }}">{% if page.lang == "es" %}Sobre mí{% else %}About{% endif %}</a></li>{% endif %}
                 <!-- Social links -->
