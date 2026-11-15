@@ -12,9 +12,9 @@ official_name: "Elisa María Vílchez Sánchez"
 other_names: ["Elisa Vilches", "Elisa Vilches Sánchez"]
 maec_number: "6774"
 maec_appointed: "2008-07-17"
-# Datos para el aviso legal (LSSI art. 10). NIF confirmado el 15/11; domicilio pendiente de decidir con Elisa.
+# Datos para el aviso legal (LSSI art. 10). NIF y domicilio confirmados el 15/11. Solo se usan en las páginas legales (noindex).
 nif: "46722555X"
-legal_address: "Badalona (Barcelona), España"
+legal_address: "Carrer de Sant Pere, 133, 08911 Badalona (Barcelona), España"
 google_maps: "https://goo.gl/maps/ojvZ35eo4Y6d25127?coh=178571&entry=tt"
 linkedin: "https://www.linkedin.com/in/elisavilches/"
 facebook: "https://www.facebook.com/profile.php?id=100082074211975"
