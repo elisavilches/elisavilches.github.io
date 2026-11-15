@@ -1,9 +1,31 @@
 name: Elisa Vílchez
 phone: (+33) 629223015
 email: elisa@elisavilchez.com
+telephone: "+33629223015"
+city: Barcelona
+country: ES
+# Número de Traductora-Intérprete Jurada del MAEC. Rellenar cuando se publique:
+# aparecerá en los datos estructurados (Person.hasCredential).
+maec_number: ""
+google_maps: "https://goo.gl/maps/ojvZ35eo4Y6d25127?coh=178571&entry=tt"
+linkedin: "https://www.linkedin.com/in/elisavilches/"
+facebook: "https://www.facebook.com/profile.php?id=100082074211975"
+
+# Título (<title>) y metadescripción únicos por idioma
+seo_title:
+  en: "Sworn Translator English–Spanish (MAEC) for Spanish Visas | Elisa Vílchez"
+  es: "Traductora jurada de inglés (MAEC) para visados y trámites | Elisa Vílchez"
+  fr: "Traductrice assermentée anglais-espagnol (MAEC) | Elisa Vílchez"
+  ca: "Traductora jurada d'anglès (MAEC) per a visats i tràmits | Elisa Vílchez"
+
+seo_description:
+  en: "Sworn translations English–Spanish by a MAEC-appointed sworn translator, accepted by Spanish consulates and authorities. Visa documents: FBI and ACRO background checks, birth and marriage certificates, bank statements. Digital or paper delivery. Free quote."
+  es: "Traducciones juradas de inglés a español por traductora jurada nombrada por el MAEC, válidas ante consulados y administraciones. Documentos para visados: antecedentes penales del FBI, partidas de nacimiento, extractos bancarios. Firma digital o papel."
+  fr: "Traductions assermentées anglais-espagnol par une traductrice jurée nommée par le ministère espagnol des Affaires étrangères (MAEC). Documents pour visas, état civil, casiers judiciaires. Devis gratuit."
+  ca: "Traduccions jurades d'anglès a castellà per una traductora jurada nomenada pel MAEC, vàlides davant consolats i administracions. Documents per a visats, antecedents penals, partides de naixement. Pressupost gratuït."
 
 title: 
-  en: Certified translator & proofreader
+  en: "Sworn translator English–Spanish (MAEC)"
   fr: Traductrice assermentée et correctrice
   es: Traductora jurada y correctora
   ca: Traductora jurada i correctora
@@ -22,18 +44,18 @@ aboutme:
   es: "
   <p><b>Traductora e intérprete jurada profesional</b> acreditada por el Ministerio de Asuntos Exteriores, UE y Cooperación (MAEC). Más de 14 años de experiencia en la traducción del <b>inglés</b> y el <b>francés</b> a mis dos idiomas maternos, el <b>castellano</b> y el <b>catalán</b>.</p>
   <p>Gracias a mi amplia experiencia en <b>textos legales, económicos, de marketing y médicos</b>, ofrezco un servicio garantizado, puntual, de alta calidad y con la mayor precisión.</p>
-  <p>He nacido y crecido en Barcelona, donde obtuve mi </b>Grado en Traducción e Interpretación</b> por la Universitat Pompeu Fabra (especialidad <b>jurídico-económica</b>) en 2006. En 2008 también obtuve mi <b>Máster en Traducción Médico-Sanitaria</b> por la Universitat Jaume I.</p>
+  <p>He nacido y crecido en Barcelona, donde obtuve mi <b>Grado en Traducción e Interpretación</b> por la Universitat Pompeu Fabra (especialidad <b>jurídico-económica</b>) en 2006. En 2008 también obtuve mi <b>Máster en Traducción Médico-Sanitaria</b> por la Universitat Jaume I.</p>
   "
   ca: "
   <p><b>Traductora i intèrpret jurada professional</b> acreditada pel Ministeri d'Afers Exteriors, UE i Cooperació (MAEC). Tinc més de 14 anys d'experiència en la traducció de l'<b>anglès</b> i el <b>francès</b> a les meves dues llengües maternes, el <b>castellà</b> i el <b>català</b>.</p>
-  <p>Gràcies a una àmplia experiència en </b>textos legals, econòmics, de màrqueting i mèdics</b>, ofereixo un servei garantit, puntual, d'alta qualitat i amb la màxima precisió.</p>
+  <p>Gràcies a una àmplia experiència en <b>textos legals, econòmics, de màrqueting i mèdics</b>, ofereixo un servei garantit, puntual, d'alta qualitat i amb la màxima precisió.</p>
   <p>He nascut i crescut a Barcelona, on vaig obtenir el <b>Grau en Traducció i Interpretació</b> (especialització en <b>traducció juridicoeconòmica</b>) per la Universitat Pompeu Fabra el 2006. El 2008 també vaig obtenir un <b>Màster en Traducció Medicosanitària</b> per la Universitat Jaume I.</p>
   "
 
 services_title:
 
   en: "My services"
-  fr: "My services"
+  fr: "Mes services"
   es: "Mis servicios"
   ca: "Els meus serveis"
 
@@ -42,11 +64,11 @@ services:
   en: "For more information or for a free quote, feel free to contact me or send your documents to <b>elisa@elisavilchez.com.</b>"
   fr: "Pour de plus amples informations ou obtenir un devis gratuit, vous pouvez me contacter ou envoyer vos documents à <b>elisa@elisavilchez.com.</b>"
   es: "Para obtener más información o solicitar un presupuesto gratis, póngase en contacto conmigo o envíe sus documentos a <b>elisa@elisavilchez.com.</b>"
-  ca: "Per obtenir més informació o per sol·licitar un pressupost gratuït, poseu-vos en contacte amb mi o envieu els vostres documents a <b>elisa@elisavilchez.com.<b>"
+  ca: "Per obtenir més informació o per sol·licitar un pressupost gratuït, poseu-vos en contacte amb mi o envieu els vostres documents a <b>elisa@elisavilchez.com.</b>"
 
 contact: 
 
-  en: "For a free price quotation, feel free to contact me or send your documents to <b>elisa.vilches@gmail.com.</b>."
+  en: "For a free price quotation, feel free to contact me or send your documents to <b>elisa@elisavilchez.com.</b>."
   fr: "Pour de plus amples informations ou obtenir un devis gratuit, vous pouvez me contacter ou envoyer vos documents à <b>elisa@elisavilchez.com.</b>."
   es: "Para obtener más información o solicitar un presupuesto gratis, póngase en contacto conmigo o envíe sus documentos a <b>elisa@elisavilchez.com.</b>."
   ca: "Per obtenir més informació o per sol·licitar un pressupost gratuït, poseu-vos en contacte amb mi o envieu els vostres documents a <b>elisa@elisavilchez.com.</b>."

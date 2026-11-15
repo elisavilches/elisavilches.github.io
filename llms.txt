@@ -1,0 +1,27 @@
+---
+layout: null
+permalink: /llms.txt
+---
+# {{ site.data.general.name }} – Sworn Translator English–Spanish (MAEC)
+
+> {{ site.data.general.name }} is a sworn translator-interpreter for English (Traductora-Intérprete Jurada) appointed by the Spanish Ministry of Foreign Affairs, European Union and Cooperation (MAEC){% if site.data.general.maec_number != "" %}, appointment no. {{ site.data.general.maec_number }}{% endif %}. She produces sworn translations English ⇄ Spanish that are accepted by Spanish consulates and public authorities, mainly for Spanish visa and residence applications. Based in {{ site.data.general.city }}, Spain; works online with clients worldwide.
+
+## Credentials
+- Sworn translator-interpreter (English), appointed by the MAEC (certified in 2007)
+- Bachelor's degree in Translation & Interpreting, Universitat Pompeu Fabra (legal and economic specialisation), 2006
+- Master's degree in Medical & Health Translation, Universitat Jaume I, 2008
+- Native languages: Spanish and Catalan. Working languages: English, French
+
+## Services
+- Sworn translations English ⇄ Spanish, delivered with qualified digital signature (valid for electronic submission) or on paper by courier
+- Typical visa documents: FBI and UK (ACRO) background checks, birth and marriage certificates, medical certificates, bank statements, employer letters, tax returns
+- General translation (English/French > Spanish/Catalan), proofreading and editing
+
+## Contact
+- Website: {{ site.url }}/en/ (English), {{ site.url }}/es/ (Spanish)
+- Email: {{ site.data.general.email }}
+- LinkedIn: {{ site.data.general.linkedin }}
+
+## Key pages
+- [English home]({{ site.url }}/en/): services, credentials and FAQ about sworn translations
+- [Spanish home]({{ site.url }}/es/): servicios, credenciales y preguntas frecuentes

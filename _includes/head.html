@@ -1,8 +1,32 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>{{ site.shorttitle }}</title>
-<meta name="description" content="Certified translator (English & Spanish) for official &amp; legal documents: background checks, apostilles, birth certificates, marriage/divorce certificates, transcripts, degrees &amp; diplomas. Translation and proofreading services from English and French into Spanish/Catalan. Specialized in legal, medical, and financial documents. Get a free quote now!
-">
+{% assign g = site.data.general %}
+{% assign is_home = false %}{% if page.layout == "mainpage" %}{% assign is_home = true %}{% endif %}
+{% if is_home %}
+  {% assign seo_title = g.seo_title[page.lang] %}
+  {% assign seo_desc = g.seo_description[page.lang] %}
+  {% capture canonical %}{{ site.url }}/{{ page.lang }}/{% endcapture %}
+{% else %}
+  {% capture seo_title %}{{ page.title }} | {{ g.name }}{% endcapture %}
+  {% assign seo_desc = page.description | default: g.seo_description[page.lang] %}
+  {% capture canonical %}{{ site.url }}{{ page.url }}{% endcapture %}
+{% endif %}
+<title>{{ seo_title }}</title>
+<meta name="description" content="{{ seo_desc | strip_html | strip_newlines | escape }}">
+<link rel="canonical" href="{{ canonical }}">
+{% if is_home %}{% for l in site.languages %}
+<link rel="alternate" hreflang="{{ l }}" href="{{ site.url }}/{{ l }}/">{% endfor %}
+<link rel="alternate" hreflang="x-default" href="{{ site.url }}/en/">
+{% endif %}
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ seo_title | escape }}">
+<meta property="og:description" content="{{ seo_desc | strip_html | strip_newlines | escape }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:image" content="{{ site.url }}/img/elisa.png">
+<meta property="og:locale" content="{{ page.lang }}">
+<meta name="twitter:card" content="summary">
+{% include structured-data.html %}
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- CSS -->
