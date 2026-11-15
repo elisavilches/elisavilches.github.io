@@ -1,0 +1,11 @@
+{% comment %}Iconos de trazo (24×24, 1.75 px). Uso: {% include icon.html name="seal" %}{% endcomment %}<svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{% case include.name %}
+{% when "seal" %}<circle cx="12" cy="9" r="6"/><path d="M9 14.5 8 22l4-2 4 2-1-7.5"/><path d="m9.5 9 1.75 1.75L14.5 7.5"/>
+{% when "language" %}<path d="M4 5h9M8.5 3v2M6 5c.6 3.4 2.6 6 6 7.5"/><path d="M11 5c-.6 3.4-2.6 6-6 7.5"/><path d="m12.5 21 4-9 4 9M14 17.5h5"/>
+{% when "proofread" %}<path d="M4 4h11l5 5v11H4z"/><path d="M15 4v5h5"/><path d="m8 14 2.5 2.5L16 11"/>
+{% when "edit" %}<path d="M4 20h4L19.5 8.5a2.1 2.1 0 0 0-3-3L5 17z"/><path d="m14.5 7.5 3 3"/><path d="M13 20h7"/>
+{% when "pin" %}<path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/>
+{% when "mail" %}<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/>
+{% when "phone" %}<path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/>
+{% when "plus" %}<path d="M12 5v14M5 12h14"/>
+{% when "quote" %}<path d="M7 7h4v4c0 3-1.5 5-4 6M14 7h4v4c0 3-1.5 5-4 6"/>
+{% endcase %}</svg>

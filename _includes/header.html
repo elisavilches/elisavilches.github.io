@@ -1,9 +1,9 @@
 {% assign g = site.data.general %}
 {% case page.lang %}
-  {% when "es" %}{% assign t_quote = "Pedir presupuesto" %}{% assign t_menu = "Menú" %}{% assign t_subject = "Presupuesto de traducción jurada" %}
-  {% when "fr" %}{% assign t_quote = "Demander un devis" %}{% assign t_menu = "Menu" %}{% assign t_subject = "Devis traduction assermentée" %}
-  {% when "ca" %}{% assign t_quote = "Demanar pressupost" %}{% assign t_menu = "Menú" %}{% assign t_subject = "Pressupost de traducció jurada" %}
-  {% else %}{% assign t_quote = "Get a quote" %}{% assign t_menu = "Menu" %}{% assign t_subject = "Sworn translation quote" %}
+  {% when "es" %}{% assign t_quote = "Pedir presupuesto" %}{% assign t_short = "Presupuesto" %}{% assign t_menu = "Menú" %}{% assign t_subject = "Presupuesto de traducción jurada" %}
+  {% when "fr" %}{% assign t_quote = "Demander un devis" %}{% assign t_short = "Devis" %}{% assign t_menu = "Menu" %}{% assign t_subject = "Devis traduction assermentée" %}
+  {% when "ca" %}{% assign t_quote = "Demanar pressupost" %}{% assign t_short = "Pressupost" %}{% assign t_menu = "Menú" %}{% assign t_subject = "Pressupost de traducció jurada" %}
+  {% else %}{% assign t_quote = "Get a quote" %}{% assign t_short = "Get a quote" %}{% assign t_menu = "Menu" %}{% assign t_subject = "Sworn translation quote" %}
 {% endcase %}
 <header class="site-header">
   <div class="sh-inner">
@@ -12,7 +12,7 @@
       <span>{{ g.name }}</span>
     </a>
 
-    <a class="sh-quote sh-quote-mobile" href="mailto:{{ g.email }}?subject={{ t_subject | uri_escape }}">{{ t_quote }}</a>
+    <a class="sh-quote sh-quote-mobile" href="mailto:{{ g.email }}?subject={{ t_subject | uri_escape }}">{{ t_short }}</a>
 
     <button class="sh-toggle" type="button" aria-expanded="false" aria-controls="sh-menu">
       <span class="sr-only">{{ t_menu }}</span>

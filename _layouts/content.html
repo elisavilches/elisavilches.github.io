@@ -2,17 +2,11 @@
 layout: default
 ---
 {% comment %}Content page (About, visas, documents, guides): the hero holds the page's single H1.{% endcomment %}
-<section id="slider">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="block">
-          <h1 class="title">{{ page.heading | default: page.title }}</h1>
-          <p><hr></p>
-          <p class="subtitle">{{ site.data.general.name }} · {{ site.data.general.title[page.lang] }}</p>
-        </div>
-      </div>
-    </div>
+<section class="hero hero-page">
+  <div class="hero-inner">
+    <h1>{{ page.heading | default: page.title }}</h1>
+    <hr class="rule">
+    <p>{{ site.data.general.name }} · {{ site.data.general.title[page.lang] }}</p>
   </div>
 </section>
 

@@ -1,152 +1,103 @@
 ---
 layout: default
----          
+---
+{% assign g = site.data.general %}
+{% case page.lang %}
+  {% when "es" %}{% assign t_quote = "Pedir presupuesto" %}{% assign t_since = "desde 2008" %}{% assign t_no = "n.º" %}{% assign t_subject = "Presupuesto de traducción jurada" %}
+  {% when "fr" %}{% assign t_quote = "Demander un devis" %}{% assign t_since = "depuis 2008" %}{% assign t_no = "n°" %}{% assign t_subject = "Devis traduction assermentée" %}
+  {% when "ca" %}{% assign t_quote = "Demanar pressupost" %}{% assign t_since = "des de 2008" %}{% assign t_no = "núm." %}{% assign t_subject = "Pressupost de traducció jurada" %}
+  {% else %}{% assign t_quote = "Get a quote" %}{% assign t_since = "since 2008" %}{% assign t_no = "no." %}{% assign t_subject = "Sworn translation quote" %}
+{% endcase %}
+{% assign hub_page = site.pages | where: "ref", "hub-visas" | where: "lang", page.lang | first %}
+{% assign about_page = site.pages | where: "ref", "about" | where: "lang", page.lang | first %}
 
-<!-- Slider Start -->
-<section id="slider">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="block">
-          <h1 class="animated fadeInUp title">{{ site.data.general.title[page.lang] }}</h1>
-          <p><hr></p>
-          <p class="animated fadeInUp subtitle">{{ site.data.general.name }}</p>
-          <p class="animated fadeInUp contact-info">{{ site.data.general.phone }} &#183; {{ site.data.general.email }}</p>
-        </div>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h1>{{ g.title[page.lang] }}</h1>
+      <hr class="rule">
+      <p>{{ g.name }}</p>
+      <p class="hero-contact">{{ g.phone }} · <a href="mailto:{{ g.email }}">{{ g.email }}</a></p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="mailto:{{ g.email }}?subject={{ t_subject | uri_escape }}">{% include icon.html name="mail" %}{{ t_quote }}</a>
+        {% if hub_page %}<a class="btn btn-ghost" href="{{ hub_page.url }}">{% if page.lang == "es" %}Guías de visados{% else %}Visa guides{% endif %}</a>
+        {% elsif about_page %}<a class="btn btn-ghost" href="{{ about_page.url }}">{% if page.lang == "es" %}Sobre mí{% else %}About me{% endif %}</a>{% endif %}
       </div>
     </div>
-  </div>	
-</section>
-
-  
-  <!-- Intro -->
-  <section id="intro">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-7">
-            <p>{{ site.data.general.aboutme[page.lang] }} </p>
-        </div>
-        <div class="col-md-5 col-sm-12 text-center">
-            <img src="/img/elisa.png" alt="{{ site.data.general.name }} - {{ site.data.general.title[page.lang] }}">
-        </div>
-      </div>
+    <div class="seal" aria-label="MAEC {{ t_no }} {{ g.maec_number }}, {{ t_since }}">
+      <span class="seal-top">MAEC</span>
+      <span class="seal-number"><small>{{ t_no }}</small>{{ g.maec_number }}</span>
+      <span class="seal-bottom">{{ t_since }}</span>
     </div>
-  </section>
-
-
-<!-- Service Start -->
-<section id="service">
-  <div class="container">
-    <div class="row">
-      <div class="section-title">
-        <h2>{{ site.data.general.services_title[page.lang] }}</h2>
-      </div>
-      <div class="service-call-to-action">
-        <p>{{ site.data.general.services[page.lang] }}</p>
-      </div>
-    </div>
-
-    {% for service in site.data.general.services_list %}
-    <div class="service-row">
-    <div class="row mb-4"> 
-        <div class="col-md-2 d-flex justify-content-center">
-          <i class="{{ service.icon }}" style="font-size: 4rem; padding-bottom: 10px;"></i>
-        </div>
-        <div class="col-md-10">
-          <div class="service-item">
-            <h2>{{ service.title[page.lang] }}</h2>
-            <p>{{ service.desc[page.lang] }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    {% endfor %}
   </div>
 </section>
-<!-- Service End -->
 
-<!--FAQ section-->
+<section class="section" id="intro">
+  <div class="wrap intro-grid">
+    <div>{{ g.aboutme[page.lang] }}</div>
+    <img class="intro-photo" src="/img/elisa.png" width="280" height="280" alt="{{ g.name }} - {{ g.title[page.lang] }}">
+  </div>
+</section>
+
+<section class="section section-alt" id="service">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>{{ g.services_title[page.lang] }}</h2>
+      <p>{{ g.services[page.lang] }}</p>
+    </div>
+    <div class="cards">
+      {% for service in g.services_list %}
+      {% case service.icon %}{% when "fa fa-certificate" %}{% assign ic = "seal" %}{% when "fa fa-language" %}{% assign ic = "language" %}{% when "fa fa-eye" %}{% assign ic = "proofread" %}{% else %}{% assign ic = "edit" %}{% endcase %}
+      <div class="card">
+        <h3>{% include icon.html name=ic %}{{ service.title[page.lang] }}</h3>
+        <p>{{ service.desc[page.lang] }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
 {% assign faqs = site.data.faq | where_exp: "f", "f.question[page.lang]" %}
 {% if faqs.size > 0 %}
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="section-title">
-        <h2>FAQs</h2>
-      </div>
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="section-head"><h2>FAQs</h2></div>
+    <div class="faq">
+      {% for item in faqs %}
+      <details id="{{ item.id }}">
+        <summary>{{ item.question[page.lang] }}{% include icon.html name="plus" %}</summary>
+        <div class="answer">{{ item.answer[page.lang] | markdownify }}</div>
+      </details>
+      {% endfor %}
     </div>
-    {% for item in faqs %}
-    <div class="row">
-      <div class="col-md-12">
-        <div class="faq-question faq-box" id="{{ item.id }}">
-          <div class="d-flex justify-content-between align-items-center">
-            <h2>{{ item.question[page.lang] }}</h2>
-            <span class="faq-icon">+</span>
-          </div>
-        </div>
-        <div class="faq-answer faq-box" style="display: none;">
-          <p>{{ item.answer[page.lang] | markdownify }}</p>
-        </div>
-      </div>
-    </div>
-    {% endfor %}
   </div>
 </section>
 {% endif %}
-<!-- FAQ End -->
 
-<section id="testimonial">
-  <div class="container">
-    
-    <div class="row">
-      <div class="section-title">
-        <h2>{{site.data.testimonials.testimonials_title[page.lang] }}</h2>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="testimonial-carousel">
-          <div id="testimonial-slider" class="owl-carousel">
-            {% for testimonial in site.data.testimonials.testimonials_comments %}
-            <div>
-              <img src="/img/cotation.png" alt="" loading="lazy">
-              <p>{{ testimonial.comment }}</p>
-              <div class="user">
-                <p><span>{{ testimonial.name }}</span>{{ testimonial.position }}</p>
-              </div>
-            </div>
-            {% endfor %}
-          </div>
-        </div>
-      </div>
+<section class="section section-alt" id="testimonial">
+  <div class="wrap">
+    <div class="section-head"><h2>{{ site.data.testimonials.testimonials_title[page.lang] }}</h2></div>
+    <div class="reviews">
+      {% for t in site.data.testimonials.testimonials_comments %}
+      <figure class="review">
+        {% include icon.html name="quote" %}
+        <blockquote>{{ t.comment | strip }}</blockquote>
+        <figcaption><strong>{{ t.name }}</strong>{{ t.position }}</figcaption>
+      </figure>
+      {% endfor %}
     </div>
   </div>
 </section>
 
-
-<!--jQueries used in this page-->
 <script>
-  $(document).ready(function() {
-    $(".faq-question").click(function() {
-      $(this).next(".faq-answer").slideToggle("slow");
-
-      const id = $(this).attr("id");
-      toggleAnswer(id);
-    });
-    // Abre la pregunta enlazada desde otras páginas (p. ej. /en/#q2)
-    if (/^#q\d+$/.test(location.hash) && $(location.hash).length) {
-      $(location.hash).next(".faq-answer").show();
-      toggleAnswer(location.hash.slice(1));
+  // Abre la pregunta enlazada desde otras páginas (p. ej. /en/#q2)
+  (function () {
+    function openFromHash() {
+      if (!/^#q\d+$/.test(location.hash)) return;
+      var d = document.getElementById(location.hash.slice(1));
+      if (d) { d.open = true; d.scrollIntoView(); }
     }
-  });
-
-  function toggleAnswer(id) {
-    let symbol = $("#" + id + " .faq-icon");
-    if (symbol.text() === '+') {
-      symbol.text('-');
-    } else {
-      symbol.text('+');
-    }
-  }
+    openFromHash();
+    window.addEventListener('hashchange', openFromHash);
+  })();
 </script>
-<!-- End jQueries -->
