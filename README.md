@@ -154,6 +154,7 @@ Todo el detalle está en [`form-service/README.md`](form-service/README.md).
     (código del visado elegido) y `files` (número de adjuntos).
   - Para filtrar por estos parámetros en los informes hay que registrarlos como dimensiones
     personalizadas en GA4 (Administrar → Definiciones personalizadas).
+- **Tráfico interno:** abrir una vez `https://elisavilchez.com/?internal=1` en cada navegador propio (Alberto, Elisa, móviles) marca ese navegador como interno (`traffic_type=internal`), y el filtro de datos «Internal Traffic» de GA4 lo descarta. `?internal=0` lo desmarca.
 - **Desde el 2026-11-15 (noche)** hay aviso de cookies: GA4 solo mide a quien acepta. Las cifras
   bajan sin que baje el tráfico real. Ver la tabla de fechas en `CLAUDE.md`.
 
