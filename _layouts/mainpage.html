@@ -66,6 +66,8 @@ layout: default
 <!-- Service End -->
 
 <!--FAQ section-->
+{% assign faqs = site.data.faq | where_exp: "f", "f.question[page.lang]" %}
+{% if faqs.size > 0 %}
 <section>
   <div class="container">
     <div class="row">
@@ -73,7 +75,7 @@ layout: default
         <h2>FAQs</h2>
       </div>
     </div>
-    {% for item in site.data.faq %}
+    {% for item in faqs %}
     <div class="row">
       <div class="col-md-12">
         <div class="faq-question faq-box" id="{{ item.id }}">
@@ -90,6 +92,7 @@ layout: default
     {% endfor %}
   </div>
 </section>
+{% endif %}
 <!-- FAQ End -->
 
 <section id="testimonial">
@@ -106,7 +109,7 @@ layout: default
           <div id="testimonial-slider" class="owl-carousel">
             {% for testimonial in site.data.testimonials.testimonials_comments %}
             <div>
-              <img src="/img/cotation.png" alt="IMG">
+              <img src="/img/cotation.png" alt="" loading="lazy">
               <p>{{ testimonial.comment }}</p>
               <div class="user">
                 <p><span>{{ testimonial.name }}</span>{{ testimonial.position }}</p>

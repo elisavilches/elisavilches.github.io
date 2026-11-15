@@ -6,6 +6,8 @@ exclude:
   - "README.md"
   - "LICENSE.md"
   - "*.gemspec"
+  - "multilingual.txt"
+  - "screenshots/"
 
 keep_files:
   - "CNAME"

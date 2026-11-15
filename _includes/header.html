@@ -9,7 +9,7 @@
 
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-              <a class="navbar-brand" href="index.html">
+              <a class="navbar-brand" href="{{ site.baseurl }}/{{ page.lang }}/">
                 <img src="{{ site.baseurl }}/{{ site.logo }}" alt="Logo">
               </a>
 
@@ -30,7 +30,7 @@
               <ul class="nav navbar-nav navbar-right">
                 <!-- Social links -->
                 <li>
-                  <a href="https://goo.gl/maps/ojvZ35eo4Y6d25127?coh=178571&entry=tt" target="_blank">
+                  <a href="{{ site.data.general.google_maps }}" target="_blank" rel="noopener" aria-label="Google Maps">
                     <i class="fa fa-map-marker"></i>
                     <!-- <i class="fa fa-thumbs-up"></i> -->
                     <!-- <i class="fa fa-star"></i> -->
@@ -38,12 +38,12 @@
                   </a>
                 </li>
                 <li> 
-                  <a href="https://www.linkedin.com/in/elisavilches/" target="_blank">
+                  <a href="{{ site.data.general.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">
                       <i class="fa fa-linkedin"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.facebook.com/profile.php?id=100082074211975" target="_blank">
+                  <a href="{{ site.data.general.facebook }}" target="_blank" rel="noopener" aria-label="Facebook">
                     <i class="fa fa-facebook"></i>
                   </a>
                 </li>
@@ -51,7 +51,7 @@
                 <ul class="nav language-selector">
                   {% for lang in site.languages %}
                     <li{% if lang == page.lang %} class="active"{% endif %}>
-                      <a href="{{ site.baseurl }}/{{ lang }}">
+                      <a href="{{ site.baseurl }}/{{ lang }}/" hreflang="{{ lang }}" lang="{{ lang }}">
                         {{ lang | upcase }}
                       </a>
                     </li>{% if forloop.last == false %}
