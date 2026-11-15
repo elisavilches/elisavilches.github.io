@@ -1,21 +1,55 @@
 ---
 layout: default
 ---
-{% comment %}Content page (About, visas, documents, guides): the hero holds the page's single H1.{% endcomment %}
+{% comment %}Content page (About, visas, documents, guides): the hero holds the page's single H1.
+Guides (page.kind or the visa hub) get a side column with the page index and a quote box.{% endcomment %}
+{% assign t = site.data.i18n %}{% assign L = page.lang %}{% assign g = site.data.general %}
+{% assign is_guide = false %}{% if page.kind or page.ref == "hub-visas" %}{% assign is_guide = true %}{% endif %}
+{% assign hub_page = site.pages | where: "ref", "hub-visas" | where: "lang", L | first %}
 <section class="hero hero-page">
   <div class="hero-inner">
+    {% if page.kind and hub_page %}<p class="hero-crumb"><a href="{{ hub_page.url }}">{{ t.nav_guides[L] }}</a></p>{% endif %}
     <h1>{{ page.heading | default: page.title }}</h1>
     <hr class="rule">
-    <p>{{ site.data.general.name }} · {{ site.data.general.title[page.lang] }}</p>
+    <p>{{ g.name }} · {{ g.title[L] }}</p>
   </div>
 </section>
 
-<section class="content-page">
+<section class="content-page{% if is_guide %} guide{% endif %}">
   <div class="container">
-    {% if page.kind %}{% assign hub_page = site.pages | where: "ref", "hub-visas" | where: "lang", page.lang | first %}{% if hub_page %}<p class="breadcrumb"><a href="{{ hub_page.url }}">← {{ site.data.i18n.back_to_guides[page.lang] }}</a></p>{% endif %}{% endif %}
-    {{ content }}
-    {% if page.last_updated %}
-    <p class="last-updated">{{ site.data.i18n.last_updated[page.lang] }}: <time datetime="{{ page.last_updated }}">{{ page.last_updated | date: "%d/%m/%Y" }}</time></p>
+    <div class="guide-main">
+      {{ content }}
+      {% if page.last_updated %}
+      <p class="last-updated">{{ t.last_updated[L] }}: <time datetime="{{ page.last_updated }}">{{ page.last_updated | date: "%d/%m/%Y" }}</time></p>
+      {% endif %}
+    </div>
+    {% if is_guide %}
+    <aside class="guide-side">
+      <nav class="toc" aria-label="{{ t.on_this_page[L] }}" hidden>
+        <p class="toc-title">{{ t.on_this_page[L] }}</p>
+        <ol></ol>
+      </nav>
+      <div class="quote-box">
+        <p class="quote-box-title">{{ t.quote_box_title[L] }}</p>
+        <p>{{ t.quote_box_text[L] }}</p>
+        <a class="btn btn-primary" href="mailto:{{ g.email }}?subject={{ t.quote_subject[L] | uri_escape }}">{% include icon.html name="mail" %}{{ t.quote[L] }}</a>
+        <p class="quote-box-id">{{ t.footer_title[L] }} {{ g.maec_number }} (MAEC)</p>
+      </div>
+    </aside>
+    <script>
+      // Índice «En esta página» a partir de los H2 de la guía
+      (function () {
+        var hs = document.querySelectorAll('.guide-main h2'), nav = document.querySelector('.toc');
+        if (hs.length < 3 || !nav) return;
+        var ol = nav.querySelector('ol');
+        hs.forEach(function (h) {
+          if (!h.id) h.id = h.textContent.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+          var li = document.createElement('li'), a = document.createElement('a');
+          a.href = '#' + h.id; a.textContent = h.textContent; li.appendChild(a); ol.appendChild(li);
+        });
+        nav.hidden = false;
+      })();
+    </script>
     {% endif %}
   </div>
 </section>

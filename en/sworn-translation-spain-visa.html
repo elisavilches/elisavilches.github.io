@@ -22,21 +22,11 @@ last_updated: 2026-11-15
 </ol>
 <p>Each consulate publishes its own requirements, and they differ in the details. I link to the official pages I've checked on each guide.</p>
 
-{% assign visas = site.pages | where: "lang", "en" | where: "kind", "visa" %}
-{% if visas.size > 0 %}
-<h2>Guides by visa</h2>
-<ul>
-{% for p in visas %}  <li><a href="{{ p.url }}">{{ p.short | default: p.title }}</a></li>
-{% endfor %}</ul>
-{% endif %}
+<h2>{{ site.data.i18n.guides_by_visa[page.lang] }}</h2>
+{% include guide-cards.html kind="visa" %}
 
-{% assign docs = site.pages | where: "lang", "en" | where: "kind", "document" %}
-{% if docs.size > 0 %}
-<h2>Guides by document</h2>
-<ul>
-{% for p in docs %}  <li><a href="{{ p.url }}">{{ p.short | default: p.title }}</a></li>
-{% endfor %}</ul>
-{% endif %}
+<h2>{{ site.data.i18n.guides_by_document[page.lang] }}</h2>
+{% include guide-cards.html kind="document" %}
 
 <h2>Digital or paper</h2>
 <p>I can deliver sworn translations with a qualified electronic signature, which is valid for online applications, or on paper with my original stamp and signature. Check which one your consulate or BLS office accepts.</p>

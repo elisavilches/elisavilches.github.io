@@ -1,0 +1,14 @@
+{% comment %}Tarjetas de guías. Uso: {% include guide-cards.html kind="visa" %}{% endcomment %}
+{% assign items = site.pages | where: "lang", page.lang | where: "kind", include.kind %}
+{% if items.size > 0 %}
+<div class="guide-cards">
+  {% for p in items %}
+  {% assign blurb = p.description | split: ". By " | first | split: ", by a MAEC" | first %}
+  <a class="guide-card" href="{{ p.url }}">
+    <span class="guide-card-title">{{ p.short | default: p.title }}</span>
+    <span class="guide-card-text">{{ blurb }}.</span>
+    <span class="guide-card-more">{{ site.data.i18n.read_guide[page.lang] }} →</span>
+  </a>
+  {% endfor %}
+</div>
+{% endif %}
