@@ -111,20 +111,20 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .hero-page h1 { font-size: 40px; }
 .hero-page p { font-size: 18px; }
 
-/* Sello (imita el sello de traductora jurada) */
-.seal { flex: none; width: 200px; height: 200px; color: #fff; }
-.seal text { fill: currentColor; }
-.seal-ring { font-family: var(--sans); font-size: 15px; font-weight: 600; }
-.seal-maec { font-family: var(--sans); font-size: 14px; font-weight: 600; letter-spacing: .3em; opacity: .85; }
-.seal-number { font-family: var(--serif); font-size: 31px; font-weight: 600; }
-.seal-no { font-size: 15px; }
+/* Sello rectangular, como el sello real de traductora jurada */
+.stamp { flex: none; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 2px; padding: 18px 26px; border: 2px solid rgba(255,255,255,.9); outline: 1px solid rgba(255,255,255,.35); outline-offset: 4px; color: #fff; }
+.stamp-title { font-size: 15px; font-weight: 600; letter-spacing: .02em; }
+.stamp-langs { font-size: 15px; color: rgba(255,255,255,.85); }
+.stamp-number { font-family: var(--serif); font-size: 30px; font-weight: 600; line-height: 1.2; margin-top: 4px; }
 @media (max-width: 760px) {
   h1 { font-size: 32px; }
   h2 { font-size: 26px; }
   .hero-inner { padding: 36px 16px 32px; gap: 20px; flex-direction: column-reverse; align-items: flex-start; }
   .hero p { font-size: 18px; }
   .hero-page h1 { font-size: 30px; }
-  .seal { width: 128px; height: 128px; }
+  .stamp { padding: 12px 18px; margin: 5px; }
+  .stamp-title, .stamp-langs { font-size: 14px; }
+  .stamp-number { font-size: 24px; }
   .hero-actions .btn { flex: 1 1 auto; justify-content: center; }
 }
 

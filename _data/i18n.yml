@@ -41,11 +41,6 @@ quote_subject:
   es: "Presupuesto de traducción jurada"
   fr: "Devis traduction assermentée"
   ca: "Pressupost de traducció jurada"
-seal_ring:
-  en: "Sworn translator · English–Spanish ·"
-  es: "Traductora jurada · Inglés–Español ·"
-  fr: "Traductrice assermentée · Anglais–Espagnol ·"
-  ca: "Traductora jurada · Anglès–Castellà ·"
 number_abbr:
   en: "no."
   es: "n.º"
