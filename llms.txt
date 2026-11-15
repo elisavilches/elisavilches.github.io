@@ -6,6 +6,8 @@ permalink: /llms.txt
 
 > {{ site.data.general.name }} is a sworn translator-interpreter for English (Traductora-Intérprete Jurada) appointed by the Spanish Ministry of Foreign Affairs, European Union and Cooperation (MAEC){% if site.data.general.maec_number != "" %}, appointment no. {{ site.data.general.maec_number }}{% endif %}. She produces sworn translations English ⇄ Spanish that are accepted by Spanish consulates and public authorities, mainly for Spanish visa and residence applications. Based in {{ site.data.general.city }}, Spain; works online with clients worldwide.
 
+Also known as: {{ site.data.general.other_names | join: ", " }} (same person; the official spelling in the MAEC register is "Vílchez").
+
 ## Credentials
 - Sworn translator-interpreter (English), appointed by the MAEC on 17 July 2008, appointment no. {{ site.data.general.maec_number }} (official name in the MAEC register: {{ site.data.general.official_name }})
 - Bachelor's degree in Translation & Interpreting, Universitat Pompeu Fabra (legal and economic specialisation), 2006

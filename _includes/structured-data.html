@@ -11,7 +11,7 @@
       "@type": "Person",
       "@id": "{{ site.url }}/#elisa",
       "name": {{ g.name | jsonify }},
-      "alternateName": {{ g.official_name | jsonify }},
+      "alternateName": {{ g.other_names | unshift: g.official_name | jsonify }},
       "jobTitle": {{ g.title[page.lang] | jsonify }},
       "url": "{{ site.url }}/{{ page.lang }}/",
       "image": "{{ site.url }}/img/elisa.png",
