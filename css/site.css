@@ -263,3 +263,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .guide-card-title { font-family: var(--serif); font-size: 20px; font-weight: 600; color: var(--ink); line-height: 1.3; }
 .guide-card-text { font-size: 15px; line-height: 1.5; color: var(--muted); flex: 1; }
 .guide-card-more { font-size: 15px; font-weight: 600; color: var(--seal); }
+
+/* Nota al pie con el nombre del registro del MAEC (portada) */
+.intro-grid p.register-note { font-size: 14px; line-height: 1.55; color: var(--muted); border-top: 1px solid var(--line); padding-top: 12px; margin-top: 20px; }
