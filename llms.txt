@@ -16,7 +16,7 @@ Also known as: {{ site.data.general.other_names | join: ", " }} (same person; th
 
 ## Services
 - Sworn translations English ⇄ Spanish, delivered with qualified digital signature (valid for electronic submission) or on paper by courier
-- Typical visa documents: FBI and UK (ACRO) background checks, birth and marriage certificates, medical certificates, bank statements, employer letters, tax returns
+- Typical visa documents: FBI and UK (ACRO) background checks, birth and marriage certificates, diplomas and transcripts, medical certificates, bank statements, employer letters, tax returns
 - General translation (English/French > Spanish/Catalan), proofreading and editing
 
 ## Contact
