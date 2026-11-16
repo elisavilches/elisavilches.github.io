@@ -40,7 +40,7 @@ Instrucciones para trabajar en este repositorio. La descripción técnica comple
 
 ## Seguimiento pendiente (resumen)
 
-- Completar la autenticación del dominio en Brevo cuando IONOS publique el DMARC nuevo.
+- Dominio autenticado en Brevo el 2026-11-16 (DKIM `brevo1`/`brevo2`, código `brevo-code` y DMARC `p=none` con informes a Brevo). Más adelante se puede endurecer el DMARC a `p=quarantine`.
 - GA4 configurado el 2026-11-15: `generate_lead` es evento clave, anotación del cambio de medición,
   9 dimensiones personalizadas (location, guide, visa, error, question, method, page_type, to,
   files), conservación de datos a 14 meses, medición mejorada (scroll, clics de salida,
