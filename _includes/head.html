@@ -44,7 +44,7 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
   gtag('js', new Date());
-  {% capture cg %}{% if page.layout == "mainpage" %}home{% elsif page.ref == "hub-visas" %}guides_index{% elsif page.kind == "visa" %}guide_visa{% elsif page.kind == "document" %}guide_document{% elsif page.ref == "quote" %}quote_form{% elsif page.ref == "about" %}about{% elsif page.ref == "legal" or page.ref == "privacy" %}legal{% else %}other{% endif %}{% endcapture %}
+  {% capture cg %}{% if page.layout == "mainpage" %}home{% elsif page.ref == "hub-visas" %}guides_index{% elsif page.kind == "visa" %}guide_visa{% elsif page.kind == "document" %}guide_document{% elsif page.ref == "quote" %}quote_form{% elsif page.ref == "about" %}about{% elsif page.ref == "faq" %}faq{% elsif page.ref == "legal" or page.ref == "privacy" %}legal{% else %}other{% endif %}{% endcapture %}
   window.__cg = {{ cg | strip | jsonify }};
   // Tráfico interno (Alberto y Elisa): abrir una vez la web con ?internal=1 en cada navegador (?internal=0 lo quita).
   // GA4 lo descarta con el filtro de datos «Internal Traffic» (traffic_type = internal).

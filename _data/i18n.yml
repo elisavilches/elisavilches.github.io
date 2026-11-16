@@ -151,6 +151,16 @@ nav_services:
   es: "Servicios"
   fr: "Services"
   ca: "Serveis"
+faq_title:
+  en: "Frequently asked questions"
+  es: "Preguntas frecuentes"
+  fr: "Questions fréquentes"
+  ca: "Preguntes freqüents"
+faq_all:
+  en: "All questions"
+  es: "Todas las preguntas"
+  fr: "Toutes les questions"
+  ca: "Totes les preguntes"
 nav_faq:
   en: "FAQ"
   es: "Preguntas"

@@ -40,7 +40,7 @@ _config.yml            idiomas, url, quote_endpoint, exclusiones
 _data/
   general.yml          datos de Elisa: nombre, MAEC, email, teléfono, NIF y domicilio legal, textos de portada
   i18n.yml             textos de la interfaz (menú, botones, pie, cookies) en los 4 idiomas
-  faq.yml              preguntas frecuentes de la portada (también van a los datos estructurados)
+  faq.yml              preguntas frecuentes (página propia /faq/ con datos estructurados; 4 en la portada)
   testimonials.yml     opiniones
   quote_form.yml       textos del formulario de presupuesto
 _layouts/
@@ -82,7 +82,7 @@ last_updated: 2026-11-15
 ```
 
 A partir de `ref` se generan solos el selector de idioma, los `hreflang`, los enlaces del menú
-y el sitemap. Los `ref` en uso son `about`, `hub-visas`, `quote`, `legal` y `privacy`.
+y el sitemap. Los `ref` en uso son `about`, `faq`, `hub-visas`, `quote`, `legal` y `privacy`.
 
 Las guías llevan además `kind: visa` o `kind: document` y `short:` (título corto para las
 tarjetas del índice). Mientras no estén aprobadas van con `published: false`: se ven en local

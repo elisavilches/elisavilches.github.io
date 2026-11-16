@@ -1,0 +1,39 @@
+{% comment %}Preguntas frecuentes en <details>.
+- Sin parámetros: todas, agrupadas según _data/faq_groups.yml (página de preguntas frecuentes).
+- include.ids: solo esas preguntas, en ese orden y sin grupos (portada).
+La clase .faq la usa el evento faq_open de GA4 (head.html).{% endcomment %}
+{% assign faqs = site.data.faq | where_exp: "f", "f.question[page.lang]" %}
+<div class="faq">
+  {% if include.ids %}
+  {% assign ids = include.ids | split: "," %}
+  {% for qid in ids %}{% assign item = faqs | where: "id", qid | first %}{% if item %}
+  <details id="{{ item.id }}">
+    <summary>{{ item.question[page.lang] }}{% include icon.html name="plus" %}</summary>
+    <div class="answer">{{ item.answer[page.lang] | markdownify }}</div>
+  </details>{% endif %}{% endfor %}
+  {% else %}
+  {% for grp in site.data.faq_groups %}
+  {% capture grp_html %}{% for qid in grp.ids %}{% assign item = faqs | where: "id", qid | first %}{% if item %}
+  <details id="{{ item.id }}">
+    <summary>{{ item.question[page.lang] }}{% include icon.html name="plus" %}</summary>
+    <div class="answer">{{ item.answer[page.lang] | markdownify }}</div>
+  </details>{% endif %}{% endfor %}{% endcapture %}
+  {% if grp_html contains "<details" %}
+  <h2 class="faq-group">{{ grp.title[page.lang] }}</h2>
+  {{ grp_html }}
+  {% endif %}
+  {% endfor %}
+  {% endif %}
+</div>
+<script>
+  // Abre la pregunta enlazada (p. ej. /en/faq/#q2)
+  (function () {
+    function openFromHash() {
+      if (!/^#q\d+$/.test(location.hash)) return;
+      var d = document.getElementById(location.hash.slice(1));
+      if (d) { d.open = true; d.scrollIntoView(); }
+    }
+    openFromHash();
+    window.addEventListener('hashchange', openFromHash);
+  })();
+</script>
