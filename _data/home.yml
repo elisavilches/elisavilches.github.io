@@ -20,10 +20,10 @@ lede:
   ca: "Traduccions oficials acceptades pels consolats i les administracions espanyoles: antecedents penals, partides de naixement i matrimoni, extractes bancaris. Amb signatura electrònica qualificada o en paper."
 
 trust:
-  en: ["Fixed quote", "Digital or paper", "Clients in the US and UK"]
-  es: ["Presupuesto cerrado", "Digital o en papel", "Clientes en EE. UU. y Reino Unido"]
-  fr: ["Devis ferme", "Numérique ou papier", "Clients aux États-Unis et au Royaume-Uni"]
-  ca: ["Pressupost tancat", "Digital o en paper", "Clients als EUA i al Regne Unit"]
+  en: ["Fixed quote", "Digital or paper", "Clients worldwide"]
+  es: ["Presupuesto cerrado", "Digital o en papel", "Clientes en todo el mundo"]
+  fr: ["Devis ferme", "Numérique ou papier", "Clients dans le monde entier"]
+  ca: ["Pressupost tancat", "Digital o en paper", "Clients arreu del món"]
 
 cta_quote:
   en: "Get a free quote"
