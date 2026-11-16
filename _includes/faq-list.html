@@ -12,6 +12,9 @@ La clase .faq la usa el evento faq_open de GA4 (head.html).{% endcomment %}
     <div class="answer">{{ item.answer[page.lang] | markdownify }}</div>
   </details>{% endif %}{% endfor %}
   {% else %}
+  <nav class="faq-index" aria-label="{{ site.data.i18n.on_this_page[page.lang] }}">
+    {% for grp in site.data.faq_groups %}<a href="#{{ grp.key }}">{{ grp.title[page.lang] }}</a>{% endfor %}
+  </nav>
   {% for grp in site.data.faq_groups %}
   {% capture grp_html %}{% for qid in grp.ids %}{% assign item = faqs | where: "id", qid | first %}{% if item %}
   <details id="{{ item.id }}">
@@ -19,8 +22,10 @@ La clase .faq la usa el evento faq_open de GA4 (head.html).{% endcomment %}
     <div class="answer">{{ item.answer[page.lang] | markdownify }}</div>
   </details>{% endif %}{% endfor %}{% endcapture %}
   {% if grp_html contains "<details" %}
-  <h2 class="faq-group">{{ grp.title[page.lang] }}</h2>
-  {{ grp_html }}
+  <section class="faq-block" id="{{ grp.key }}">
+    <h2 class="faq-group"><span class="faq-num">{{ forloop.index | prepend: "0" }}</span>{{ grp.title[page.lang] }}</h2>
+    {{ grp_html }}
+  </section>
   {% endif %}
   {% endfor %}
   {% endif %}

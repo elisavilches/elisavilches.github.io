@@ -38,7 +38,7 @@
 
 - id: q4
   question:
-    es: Cuál es el plazo de entrega habitual de una traducción jurada?
+    es: ¿Cuál es el plazo de entrega habitual de una traducción jurada?
     ca: Quin és el termini d'entrega habitual d'una traducció jurada?
     en: How long does it usually take to deliver a sworn translation?
   answer:
