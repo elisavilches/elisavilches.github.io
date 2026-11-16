@@ -44,10 +44,10 @@ visas_title:
   ca: "Quin visat sol·liciteu?"
 
 visas_sub:
-  en: "Each guide lists the documents that usually need a sworn translation, consulate by consulate."
-  es: "Cada guía recoge los documentos que suelen necesitar traducción jurada, consulado por consulado."
-  fr: "Chaque guide liste les documents qui demandent généralement une traduction assermentée, consulat par consulat."
-  ca: "Cada guia recull els documents que solen necessitar traducció jurada, consolat per consolat."
+  en: "Each guide lists the documents that usually need a sworn translation, and what can vary between consulates."
+  es: "Cada guía recoge los documentos que suelen necesitar traducción jurada y lo que puede variar entre consulados."
+  fr: "Chaque guide liste les documents qui demandent généralement une traduction assermentée, et ce qui peut varier d’un consulat à l’autre."
+  ca: "Cada guia recull els documents que solen necessitar traducció jurada i allò que pot variar entre consolats."
 
 docs_title:
   en: "Or start from your document"
