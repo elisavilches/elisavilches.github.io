@@ -26,7 +26,7 @@ Also known as: {{ site.data.general.other_names | join: ", " }} (same person; th
 
 ## Key pages
 - [English home]({{ site.url }}/en/): sworn translations for Spanish visas, credentials and reviews
-- [Visa guides]({{ site.url }}/en/sworn-translation-spain-visa/): which documents need a sworn translation for the non-lucrative, digital nomad, student (including NALCAP language assistants) and family reunification visas, and guides by document (FBI check, ACRO certificate, birth and marriage certificates, diplomas and transcripts)
+- [Visa guides]({{ site.url }}/en/sworn-translation-spain-visa/): which documents need a sworn translation for the non-lucrative, digital nomad, student (including NALCAP language assistants) and family reunification visas, and guides by document (FBI check, ACRO certificate, birth and marriage certificates, diplomas and transcripts, Philippine PSA and NBI documents)
 - [FAQ]({{ site.url }}/en/faq/): what a sworn translation is, originals and scans, delivery times, digital signature or paper, copies
 - [Spanish home]({{ site.url }}/es/): traducción jurada, credenciales y opiniones
 - [Preguntas frecuentes]({{ site.url }}/es/preguntas-frecuentes/)
