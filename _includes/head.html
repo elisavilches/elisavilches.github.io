@@ -54,10 +54,12 @@
     if (/[?&]internal=0\b/.test(location.search)) localStorage.removeItem('ga-internal');
     if (localStorage.getItem('ga-internal') === '1') gaCfg.traffic_type = 'internal';
   } catch (e) {}
-  gtag('config', 'G-JNQ2TCMR0S', gaCfg);
   window.loadAnalytics = function () {
     if (window.__gaLoaded) return; window.__gaLoaded = true;
+    // Primero el consentimiento y después la configuración: si no, la vista de página
+    // se envía como «sin consentimiento» y GA4 la descarta (fallo corregido el 17/11/2026).
     gtag('consent', 'update', { analytics_storage: 'granted' });
+    gtag('config', 'G-JNQ2TCMR0S', gaCfg);
     var s = document.createElement('script'); s.async = true;
     s.src = 'https://www.googletagmanager.com/gtag/js?id=G-JNQ2TCMR0S';
     document.head.appendChild(s);

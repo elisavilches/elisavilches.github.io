@@ -9,6 +9,7 @@ Instrucciones para trabajar en este repositorio. La descripción técnica comple
 |---|---|---|
 | 2026-11-15 (mañana) | Publicados los cambios de SEO: títulos y meta por idioma, hreflang, sitemap, «sworn» en vez de «certified», evento `generate_lead` | Punto de partida para comparar Search Console (ticket de revisión el 2026-12-15) |
 | **2026-11-15 (noche)** | **Publicado el rediseño**: aviso de cookies (GA4 solo se carga si el visitante acepta), formulario de presupuesto, 7 guías en inglés, páginas legales | **GA4 mide menos visitas y menos `generate_lead` desde esta fecha sin que baje el tráfico real**: solo cuenta a quien acepta las cookies (suele ser entre la mitad y dos tercios). No confundirlo con una caída. Comparar periodos antes y después con cuidado; Search Console no se ve afectado |
+| **2026-11-17 (tarde)** | **Corregido el orden consentimiento → `config` de GA4.** Hasta entonces la `page_view` de cada página se enviaba antes de aplicar el consentimiento (`gcs=G100`, identificador nuevo) y GA4 la descartaba | Entre el 15/11 (noche) y el 17/11 faltan vistas de página y visitas cortas (solo constan las visitas con otros eventos: scroll, clics, `user_engagement`). Desde el 17/11 las vistas y los usuarios suben sin que cambie el tráfico real |
 | 2026-11-15 (noche) | Eventos de navegación nuevos: `quote_click`, `guide_click`, `faq_open`, `language_switch`, `maec_lookup`, `form_start`, `form_error` y el grupo de contenido | Antes de esta fecha no existen; no hay histórico con el que comparar |
 
 ## Normas del proyecto
