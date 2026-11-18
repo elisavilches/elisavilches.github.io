@@ -47,4 +47,5 @@ Instrucciones para trabajar en este repositorio. La descripción técnica comple
   files), conservación de datos a 14 meses, medición mejorada (scroll, clics de salida,
   descargas), referencias de spam excluidas, filtro de tráfico interno activo (`?internal=1`) y
   Search Console vinculado. El canal «AI Assistant» ya viene en el grupo predeterminado de GA4.
+- **Envíos del formulario: la fuente fiable son los registros de Cloud Run, no GA4** (GA4 no ve a quien rechaza las cookies). Consulta: `gcloud logging read 'resource.type="cloud_run_revision" AND resource.labels.service_name="quote-form" AND httpRequest.requestMethod="POST"' --project elisavilchez-web --freshness=30d`. Descontar las pruebas propias del 15/11. Primera petición real: 2026-11-18.
 - Revisar cada mes el registro de envíos de Brevo (Transaccional → Logs).
