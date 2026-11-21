@@ -4,3 +4,4 @@ AUDITORIA-SEO.md
 PENDIENTES.md
 __pycache__/
 .venv/
+Gemfile.lock
