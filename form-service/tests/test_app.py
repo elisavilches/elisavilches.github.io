@@ -156,7 +156,7 @@ def test_si_falla_la_confirmacion_el_cliente_ve_exito(tmp_path):
         ("es", "Solicitud de presupuesto recibida", "a la mayor brevedad"),
         ("en", "Quote request received", "as soon as possible"),
         ("fr", "Demande de devis bien reçue", "dans les meilleurs délais"),
-        ("ca", "Sol·licitud de pressupost rebuda", "com més aviat millor"),
+        ("ca", "Sol·licitud de pressupost rebuda", "el més aviat possible"),
         ("", "Quote request received", "as soon as possible"),  # sin idioma: inglés
     ],
 )

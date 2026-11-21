@@ -95,7 +95,7 @@ CONFIRM = {
     "ca": {
         "subject": "Sol·licitud de pressupost rebuda",
         "hello": "Hola, {name}:",
-        "body": "Gràcies per escriure’m. He rebut la vostra sol·licitud de pressupost i us respondré com més aviat millor.",
+        "body": "Gràcies per escriure’m. He rebut la vostra sol·licitud de pressupost i us respondré el més aviat possible.",
         "summary": "Resum de la vostra sol·licitud:",
         "visa": "Tràmit", "deadline": "Data límit", "delivery": "Lliurament", "files": "Documents adjunts", "none": "cap",
         "role": "Traductora jurada d’anglès núm. 6774 (Ministeri d’Afers Estrangers)",
