@@ -22,7 +22,7 @@ en:
   submit: "Send request"
   sending: "Sending…"
   ok_title: "Request received"
-  ok_text: "Thank you. I'll reply to your email with a quote and a delivery date."
+  ok_text: "Thank you. I've sent a confirmation to your email. I'll reply with a quote and a delivery date."
   errors:
     email_invalid: "Please check your email address."
     name_required: "Please tell me your name."
@@ -55,7 +55,7 @@ es:
   submit: "Enviar solicitud"
   sending: "Enviando…"
   ok_title: "Solicitud recibida"
-  ok_text: "Gracias. Le responderé a su email con un presupuesto y una fecha de entrega."
+  ok_text: "Gracias. Le he enviado una confirmación a su email. Le responderé con un presupuesto y una fecha de entrega."
   errors:
     email_invalid: "Revise su dirección de email."
     name_required: "Indique su nombre."
@@ -88,7 +88,7 @@ fr:
   submit: "Envoyer la demande"
   sending: "Envoi…"
   ok_title: "Demande reçue"
-  ok_text: "Merci. Je vous répondrai par e-mail avec un devis et une date de livraison."
+  ok_text: "Merci. Je vous ai envoyé une confirmation par e-mail. Je vous répondrai avec un devis et une date de livraison."
   errors:
     email_invalid: "Vérifiez votre adresse e-mail."
     name_required: "Indiquez votre nom."
@@ -121,7 +121,7 @@ ca:
   submit: "Enviar la sol·licitud"
   sending: "Enviant…"
   ok_title: "Sol·licitud rebuda"
-  ok_text: "Gràcies. Us respondré per correu amb un pressupost i una data de lliurament."
+  ok_text: "Gràcies. Us he enviat una confirmació per correu. Us respondré amb un pressupost i una data de lliurament."
   errors:
     email_invalid: "Reviseu l’adreça de correu."
     name_required: "Indiqueu el vostre nom."
