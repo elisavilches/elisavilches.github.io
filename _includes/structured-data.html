@@ -68,7 +68,7 @@
       "url": "{{ site.url }}{{ page.url }}",
       "name": {{ page.title | jsonify }},
       "inLanguage": "{{ page.lang }}",
-      "dateModified": "{{ page.last_updated | date: '%Y-%m-%d' }}",
+      "dateModified": "{{ page.last_updated | date_to_xmlschema }}",
       "mainEntity": {"@id": "{{ site.url }}/#elisa"}
     }{% endif %}{% assign faqs = site.data.faq | where_exp: "f", "f.question[page.lang]" %}{% if page.ref == "faq" and faqs.size > 0 %},
     {
