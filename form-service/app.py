@@ -1,7 +1,7 @@
 """Servicio del formulario de presupuesto de elisavilchez.com.
 
 Recibe el formulario de la web (con los documentos adjuntos) y lo reenvía por email a Elisa
-con la API de Brevo. No guarda nada: ni base de datos ni disco. Los adjuntos solo pasan por
+con la API de Brevo. Después manda al cliente un email de confirmación en el idioma de la página. No guarda nada: ni base de datos ni disco. Los adjuntos solo pasan por
 memoria y los registros no llevan datos personales.
 
 Variables de entorno:
@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import base64
 import html
+import itertools
 import json
 import logging
 import os
@@ -58,6 +59,55 @@ LABELS = {
     "message": "Comentarios",
     "lang": "Idioma de la web",
 }
+
+
+# Email de confirmación al cliente, en el idioma de la página. Solo repite datos cortos y de
+# opciones (trámite, plazo, entrega, nombres de archivo): nada del texto libre del cliente, para que
+# nadie pueda usar el formulario para mandar su propio texto a otra dirección.
+CONFIRM = {
+    "es": {
+        "subject": "Solicitud de presupuesto recibida",
+        "hello": "Hola, {name}:",
+        "body": "Gracias por escribirme. He recibido su solicitud de presupuesto y le responderé en menos de 24 horas, normalmente bastante antes.",
+        "summary": "Resumen de su solicitud:",
+        "visa": "Trámite", "deadline": "Fecha límite", "delivery": "Entrega", "files": "Documentos adjuntos", "none": "ninguno",
+        "more": "Si quiere añadir algo o enviarme más documentos, basta con responder a este email.",
+        "role": "Traductora jurada de inglés n.º 6774 (Ministerio de Asuntos Exteriores)",
+        "auto": "Este es un mensaje automático de confirmación.",
+    },
+    "en": {
+        "subject": "Quote request received",
+        "hello": "Hello {name},",
+        "body": "Thank you for getting in touch. I have received your quote request and will reply within 24 hours, usually much sooner.",
+        "summary": "Summary of your request:",
+        "visa": "Purpose", "deadline": "Needed by", "delivery": "Delivery", "files": "Attached documents", "none": "none",
+        "more": "If you would like to add anything or send more documents, simply reply to this email.",
+        "role": "Sworn translator English–Spanish no. 6774 (Spanish Ministry of Foreign Affairs)",
+        "auto": "This is an automatic confirmation.",
+    },
+    "fr": {
+        "subject": "Demande de devis bien reçue",
+        "hello": "Bonjour {name},",
+        "body": "Merci de votre message. J’ai bien reçu votre demande de devis et je vous répondrai sous 24 heures, généralement bien avant.",
+        "summary": "Récapitulatif de votre demande :",
+        "visa": "Démarche", "deadline": "Pour le", "delivery": "Livraison", "files": "Documents joints", "none": "aucun", "sep": "\u00a0: ",
+        "more": "Pour ajouter une information ou m’envoyer d’autres documents, il vous suffit de répondre à cet e-mail.",
+        "role": "Traductrice assermentée d’anglais n° 6774 (ministère espagnol des Affaires étrangères)",
+        "auto": "Ceci est une confirmation automatique.",
+    },
+    "ca": {
+        "subject": "Sol·licitud de pressupost rebuda",
+        "hello": "Hola, {name}:",
+        "body": "Gràcies per escriure’m. He rebut la vostra sol·licitud de pressupost i us respondré en menys de 24 hores, normalment força abans.",
+        "summary": "Resum de la vostra sol·licitud:",
+        "visa": "Tràmit", "deadline": "Data límit", "delivery": "Lliurament", "files": "Documents adjunts", "none": "cap",
+        "more": "Si voleu afegir-hi alguna cosa o enviar-me més documents, només cal que respongueu aquest correu.",
+        "role": "Traductora jurada d’anglès núm. 6774 (Ministeri d’Afers Estrangers)",
+        "auto": "Aquest és un missatge automàtic de confirmació.",
+    },
+}
+SHORT_FIELD = 100  # los campos de opciones nunca pasan de esto; si pasan, no se repiten
+DATE_RE = re.compile(r"^(\d{4})-(\d{2})-(\d{2})$")
 
 
 @dataclass
@@ -108,6 +158,8 @@ class RateLimiter:
 
 # ---------------------------------------------------------------- envío
 
+_seq = itertools.count()
+
 
 def build_email(fields: dict[str, str], files: list[tuple[str, bytes]], settings: Settings) -> dict:
     """Payload de la API de Brevo (POST /v3/smtp/email)."""
@@ -139,11 +191,49 @@ def build_email(fields: dict[str, str], files: list[tuple[str, bytes]], settings
     return payload
 
 
+def build_confirmation(fields: dict[str, str], files: list[tuple[str, bytes]], settings: Settings) -> dict:
+    """Email de confirmación al cliente (sin adjuntos). Si responde, la respuesta le llega a Elisa."""
+    t = CONFIRM.get(fields.get("lang") or "", CONFIRM["en"])
+    name = fields["name"][:60]
+    rows = []
+    if fields.get("visa") and len(fields["visa"]) <= SHORT_FIELD:
+        rows.append((t["visa"], fields["visa"]))
+    m = DATE_RE.match(fields.get("deadline") or "")
+    if m:
+        rows.append((t["deadline"], f"{m[3]}/{m[2]}/{m[1]}"))
+    if fields.get("delivery") and len(fields["delivery"]) <= SHORT_FIELD:
+        rows.append((t["delivery"], fields["delivery"]))
+    names = [n for n, _ in files]
+    rows.append((t["files"], ", ".join(names) if names else t["none"]))
+    e = html.escape
+    body = (
+        f"<p>{e(t['hello'].format(name=name))}</p><p>{e(t['body'])}</p>"
+        f"<p><b>{e(t['summary'])}</b></p><ul>"
+        + "".join(f"<li>{e(k)}{t.get('sep', ': ')}{e(v)}</li>" for k, v in rows)
+        + f"</ul><p>{e(t['more'])}</p>"
+        f"<p>Elisa Vílchez<br>{e(t['role'])}<br><a href='https://elisavilchez.com'>elisavilchez.com</a></p>"
+        f"<p style='color:#888;font-size:12px'>{e(t['auto'])}</p>"
+    )
+    text = "\n".join(
+        [t["hello"].format(name=name), "", t["body"], "", t["summary"]]
+        + [f"- {k}{t.get('sep', ': ')}{v}" for k, v in rows]
+        + ["", t["more"], "", "Elisa Vílchez", t["role"], "https://elisavilchez.com", "", t["auto"]]
+    )
+    return {
+        "sender": {"name": "Elisa Vílchez", "email": settings.mail_from},
+        "to": [{"email": fields["email"], "name": name}],
+        "replyTo": {"email": settings.mail_to, "name": "Elisa Vílchez"},
+        "subject": t["subject"],
+        "htmlContent": body,
+        "textContent": text,
+    }
+
+
 async def send(payload: dict, settings: Settings, client: httpx.AsyncClient | None = None) -> None:
     if settings.backend == "file":
         out = Path(settings.mail_dir)
         out.mkdir(parents=True, exist_ok=True)
-        path = out / f"{int(time.time() * 1000)}.json"
+        path = out / f"{time.time_ns()}-{next(_seq):04d}.json"
         path.write_text(json.dumps(payload, ensure_ascii=False, indent=2))
         log.info("email escrito en %s", path)
         return
@@ -239,6 +329,10 @@ def create_app(settings: Settings | None = None, client: httpx.AsyncClient | Non
             files = await read_files(form.getlist("files"))
             await send(build_email(fields, files, settings), settings, client)
             log.info("presupuesto enviado: %d adjuntos, %d KB", len(files), sum(len(b) for _, b in files) // 1024)
+            try:  # la solicitud ya ha llegado a Elisa: si falla la confirmación, no se avisa de error al cliente
+                await send(build_confirmation(fields, files, settings), settings, client)
+            except Exception as e:  # noqa: BLE001
+                log.error("confirmación no enviada: %s", getattr(e, "code", type(e).__name__))
             return {"ok": True}
         except FormError as e:
             if e.code != "spam":

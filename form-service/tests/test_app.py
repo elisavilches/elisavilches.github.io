@@ -43,11 +43,19 @@ def written(tmp_path):
     return [json.loads(p.read_text()) for p in sorted(tmp_path.glob("*.json"))]
 
 
+def to_elisa(tmp_path):
+    return [m for m in written(tmp_path) if m["to"] == [{"email": "elisa@elisavilchez.com"}]]
+
+
+def confirmations(tmp_path):
+    return [m for m in written(tmp_path) if m["to"][0]["email"] != "elisa@elisavilchez.com"]
+
+
 def test_envia_formulario_con_adjuntos(tmp_path):
     c, d = make_client(tmp_path)
     r = post(c, fields(), files=[("files", ("fbi.pdf", b"%PDF-1.4 fake", "application/pdf"))])
     assert r.status_code == 200 and r.json() == {"ok": True}
-    [mail] = written(d)
+    [mail] = to_elisa(d)
     assert mail["to"] == [{"email": "elisa@elisavilchez.com"}]
     assert mail["replyTo"]["email"] == "jane@example.com"
     assert mail["sender"]["email"] == "web@elisavilchez.com"
@@ -59,7 +67,7 @@ def test_envia_formulario_con_adjuntos(tmp_path):
 def test_sin_adjuntos_no_lleva_campo_attachment(tmp_path):
     c, d = make_client(tmp_path)
     assert post(c, fields()).status_code == 200
-    assert "attachment" not in written(d)[0]
+    assert "attachment" not in to_elisa(d)[0]
 
 
 @pytest.mark.parametrize(
@@ -115,18 +123,62 @@ def test_limite_por_ip(tmp_path):
 
 
 def test_brevo_recibe_clave_y_payload(tmp_path):
-    seen = {}
+    seen = []
 
     def handler(request: httpx.Request):
-        seen["url"] = str(request.url)
-        seen["key"] = request.headers["api-key"]
-        seen["body"] = json.loads(request.content)
+        seen.append((str(request.url), request.headers["api-key"], json.loads(request.content)))
         return httpx.Response(201, json={"messageId": "x"})
 
     c, d = make_client(tmp_path, backend="brevo", transport=httpx.MockTransport(handler), api_key="k-123")
     assert post(c, fields()).status_code == 200
-    assert seen["url"] == "https://api.brevo.com/v3/smtp/email" and seen["key"] == "k-123"
-    assert seen["body"]["replyTo"]["email"] == "jane@example.com"
+    assert len(seen) == 2  # a Elisa y la confirmación al cliente
+    for url, key, _ in seen:
+        assert url == "https://api.brevo.com/v3/smtp/email" and key == "k-123"
+    assert seen[0][2]["replyTo"]["email"] == "jane@example.com"
+    assert seen[1][2]["to"][0]["email"] == "jane@example.com"
+
+
+def test_si_falla_la_confirmacion_el_cliente_ve_exito(tmp_path):
+    calls = []
+
+    def handler(request: httpx.Request):
+        calls.append(1)
+        return httpx.Response(201 if len(calls) == 1 else 500)
+
+    c, _ = make_client(tmp_path, backend="brevo", transport=httpx.MockTransport(handler), api_key="k")
+    r = post(c, fields())
+    assert r.status_code == 200 and r.json() == {"ok": True} and len(calls) == 2
+
+
+@pytest.mark.parametrize(
+    "lang,subject,snippet",
+    [
+        ("es", "Solicitud de presupuesto recibida", "menos de 24 horas"),
+        ("en", "Quote request received", "within 24 hours"),
+        ("fr", "Demande de devis bien reçue", "sous 24 heures"),
+        ("ca", "Sol·licitud de pressupost rebuda", "menys de 24 hores"),
+        ("", "Quote request received", "within 24 hours"),  # sin idioma: inglés
+    ],
+)
+def test_confirmacion_en_el_idioma_de_la_pagina(tmp_path, lang, subject, snippet):
+    c, d = make_client(tmp_path)
+    post(c, fields(lang=lang), files=[("files", ("fbi.pdf", b"x", "application/pdf"))])
+    [conf] = confirmations(d)
+    assert conf["subject"] == subject and snippet in conf["textContent"]
+    assert conf["to"] == [{"email": "jane@example.com", "name": "Jane Doe"}]
+    assert conf["replyTo"]["email"] == "elisa@elisavilchez.com"
+    assert "attachment" not in conf
+    assert "fbi.pdf" in conf["textContent"] and "20/12/2026" in conf["textContent"]
+
+
+def test_confirmacion_no_repite_texto_libre(tmp_path):
+    c, d = make_client(tmp_path)
+    spam = "Compre ya en http://spam.example " * 10
+    post(c, fields(name="Jane " + spam, message=spam, documents=spam, consulate=spam, visa=spam))
+    [conf] = confirmations(d)
+    # Solo puede colarse lo que quepa en los 60 caracteres del nombre; el resto no se repite.
+    assert conf["textContent"].count("spam.example") <= 1 and conf["htmlContent"].count("spam.example") <= 1
+    assert len(conf["to"][0]["name"]) <= 60
 
 
 def test_brevo_falla_devuelve_502(tmp_path):
