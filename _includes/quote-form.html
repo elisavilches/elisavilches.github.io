@@ -49,6 +49,14 @@
     <textarea name="message" rows="4" maxlength="4000"></textarea>
   </label>
 
+  {% assign source_codes = "google,referral,forum,professional,client,other" | split: "," %}
+  <label class="qf-field"><span class="qf-label">{{ f.source }} <span class="qf-opt">({{ f.optional }})</span></span>
+    <select name="source">
+      <option value="">{{ f.choose }}</option>
+      {% for o in f.source_options %}<option value="{{ source_codes[forloop.index0] }}">{{ o }}</option>{% endfor %}
+    </select>
+  </label>
+
   {% comment %}Campo trampa para bots (oculto a las personas) y hora de carga de la página.{% endcomment %}
   <div class="qf-trap" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
   <input type="hidden" name="t" value="">
@@ -98,7 +106,7 @@
         .then(function (r) { return r.json().catch(function () { return { ok: false }; }); })
         .then(function (res) {
           if (!res.ok) throw res.error || 'generic';
-          if (window.gtag) gtag('event', 'generate_lead', { method: 'form', visa: ['none','non_lucrative','digital_nomad','student','nalcap','family','other'][form.elements.visa.selectedIndex] || 'none', files: fileInput.files.length });
+          if (window.gtag) gtag('event', 'generate_lead', { method: 'form', visa: ['none','non_lucrative','digital_nomad','student','nalcap','family','other'][form.elements.visa.selectedIndex] || 'none', files: fileInput.files.length, heard_from: form.elements.source.value || 'none' });
           form.hidden = true;
           var ok = document.querySelector('.qf-ok'); ok.hidden = false; ok.scrollIntoView({ block: 'center' });
         })

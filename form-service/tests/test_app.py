@@ -203,3 +203,17 @@ def test_cors_preflight(tmp_path):
 def test_health(tmp_path):
     c, _ = make_client(tmp_path)
     assert c.get("/health").json() == {"ok": True}
+
+
+@pytest.mark.parametrize("code,shown", [("forum", "Un foro o grupo (Reddit, Facebook…)"), ("", None), ("<b>spam</b>", None)])
+def test_como_me_ha_conocido(tmp_path, code, shown, caplog):
+    c, d = make_client(tmp_path)
+    with caplog.at_level("INFO", logger="form-service"):
+        assert post(c, fields(source=code)).status_code == 200
+    [mail] = to_elisa(d)
+    if shown:
+        assert f"Cómo me ha conocido: {shown}" in mail["textContent"]
+        assert "origen=forum" in caplog.text
+    else:
+        assert "Cómo me ha conocido" not in mail["textContent"] and "spam" not in mail["htmlContent"]
+        assert "origen=none" in caplog.text

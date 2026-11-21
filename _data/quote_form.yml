@@ -17,6 +17,8 @@ en:
   delivery_options: ["Digital (qualified e-signature)", "Paper (original stamp and signature)", "Not sure"]
   message: "Anything else?"
   optional: "optional"
+  source: "How did you hear about me?"
+  source_options: ["Google", "Recommended by someone I know", "A forum or group (Reddit, Facebook…)", "A consulate, agency or lawyer", "I’m already a client", "Other"]
   privacy: "I'll only use your details and documents to prepare your quote and translation. More in the"
   privacy_link: "privacy policy"
   submit: "Send request"
@@ -50,6 +52,8 @@ es:
   delivery_options: ["Digital (firma electrónica cualificada)", "Papel (sello y firma originales)", "No lo sé"]
   message: "¿Algo más?"
   optional: "opcional"
+  source: "¿Cómo me ha conocido?"
+  source_options: ["Google", "Recomendación de un conocido", "Un foro o grupo (Reddit, Facebook…)", "Un consulado, una agencia o un abogado", "Ya era cliente", "Otro"]
   privacy: "Solo usaré sus datos y documentos para preparar el presupuesto y la traducción. Más información en la"
   privacy_link: "política de privacidad"
   submit: "Enviar solicitud"
@@ -83,6 +87,8 @@ fr:
   delivery_options: ["Numérique (signature électronique qualifiée)", "Papier (tampon et signature originaux)", "Je ne sais pas"]
   message: "Autre chose ?"
   optional: "facultatif"
+  source: "Comment m’avez-vous connue ?"
+  source_options: ["Google", "Recommandation d’une connaissance", "Un forum ou un groupe (Reddit, Facebook…)", "Un consulat, une agence ou un avocat", "J’étais déjà client(e)", "Autre"]
   privacy: "Je n’utiliserai vos données et documents que pour préparer le devis et la traduction. Plus d’informations dans la"
   privacy_link: "politique de confidentialité"
   submit: "Envoyer la demande"
@@ -116,6 +122,8 @@ ca:
   delivery_options: ["Digital (signatura electrònica qualificada)", "Paper (segell i signatura originals)", "No ho sé"]
   message: "Alguna cosa més?"
   optional: "opcional"
+  source: "Com m’heu conegut?"
+  source_options: ["Google", "Recomanació d’un conegut", "Un fòrum o grup (Reddit, Facebook…)", "Un consolat, una agència o un advocat", "Ja era client", "Altres"]
   privacy: "Només faré servir les vostres dades i documents per preparar el pressupost i la traducció. Més informació a la"
   privacy_link: "política de privacitat"
   submit: "Enviar la sol·licitud"

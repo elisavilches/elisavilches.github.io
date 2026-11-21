@@ -47,7 +47,7 @@ RATE_WINDOW = 3600  # ...por hora
 ALLOWED_EXT = {".pdf", ".jpg", ".jpeg", ".png", ".heic", ".heif", ".webp", ".doc", ".docx", ".tif", ".tiff"}
 EMAIL_RE = re.compile(r"^[^@\s<>]+@[^@\s<>]+\.[^@\s<>]+$")
 
-TEXT_FIELDS = ("name", "email", "visa", "consulate", "documents", "deadline", "delivery", "message", "lang")
+TEXT_FIELDS = ("name", "email", "visa", "consulate", "documents", "deadline", "delivery", "message", "source", "lang")
 LABELS = {
     "name": "Nombre",
     "email": "Email",
@@ -57,6 +57,7 @@ LABELS = {
     "deadline": "Fecha límite",
     "delivery": "Formato de entrega",
     "message": "Comentarios",
+    "source": "Cómo me ha conocido",
     "lang": "Idioma de la web",
 }
 
@@ -104,6 +105,17 @@ CONFIRM = {
 }
 SHORT_FIELD = 100  # los campos de opciones nunca pasan de esto; si pasan, no se repiten
 DATE_RE = re.compile(r"^(\d{4})-(\d{2})-(\d{2})$")
+
+
+# «¿Cómo me ha conocido?»: la web envía un código; Elisa lo lee en español y el registro guarda solo el código.
+SOURCES = {
+    "google": "Google",
+    "referral": "Recomendación de un conocido",
+    "forum": "Un foro o grupo (Reddit, Facebook…)",
+    "professional": "Un consulado, una agencia o un abogado",
+    "client": "Ya era cliente",
+    "other": "Otro",
+}
 
 
 @dataclass
@@ -273,6 +285,7 @@ def validate_fields(form) -> dict[str, str]:
         raise FormError("name_required")
     if not EMAIL_RE.match(fields["email"]):
         raise FormError("email_invalid")
+    fields["source"] = SOURCES.get(fields["source"], "")  # código desconocido: se descarta
     return fields
 
 
@@ -324,7 +337,11 @@ def create_app(settings: Settings | None = None, client: httpx.AsyncClient | Non
             fields = validate_fields(form)
             files = await read_files(form.getlist("files"))
             await send(build_email(fields, files, settings), settings, client)
-            log.info("presupuesto enviado: %d adjuntos, %d KB", len(files), sum(len(b) for _, b in files) // 1024)
+            source = next((k for k, v in SOURCES.items() if v == fields["source"]), "none")
+            log.info(
+                "presupuesto enviado: %d adjuntos, %d KB, origen=%s",
+                len(files), sum(len(b) for _, b in files) // 1024, source,
+            )
             try:  # la solicitud ya ha llegado a Elisa: si falla la confirmación, no se avisa de error al cliente
                 await send(build_confirmation(fields, files, settings), settings, client)
             except Exception as e:  # noqa: BLE001
