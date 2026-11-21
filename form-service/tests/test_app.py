@@ -153,11 +153,11 @@ def test_si_falla_la_confirmacion_el_cliente_ve_exito(tmp_path):
 @pytest.mark.parametrize(
     "lang,subject,snippet",
     [
-        ("es", "Solicitud de presupuesto recibida", "menos de 24 horas"),
-        ("en", "Quote request received", "within 24 hours"),
-        ("fr", "Demande de devis bien reçue", "sous 24 heures"),
-        ("ca", "Sol·licitud de pressupost rebuda", "menys de 24 hores"),
-        ("", "Quote request received", "within 24 hours"),  # sin idioma: inglés
+        ("es", "Solicitud de presupuesto recibida", "a la mayor brevedad"),
+        ("en", "Quote request received", "as soon as possible"),
+        ("fr", "Demande de devis bien reçue", "dans les meilleurs délais"),
+        ("ca", "Sol·licitud de pressupost rebuda", "com més aviat millor"),
+        ("", "Quote request received", "as soon as possible"),  # sin idioma: inglés
     ],
 )
 def test_confirmacion_en_el_idioma_de_la_pagina(tmp_path, lang, subject, snippet):

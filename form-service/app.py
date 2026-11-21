@@ -68,40 +68,36 @@ CONFIRM = {
     "es": {
         "subject": "Solicitud de presupuesto recibida",
         "hello": "Hola, {name}:",
-        "body": "Gracias por escribirme. He recibido su solicitud de presupuesto y le responderé en menos de 24 horas, normalmente bastante antes.",
+        "body": "Gracias por escribirme. He recibido su solicitud de presupuesto y le responderé a la mayor brevedad.",
         "summary": "Resumen de su solicitud:",
         "visa": "Trámite", "deadline": "Fecha límite", "delivery": "Entrega", "files": "Documentos adjuntos", "none": "ninguno",
-        "more": "Si quiere añadir algo o enviarme más documentos, basta con responder a este email.",
         "role": "Traductora jurada de inglés n.º 6774 (Ministerio de Asuntos Exteriores)",
         "auto": "Este es un mensaje automático de confirmación.",
     },
     "en": {
         "subject": "Quote request received",
         "hello": "Hello {name},",
-        "body": "Thank you for getting in touch. I have received your quote request and will reply within 24 hours, usually much sooner.",
+        "body": "Thank you for getting in touch. I have received your quote request and will reply as soon as possible.",
         "summary": "Summary of your request:",
         "visa": "Purpose", "deadline": "Needed by", "delivery": "Delivery", "files": "Attached documents", "none": "none",
-        "more": "If you would like to add anything or send more documents, simply reply to this email.",
         "role": "Sworn translator English–Spanish no. 6774 (Spanish Ministry of Foreign Affairs)",
         "auto": "This is an automatic confirmation.",
     },
     "fr": {
         "subject": "Demande de devis bien reçue",
         "hello": "Bonjour {name},",
-        "body": "Merci de votre message. J’ai bien reçu votre demande de devis et je vous répondrai sous 24 heures, généralement bien avant.",
+        "body": "Merci de votre message. J’ai bien reçu votre demande de devis et je vous répondrai dans les meilleurs délais.",
         "summary": "Récapitulatif de votre demande :",
         "visa": "Démarche", "deadline": "Pour le", "delivery": "Livraison", "files": "Documents joints", "none": "aucun", "sep": "\u00a0: ",
-        "more": "Pour ajouter une information ou m’envoyer d’autres documents, il vous suffit de répondre à cet e-mail.",
         "role": "Traductrice assermentée d’anglais n° 6774 (ministère espagnol des Affaires étrangères)",
         "auto": "Ceci est une confirmation automatique.",
     },
     "ca": {
         "subject": "Sol·licitud de pressupost rebuda",
         "hello": "Hola, {name}:",
-        "body": "Gràcies per escriure’m. He rebut la vostra sol·licitud de pressupost i us respondré en menys de 24 hores, normalment força abans.",
+        "body": "Gràcies per escriure’m. He rebut la vostra sol·licitud de pressupost i us respondré com més aviat millor.",
         "summary": "Resum de la vostra sol·licitud:",
         "visa": "Tràmit", "deadline": "Data límit", "delivery": "Lliurament", "files": "Documents adjunts", "none": "cap",
-        "more": "Si voleu afegir-hi alguna cosa o enviar-me més documents, només cal que respongueu aquest correu.",
         "role": "Traductora jurada d’anglès núm. 6774 (Ministeri d’Afers Estrangers)",
         "auto": "Aquest és un missatge automàtic de confirmació.",
     },
@@ -210,14 +206,14 @@ def build_confirmation(fields: dict[str, str], files: list[tuple[str, bytes]], s
         f"<p>{e(t['hello'].format(name=name))}</p><p>{e(t['body'])}</p>"
         f"<p><b>{e(t['summary'])}</b></p><ul>"
         + "".join(f"<li>{e(k)}{t.get('sep', ': ')}{e(v)}</li>" for k, v in rows)
-        + f"</ul><p>{e(t['more'])}</p>"
+        + "</ul>"
         f"<p>Elisa Vílchez<br>{e(t['role'])}<br><a href='https://elisavilchez.com'>elisavilchez.com</a></p>"
         f"<p style='color:#888;font-size:12px'>{e(t['auto'])}</p>"
     )
     text = "\n".join(
         [t["hello"].format(name=name), "", t["body"], "", t["summary"]]
         + [f"- {k}{t.get('sep', ': ')}{v}" for k, v in rows]
-        + ["", t["more"], "", "Elisa Vílchez", t["role"], "https://elisavilchez.com", "", t["auto"]]
+        + ["", "Elisa Vílchez", t["role"], "https://elisavilchez.com", "", t["auto"]]
     )
     return {
         "sender": {"name": "Elisa Vílchez", "email": settings.mail_from},
