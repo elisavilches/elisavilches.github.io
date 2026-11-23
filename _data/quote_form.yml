@@ -11,7 +11,7 @@ en:
   documents: "Which documents?"
   documents_hint: "For example: FBI background check with apostille, birth certificate"
   files: "Attach your documents"
-  files_hint: "PDF, photos or Word. Up to 10 files and 15 MB in total. A clear scan or photo of every page is enough."
+  files_hint: "PDF, photos or Word. Up to 20 files and 15 MB in total. A clear scan or photo of every page is enough."
   deadline: "When do you need it?"
   delivery: "Delivery"
   delivery_options: ["Digital (qualified e-signature)", "Paper (original stamp and signature)", "Not sure"]
@@ -31,7 +31,7 @@ en:
     too_fast: "Please try again in a few seconds."
     file_type: "One of the files has a format I can't accept. Please use PDF, JPG, PNG, HEIC or Word."
     too_large: "The files are too large (15 MB in total). Send the rest by email after this request."
-    too_many_files: "Please attach 10 files at most. Send the rest by email after this request."
+    too_many_files: "Please attach 20 files at most. Send the rest by email after this request."
     rate_limited: "Too many requests from your connection. Please try again later or email me."
     generic: "Something went wrong and your request was not sent. Please email your documents to"
 es:
@@ -46,7 +46,7 @@ es:
   documents: "¿Qué documentos?"
   documents_hint: "Por ejemplo: antecedentes penales del FBI con apostilla, partida de nacimiento"
   files: "Adjunte sus documentos"
-  files_hint: "PDF, fotos o Word. Hasta 10 archivos y 15 MB en total. Basta con un escaneo o una foto nítida de cada página."
+  files_hint: "PDF, fotos o Word. Hasta 20 archivos y 15 MB en total. Basta con un escaneo o una foto nítida de cada página."
   deadline: "¿Para cuándo lo necesita?"
   delivery: "Formato de entrega"
   delivery_options: ["Digital (firma electrónica cualificada)", "Papel (sello y firma originales)", "No lo sé"]
@@ -66,7 +66,7 @@ es:
     too_fast: "Vuelva a intentarlo en unos segundos."
     file_type: "Uno de los archivos tiene un formato que no puedo aceptar. Use PDF, JPG, PNG, HEIC o Word."
     too_large: "Los archivos ocupan demasiado (15 MB en total). Envíe el resto por email después de esta solicitud."
-    too_many_files: "Adjunte como máximo 10 archivos. Envíe el resto por email después de esta solicitud."
+    too_many_files: "Adjunte como máximo 20 archivos. Envíe el resto por email después de esta solicitud."
     rate_limited: "Demasiadas solicitudes desde su conexión. Inténtelo más tarde o escríbame por email."
     generic: "Algo ha fallado y la solicitud no se ha enviado. Envíe sus documentos por email a"
 fr:
@@ -81,7 +81,7 @@ fr:
   documents: "Quels documents ?"
   documents_hint: "Par exemple : casier judiciaire apostillé, acte de naissance"
   files: "Joignez vos documents"
-  files_hint: "PDF, photos ou Word. Jusqu’à 10 fichiers et 15 Mo au total. Une copie ou une photo nette de chaque page suffit."
+  files_hint: "PDF, photos ou Word. Jusqu’à 20 fichiers et 15 Mo au total. Une copie ou une photo nette de chaque page suffit."
   deadline: "Pour quand ?"
   delivery: "Format de livraison"
   delivery_options: ["Numérique (signature électronique qualifiée)", "Papier (tampon et signature originaux)", "Je ne sais pas"]
@@ -101,7 +101,7 @@ fr:
     too_fast: "Réessayez dans quelques secondes."
     file_type: "Un des fichiers a un format que je ne peux pas accepter. Utilisez PDF, JPG, PNG, HEIC ou Word."
     too_large: "Les fichiers sont trop lourds (15 Mo au total). Envoyez le reste par e-mail après cette demande."
-    too_many_files: "Joignez 10 fichiers au maximum. Envoyez le reste par e-mail après cette demande."
+    too_many_files: "Joignez 20 fichiers au maximum. Envoyez le reste par e-mail après cette demande."
     rate_limited: "Trop de demandes depuis votre connexion. Réessayez plus tard ou écrivez-moi."
     generic: "Une erreur est survenue et la demande n’a pas été envoyée. Envoyez vos documents par e-mail à"
 ca:
@@ -116,7 +116,7 @@ ca:
   documents: "Quins documents?"
   documents_hint: "Per exemple: antecedents penals de l’FBI amb apostilla, partida de naixement"
   files: "Adjunteu els documents"
-  files_hint: "PDF, fotos o Word. Fins a 10 fitxers i 15 MB en total. N’hi ha prou amb un escaneig o una foto nítida de cada pàgina."
+  files_hint: "PDF, fotos o Word. Fins a 20 fitxers i 15 MB en total. N’hi ha prou amb un escaneig o una foto nítida de cada pàgina."
   deadline: "Per a quan ho necessiteu?"
   delivery: "Format de lliurament"
   delivery_options: ["Digital (signatura electrònica qualificada)", "Paper (segell i signatura originals)", "No ho sé"]
@@ -136,6 +136,6 @@ ca:
     too_fast: "Torneu-ho a provar d’aquí a uns segons."
     file_type: "Un dels fitxers té un format que no puc acceptar. Feu servir PDF, JPG, PNG, HEIC o Word."
     too_large: "Els fitxers ocupen massa (15 MB en total). Envieu la resta per correu després d’aquesta sol·licitud."
-    too_many_files: "Adjunteu com a màxim 10 fitxers. Envieu la resta per correu després d’aquesta sol·licitud."
+    too_many_files: "Adjunteu com a màxim 20 fitxers. Envieu la resta per correu després d’aquesta sol·licitud."
     rate_limited: "Massa sol·licituds des de la vostra connexió. Torneu-ho a provar més tard o escriviu-me."
     generic: "Alguna cosa ha fallat i la sol·licitud no s’ha enviat. Envieu els documents per correu a"

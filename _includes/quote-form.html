@@ -94,7 +94,7 @@
       for (var i = 0; i < n; i++) size += fileInput.files[i].size;
       fileLabel.textContent = n ? Array.prototype.map.call(fileInput.files, function (x) { return x.name; }).join(', ') : T.files;
       err.hidden = true;
-      if (n > 10) showError('too_many_files'); else if (size > MAX) showError('too_large');
+      if (n > 20) showError('too_many_files'); else if (size > MAX) showError('too_large');
     });
 
     form.addEventListener('submit', function (e) {

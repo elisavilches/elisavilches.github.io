@@ -37,7 +37,7 @@ logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
 
 # ---------------------------------------------------------------- configuración
 
-MAX_FILES = 10
+MAX_FILES = 20
 # Brevo admite 25 MB por email y el base64 de los adjuntos ocupa un 37 % más: 15 MB reales caben con margen.
 MAX_TOTAL_BYTES = 15 * 1024 * 1024
 MAX_FIELD_CHARS = 4000

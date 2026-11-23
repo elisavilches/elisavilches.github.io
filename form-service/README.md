@@ -48,7 +48,7 @@ navegador ──POST /quote──▶ Cloud Run «quote-form» ──API──▶
 - Campo trampa invisible (`website`): si viene relleno, se responde «ok» y no se envía nada.
 - Tiempo mínimo de rellenado: 4 segundos.
 - Límite por IP: 5 envíos por hora.
-- Adjuntos: hasta 10 archivos y 15 MB en total; solo PDF, imágenes y Word.
+- Adjuntos: hasta 20 archivos y 15 MB en total; solo PDF, imágenes y Word.
 
 ## Desarrollo
 
